@@ -1,0 +1,8 @@
+{
+  "shots": 1000,
+  "counts": {
+    "000": 497,
+    "111": 503
+  },
+  "note": "Ideal AerSimulator ground truth for 3-qubit GHZ-style circuit."
+}

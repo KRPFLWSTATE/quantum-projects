@@ -1,0 +1,16 @@
+{
+  "shots": 1000,
+  "backend_name": "ibm_kingston",
+  "job_id": "da6c1u60ukec7381slv0",
+  "counts": {
+    "000": 277,
+    "001": 155,
+    "010": 48,
+    "011": 36,
+    "100": 2,
+    "101": 1,
+    "110": 52,
+    "111": 429
+  },
+  "note": "Raw measurement counts from physical QPU execution."
+}
