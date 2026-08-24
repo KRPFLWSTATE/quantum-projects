@@ -1,0 +1,4 @@
+# Python 3.10+ recommended
+qiskit>=2.0
+qiskit-ibm-runtime
+matplotlib

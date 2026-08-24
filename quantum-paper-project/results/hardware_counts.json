@@ -1,0 +1,13 @@
+{
+  "_schema": "hardware_counts",
+  "_status": "TEMPLATE_ONLY_NO_DATA",
+  "_instructions": "Populate bitstring_counts only from IBM Quantum (or other QPU) measurement results of an actual submitted job. Do not invent counts.",
+  "source": null,
+  "backend_name": null,
+  "processor_family": null,
+  "circuit_name": null,
+  "shot_count": null,
+  "job_id": null,
+  "run_timestamp_utc": null,
+  "bitstring_counts": {}
+}

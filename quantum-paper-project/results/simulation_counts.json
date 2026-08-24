@@ -1,0 +1,12 @@
+{
+  "_schema": "simulation_counts",
+  "_status": "TEMPLATE_ONLY_NO_DATA",
+  "_instructions": "Populate bitstring_counts only from AerSimulator (or other verified simulator) output of an actual job. Do not invent counts.",
+  "source": null,
+  "backend_or_simulator": null,
+  "circuit_name": null,
+  "shot_count": null,
+  "job_id": null,
+  "run_timestamp_utc": null,
+  "bitstring_counts": {}
+}
