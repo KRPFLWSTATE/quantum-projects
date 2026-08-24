@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "Hybrid Multi-Agent AI and Quantum Cloud Infrastructure: An Exploratory Organisational Framework for Complex Decision Processing"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Perera
+    given-names: Kawin Rehan
+url: "https://github.com/KRPFLWSTATE/quantum-projects"
+repository-code: "https://github.com/KRPFLWSTATE/quantum-projects"
+version: 1.0.0
+date-released: 2026-08-25
+license: MIT
+abstract: "A bounded pilot implementation of a five-stage multi-agent-to-QPU architecture, with named-hardware telemetry and Hellinger fidelity analysis."
