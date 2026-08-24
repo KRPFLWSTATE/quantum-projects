@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import math
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from qiskit import QuantumCircuit
@@ -82,11 +82,25 @@ def compute_hellinger_fidelity(
     return overlap**2
 
 
+def parse_utc_timestamp(value: datetime | str | None) -> datetime | None:
+    """Parse a job.metrics() timestamp into a timezone-aware datetime."""
+    if value is None:
+        return None
+    if isinstance(value, datetime):
+        return value if value.tzinfo is not None else value.replace(tzinfo=timezone.utc)
+
+    timestamp = str(value)
+    if timestamp.endswith("Z"):
+        timestamp = timestamp[:-1] + "+00:00"
+    parsed = datetime.fromisoformat(timestamp)
+    return parsed if parsed.tzinfo is not None else parsed.replace(tzinfo=timezone.utc)
+
+
 def queue_wait_seconds_from_metrics(metrics: dict) -> float | None:
     """Derive queue wait time from job.metrics() timestamps."""
     timestamps = metrics.get("timestamps", {})
-    created = timestamps.get("created")
-    running = timestamps.get("running")
+    created = parse_utc_timestamp(timestamps.get("created"))
+    running = parse_utc_timestamp(timestamps.get("running"))
 
     if created is None or running is None:
         return None
@@ -129,7 +143,7 @@ def main() -> None:
     print(f"\nSubmitting to hardware backend '{backend.name}' ({SHOTS} shots)...")
     try:
         sampler = Sampler(mode=backend)
-        submission_timestamp_utc = datetime.utcnow().isoformat() + "Z"
+        submission_timestamp_utc = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
         job = sampler.run([transpiled_circuit], shots=SHOTS)
         job_id = job.job_id()
         print(f"  job_id: {job_id}")

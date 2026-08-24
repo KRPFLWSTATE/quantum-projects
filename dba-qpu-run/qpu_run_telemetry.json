@@ -1,0 +1,28 @@
+{
+  "backend_name": "ibm_kingston",
+  "processor_family": "Heron r2",
+  "num_qubits_on_backend": 156,
+  "circuit_qubits": 3,
+  "shots": 1000,
+  "job_id": "da6c1u60ukec7381slv0",
+  "submission_timestamp_utc": "2026-08-24T22:08:55.492250Z",
+  "queue_wait_seconds": 1.191856,
+  "execution_wall_time_seconds": 6.97963285446167,
+  "ideal_counts": {
+    "111": 503,
+    "000": 497
+  },
+  "hardware_counts": {
+    "111": 429,
+    "001": 155,
+    "000": 277,
+    "110": 52,
+    "010": 48,
+    "011": 36,
+    "100": 2,
+    "101": 1
+  },
+  "hellinger_fidelity": 0.6981714217786029,
+  "recovered_from_job_id": "da6c1u60ukec7381slv0",
+  "recovery_note": "Hardware counts and fidelity recovered from completed job after metrics timestamp parsing bug caused original run to fail post-result()."
+}
