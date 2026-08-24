@@ -59,20 +59,10 @@ def run_ideal_simulation(circuit: QuantumCircuit) -> dict[str, int]:
     return dict(result.get_counts())
 
 
-def extract_sampler_counts(result) -> dict[str, int]:
+def extract_sampler_counts(primitive_result) -> dict[str, int]:
     """Extract measurement counts from a SamplerV2 PrimitiveResult."""
-    pub_result = result[0]
-    data = pub_result.data
-
-    if hasattr(data, "meas"):
-        return dict(data.meas.get_counts())
-
-    for field_name in data.keys():
-        field = getattr(data, field_name)
-        if hasattr(field, "get_counts"):
-            return dict(field.get_counts())
-
-    raise ValueError("Could not extract measurement counts from SamplerV2 result.")
+    pub_result = primitive_result[0]
+    return dict(pub_result.data.meas.get_counts())
 
 
 def compute_hellinger_fidelity(
