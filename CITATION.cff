@@ -10,4 +10,4 @@ repository-code: "https://github.com/KRPFLWSTATE/quantum-projects"
 version: 1.0.0
 date-released: 2026-08-25
 license: MIT
-abstract: "A bounded pilot implementation of a five-stage multi-agent-to-QPU architecture, with named-hardware telemetry and Hellinger fidelity analysis."
+abstract: "A bounded pilot implementation of a five-stage multi-agent-to-QPU architecture, documenting a two-run comparative IBM Quantum hardware pilot with named-hardware telemetry and Hellinger-fidelity analysis."

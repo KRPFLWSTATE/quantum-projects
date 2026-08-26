@@ -1,0 +1,33 @@
+{
+  "backend": "ibm_fez",
+  "created": "2026-08-25T22:10:50.040719Z",
+  "estimated_running_time_seconds": 2.310666905,
+  "id": "da715qe0ukec7382m480",
+  "cost": 600,
+  "params": {
+    "options": {},
+    "pubs": [
+      [
+        {
+          "__type__": "QuantumCircuit",
+          "__value__": "eJztmPdTVGcYhe9dRBALYu+KvWFFxApWRERFsGFjXVFRRFjBAhbsvfeYfzSTH8yevc8qJwkTHUhmMsM3sz48uHcvC997zgc1lbVVlXUFsexYEK2wtY2PpgR5p4Pc1Ae/ph5ZfDLGQ2us/kk0JRMdTe1FxSXl+ec6F+wvPdt1oy1MXxWGmZfKrLDHqwQ9XnUQzIaDYQ7MhUNgHhwKh8HhcATMhyNhARwFR8MxPd9Rao2D4+EEOBFOgpPhFDgVToPT4QxYCGfCWXA2nAPnwnlwPlwAF8JFcDEsgkvgUrgMLocr4EpYDFfBErgalsI1cC1cB9fDDXAjLIPlcBPcDLfArXAb3A4r4A5YCXfCKrgLVsPdcA/cC2vgPlgL6+B+eAAehIfgYVgPj8Cj8Bg8Dk/ABhiHJ2ECnoKN8DQ8A8/CJngOnofN8AJsgRdhK8zMYxJegu2wA16GV+BVeA12wi54Hd6AN+Et2A1vwzvwLrwH78MH8CF8BB/DJ/ApfAafwxfwJXwFX8M38C18B9/DD/Aj/AQ/w1/gl4QSLSsYFF5ojGe+mZn157CL1mD+Jwz+fu2rr4i3N6Z/UJldkDuhaGvd74W/lX3Lxd4urj307eK+3+jHLg778lWG/XOj2F+vS7/mlu9vsR/v9p+8rR+7ONaXrzLWPzf6529+2I93+9ffVubIkdXLxZvjyWRTY/L7porumbmst/tWp/KhIxntxSj1f+KKMJF+zk9cEUukv6ogOoilHl9TK/pUkNUWhVbqePa1l5V+xucgJ4y3JJqam+O9PW9gDayBNbD+LysToG2ZFG0jE7/9pppD4vGEHhpzzXId5JrtOtg1xzXXdYhrnutQ12Guw11HuOa7jnQtcB3lOtp1jOtY13Gu410nuE50neQ62XWK61TXaa7TXWe4FrrOdJ3lOtt1jutc13mu810XuC50XeS62LXIdYnrUtdlrstdV7iudC12XeVa4rratdR1jeta13Wu6103uG50LXMtd93kutl1i+tW122u210rXHe4VrrudK1y3eVa7brbdY/rXtca132uta51rvtdD7gedD3keti13vWI61HXY67HXU+4NrjGXU+6JlxPuTa6nnY943rWtcn1nOt512bXC64trhddW13bXJOul1zbXTtcL7tecb3qes2107XL9brrDdebrrdcu11vu95xvet6z/W+6wPXh66PXB+7PnF96vrM9bnrC9eXrq9cX7u+cX3r+s71vesH14+un1y1woDfDYPoKKPzS/rQEkTHE51JdBDR6UNHDp0zdLjQiULHCJ0ddGDQKUFHA50HdAhQ86vu1fEqdrW5Kly9rbJWQ88Ioi5WAat1VbXqV5WqmlT1qc5UUaodVYnqQZWfGk81p25ToanFVF3qK5WUmkl1pA5S8ahtVDHqFZWJGqQ8iLpCBaFWUBUo/xX6SnrFuzJdQa70VmQrpxXOSmTFsLJXgauUVbQqTxWiSk7FpTJSwag0VAQq9xR2SriGIMoyBZhSS1GlfFIoKYkUP8ocBY3SRZGiHFF4KDEUE8oGBYJSQKOvedeQa7I1zpphDa6mVSOqudQwagK7g2jWNGCaKo2S5kdDo0nReGgmNAja/dry2ufa3NrR2sbau9qw2qXamtqP2oTaedpu+sOp/mj65Q/mhpd/"
+        },
+        {
+          "__type__": "ndarray",
+          "__value__": "eJyb7BfqGxDJyFDGUK2eklqcXKRupaBuk2ahrqOgnpZfVFKUmBefX5SSChJ3S8wpTgWKF2ckFqQC+RoGOpo6CrUKFAAuAFOzG1s="
+        },
+        1000
+      ]
+    ],
+    "support_qiskit": true,
+    "version": 2
+  },
+  "program": {
+    "id": "sampler"
+  },
+  "state": {
+    "status": "Completed"
+  },
+  "status": "Completed",
+  "user_id": "IBMid-693001XTNP"
+}
