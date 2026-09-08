@@ -4,8 +4,8 @@ Bounded pilot implementation of a multi-agent-to-QPU telemetry-probe workflow fo
 
 ## Authoritative vs convenience telemetry
 
-- **`results/runs/`** is the authoritative immutable archive of all observed hardware executions (Run 1 on `ibm_kingston`, Run 2 on `ibm_fez`).
-- **`qpu_run_telemetry.json`** at this package root is a backward-compatible convenience copy of **Run 1** only. Do not treat it as the full multi-run archive, and do not overwrite it with Run 2 data.
+- **`results/runs/`** is the authoritative immutable archive of all observed hardware executions (20 runs: `ibm_kingston`, `ibm_fez`, and `ibm_marrakesh`).
+- **`qpu_run_telemetry.json`** at this package root is a last-run convenience copy. Do not treat it as the full multi-run archive.
 
 Supporting artefacts (IBM Runtime exports, figures, comparative index) live under [`results/`](results/).
 
@@ -15,8 +15,8 @@ IBM Quantum credentials must be configured locally (for example via `QiskitRunti
 
 ```bash
 cd dba-qpu-run
-python run_circuit.py
-python analyze_results.py
+PYTHONUNBUFFERED=1 python -u run_circuit.py
+PYTHONUNBUFFERED=1 python -u analyze_results.py
 ```
 
-Future executions must **not** overwrite the immutable records under `results/runs/`.
+Future executions must **not** overwrite existing immutable records under `results/runs/`.

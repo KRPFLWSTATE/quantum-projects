@@ -1,13 +1,13 @@
 # Results layout
 
-This directory holds reproducibility artefacts for the two-run comparative IBM Quantum hardware pilot.
+This directory holds reproducibility artefacts for the 20-run comparative IBM Quantum hardware pilot.
 
 ## Contents
 
-- **`runs/`** — authoritative immutable run records for Run 1 (`ibm_kingston`) and Run 2 (`ibm_fez`). Do not overwrite these during future executions.
-- **`ibm-runtime-exports/`** — unmodified IBM Runtime job-info and job-result exports for both jobs.
-- **`figures/`** — one observed measurement-distribution visualisation per run (copied from the IBM result UI; not regenerated).
-- **`comparative_summary.json`** — descriptive cross-run index of backends, job IDs, timings, and fidelities. It is **not** an aggregate benchmark (no mean/median/ranking of fidelity).
+- **`runs/`** — authoritative immutable run records for Runs 1–20. Do not overwrite these during future executions.
+- **`ibm-runtime-exports/`** — IBM Runtime job-info and job-result exports for each archived job. Runs 1–2 are console downloads; later runs are dumps from the live job object after each execution.
+- **`figures/`** — observed measurement-distribution visualisations for **Run 1 and Run 2 only** (copied from the IBM result UI; not regenerated). No figure files exist for Runs 3–20.
+- **`comparative_summary.json`** — descriptive cross-run index of backends, job IDs, timings, and fidelities, plus sample mean/stdev/min/max. Those aggregates describe this 20-run set only; they are **not** a statistically powered backend ranking.
 
 ## Timing notes
 

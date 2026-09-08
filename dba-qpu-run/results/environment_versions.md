@@ -26,11 +26,10 @@ This file documents the runtime environment for the pilot QPU execution reported
 
 Note: These versions reflect the actual environment in which the pilot run was executed. Minor version drift relative to the minimum requirements in requirements.txt is expected due to pip resolving newer compatible releases.
 
-## Two-run execution record
+## Multi-run execution record
 
-Run 1 and Run 2 used the documented local software environment above.
+The Hardware Execution section above is the original Run 1 capture. Later jobs in this repository were submitted from the same documented local venv (`qiskit 2.5.2`, `qiskit-ibm-runtime 0.49.0`, `qiskit-aer 0.17.2`). This file does not contain a separate environment snapshot for every run.
 
-- **Run 1:** backend `ibm_kingston`, job `da6c1u60ukec7381slv0`
-- **Run 2:** backend `ibm_fez`, job `da715qe0ukec7382m480`
+Per-run backends, job IDs, timings, counts, and Hellinger fidelities for all 20 archived executions are in `results/runs/` and `results/comparative_summary.json`.
 
-Client-side wall-clock for each run is separately recorded in the immutable archive under `results/runs/` and differs conceptually from IBM Runtime server-side timing in the raw exports.
+Client-side wall-clock for each run is separately recorded in those archives and differs conceptually from IBM Runtime server-side timing in the raw exports.

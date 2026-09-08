@@ -91,7 +91,7 @@ def load_json_object(path: Path, *, label: str) -> dict:
 
 
 def load_comparative_summary() -> dict:
-    """Load the primary two-run comparative summary."""
+    """Load the primary N-run comparative summary."""
     return load_json_object(COMPARATIVE_SUMMARY_PATH, label="Comparative summary")
 
 
