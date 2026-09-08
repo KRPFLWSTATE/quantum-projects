@@ -131,6 +131,32 @@ def write_analysis_tables(qaoa_params: dict) -> dict:
     }
 
 
+def analyse_hardware_archives() -> dict:
+    from .paths import RAW_DIR
+
+    rows = []
+    if RAW_DIR.is_dir():
+        for path in sorted(RAW_DIR.glob("*.json")):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if data.get("evidence_type") != "decision_hardware":
+                continue
+            pubs = data.get("pubs") or []
+            rows.append(
+                {
+                    "job_id": data.get("job_id"),
+                    "intent": data.get("intent"),
+                    "n_pubs": data.get("n_pubs_observed") or len(pubs),
+                    "shots_valid": data.get("shots_valid"),
+                    "charged_usage_seconds": data.get("charged_usage_seconds"),
+                    "created_utc": data.get("created_utc"),
+                    "result_received_utc": data.get("result_received_utc"),
+                    "evidence_type": "decision_hardware",
+                }
+            )
+    write_json_atomic(DERIVED_DIR / "hardware_archive_analysis.json", {"rows": rows, "n_jobs": len(rows)})
+    return {"n_jobs": len(rows)}
+
+
 def _write_csv(path, rows: list[dict]) -> None:
     if not rows:
         path.write_text("", encoding="utf-8")

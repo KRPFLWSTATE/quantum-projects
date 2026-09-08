@@ -101,10 +101,28 @@ def pin_backend(service):
 def compile_all_fixtures(params: dict[str, Any], timeout_note: str | None = None) -> dict[str, Any]:
     from qiskit_ibm_runtime import QiskitRuntimeService
 
+    from .paths import PROTOCOL_PATH
+
     out_dir = DERIVED_DIR / "compile"
     qpy_dir = out_dir / "qpy"
     out_dir.mkdir(parents=True, exist_ok=True)
     qpy_dir.mkdir(parents=True, exist_ok=True)
+    if PROTOCOL_PATH.is_file():
+        protocol = json.loads(PROTOCOL_PATH.read_text(encoding="utf-8"))
+        summary_path = out_dir / "isa_summary.json"
+        if protocol.get("freeze_complete") and protocol.get("isa_qpy_sha256") and summary_path.is_file():
+            summary = json.loads(summary_path.read_text(encoding="utf-8"))
+            validated = True
+            for name, expected in protocol["isa_qpy_sha256"].items():
+                path = qpy_dir / name
+                if not path.is_file() or sha256_file(path) != expected:
+                    validated = False
+                    break
+            summary["qpy_rewrite"] = False
+            summary["frozen_circuits_validated"] = validated
+            if not validated:
+                summary["structural_ok"] = False
+            return summary
     service = QiskitRuntimeService()
     pin_path = DERIVED_DIR / "backend_pin.json"
     ledger_jobs = False

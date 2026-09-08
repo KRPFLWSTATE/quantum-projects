@@ -25,6 +25,16 @@ def freeze_protocol() -> dict:
     notes = list(protocol.get("notes") or [])
     if PRE_REPAIR_NOTE not in notes:
         notes.append(PRE_REPAIR_NOTE)
+    prior_hash = protocol.get("protocol_hash")
+    revisions = list(protocol.get("protocol_revisions") or [])
+    if prior_hash:
+        revisions.append(
+            {
+                "protocol_hash": prior_hash,
+                "superseded_utc": datetime.now(timezone.utc).isoformat(),
+                "reason": "pre_hardware_r1_r7_execution_correctness",
+            }
+        )
     qpy_dir = DERIVED_DIR / "compile" / "qpy"
     isa_files = sorted(qpy_dir.glob("*_isa.qpy")) if qpy_dir.is_dir() else []
     code_files = sorted(SRC_DIR.glob("*.py")) + [STUDY_ROOT / "study.py"]
@@ -37,6 +47,8 @@ def freeze_protocol() -> dict:
         "code_sha256": {str(path.relative_to(STUDY_ROOT)): sha256_file(path) for path in code_files if path.is_file()},
         "qaoa_parameters_sha256": sha256_file(DERIVED_DIR / "qaoa_parameters.json") if (DERIVED_DIR / "qaoa_parameters.json").is_file() else None,
         "circuit_equivalence_sha256": sha256_file(DERIVED_DIR / "circuit_equivalence.json") if (DERIVED_DIR / "circuit_equivalence.json").is_file() else None,
+        "validate_unittests_sha256": sha256_file(DERIVED_DIR / "validate_unittests.json") if (DERIVED_DIR / "validate_unittests.json").is_file() else None,
+        "protocol_revisions": revisions,
         "freeze_complete": True,
     }
     freeze.pop("protocol_hash", None)

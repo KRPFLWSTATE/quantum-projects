@@ -232,8 +232,11 @@ def cmd_run_next(hardware: bool) -> dict:
             "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
         }
     result = dispatch_block(physical=True)
-    if result.get("ok") and result.get("NEW_PHYSICAL_QPU_JOBS_SUBMITTED"):
+    if result.get("NEW_PHYSICAL_QPU_JOBS_SUBMITTED") or result.get("job_id"):
         try:
+            from src.analysis import analyse_hardware_archives
+
+            result["hardware_analysis"] = analyse_hardware_archives()
             cmd_report()
             cmd_export()
         except Exception as exc:

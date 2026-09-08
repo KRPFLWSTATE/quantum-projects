@@ -16,7 +16,7 @@
     "usage_remaining_seconds"
   ],
   "remaining_seconds": 554.0,
-  "timestamp_utc": "2026-09-08T22:07:24.938959+00:00",
+  "timestamp_utc": "2026-09-08T22:35:31.875405+00:00",
   "usage": {
     "instance_id": "<redacted>",
     "plan_id": "<redacted>",
@@ -24,8 +24,8 @@
     "usage_limit_reached": false,
     "usage_limit_seconds": 600,
     "usage_period": {
-      "end_time": "2026-09-08T22:07:33.063Z",
-      "start_time": "2026-08-11T22:07:33.063Z"
+      "end_time": "2026-09-08T22:35:39.150Z",
+      "start_time": "2026-08-11T22:35:39.150Z"
     },
     "usage_remaining_seconds": 554
   }

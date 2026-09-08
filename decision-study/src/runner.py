@@ -2,18 +2,28 @@
 
 from __future__ import annotations
 
+import concurrent.futures
 import json
+import time
 import uuid
 from datetime import datetime, timezone
 from typing import Any
 
 from qiskit import qpy
 
-from .hashing import sha256_file, write_json_atomic
+from .hashing import write_json_atomic
 from .ledger import can_submit
 from .paths import DERIVED_DIR, STUDY_ROOT
 from .readiness import engineering_status
-from .runtime_adapter import FakeSamplerV2, FakeService, decode_primitive_result, job_id_of
+from .runtime_adapter import (
+    FakeSamplerV2,
+    FakeService,
+    decode_primitive_result,
+    interpret_usage,
+    job_id_of,
+    sampler_options_object,
+    shots_are_valid,
+)
 from .store import DEFAULT_STORE, CampaignStore
 
 
@@ -60,14 +70,22 @@ class InjectedAdapter:
         self.backend_name = backend_name
         self.physical = False
 
-    def submit(self, pubs, shots: int = 1024):
+    def submit(self, pubs, shots: int = 1024, tags: list[str] | None = None):
+        self.sampler.options = sampler_options_object(job_tags=tags)
         job = self.sampler.run(pubs, shots=shots)
+        if tags:
+            job.tags = list(tags)
         self.service.jobs[job_id_of(job)] = job
         self.sampler.jobs[job_id_of(job)] = job
         return job
 
     def retrieve(self, job_id: str):
         return self.service.job(job_id)
+
+    def retrieve_by_tags(self, tags: list[str]):
+        if hasattr(self.service, "jobs_by_tags"):
+            return self.service.jobs_by_tags(tags)
+        return []
 
 
 class PhysicalAdapter:
@@ -78,14 +96,22 @@ class PhysicalAdapter:
         self.physical = True
         self.run_calls = 0
 
-    def submit(self, pubs, shots: int = 1024):
+    def submit(self, pubs, shots: int = 1024, tags: list[str] | None = None):
         from .hardware import run_physical_block
 
         self.run_calls += 1
-        return run_physical_block(self.backend, pubs, shots=shots)
+        return run_physical_block(self.backend, pubs, shots=shots, job_tags=tags)
 
     def retrieve(self, job_id: str):
         return self.service.job(job_id)
+
+    def retrieve_by_tags(self, tags: list[str]):
+        if hasattr(self.service, "jobs"):
+            try:
+                return list(self.service.jobs(job_tags=tags) or [])
+            except TypeError:
+                return list(self.service.jobs(limit=50) or [])
+        return []
 
 
 def _persist_job_index(store: CampaignStore, job_id: str, payload: dict[str, Any]) -> None:
@@ -94,6 +120,202 @@ def _persist_job_index(store: CampaignStore, job_id: str, payload: dict[str, Any
         index = json.loads(store.jobs_index_path.read_text(encoding="utf-8"))
     index[job_id] = payload
     write_json_atomic(store.jobs_index_path, index)
+
+
+def _job_usage_report(job: Any, usage_seconds: float | None) -> dict[str, Any]:
+    if usage_seconds is not None:
+        return {"state": "resolved", "seconds": float(usage_seconds), "final_zero": float(usage_seconds) == 0.0, "raw": usage_seconds}
+    raw = None
+    metrics = None
+    status = getattr(job, "status", None)
+    try:
+        raw = job.usage() if hasattr(job, "usage") else None
+    except Exception:
+        return {"state": "error", "seconds": None, "final_zero": False, "raw": None}
+    try:
+        metrics = job.metrics() if hasattr(job, "metrics") else None
+    except Exception:
+        metrics = None
+    return interpret_usage(raw, metrics=metrics, status=status)
+
+
+def _already_finalised(ledger: dict[str, Any], job_id: str) -> bool:
+    return any(item.get("job_id") == job_id and item.get("finalised") for item in ledger.get("history", []))
+
+
+def _evaluate_policies(decoded: dict[str, Any], pubs_meta: list[dict[str, Any]], intent: str, elapsed: float) -> list[dict[str, Any]]:
+    from .classical import greedy_then_swaps
+    from .fixtures import hardware_instances
+    from .policies import apply_policy
+    from .spec import spec_from_instance
+
+    instances = {inst.instance_id: inst for inst in hardware_instances()}
+    rows = []
+    pubs = decoded.get("pubs") or []
+    for pub, meta in zip(pubs, pubs_meta or []):
+        inst = instances.get(meta.get("instance_id"))
+        if inst is None:
+            continue
+        spec = spec_from_instance(inst, request_id=f"{intent}-{meta.get('instance_id')}-p{meta.get('p')}")
+        greedy = greedy_then_swaps(inst)
+        incumbent = {"bitstring": greedy["bitstring"], "utility": greedy["utility"]} if greedy.get("status") == "ok" else None
+        circuit_hash = meta.get("isa_qpy_sha256") or "missing"
+        linkage = {
+            "request_id": spec["request_id"],
+            "source_hash": spec["source_hash"],
+            "circuit_hash": circuit_hash,
+            "expected_circuit_hash": circuit_hash,
+            "expected_request_id": spec["request_id"],
+            "expected_source_hash": spec["source_hash"],
+        }
+        shots = list(pub.get("shots") or [])
+        for policy in ("P0", "P1", "P2", "P3"):
+            rows.append(
+                apply_policy(
+                    policy,
+                    spec,
+                    shots,
+                    incumbent,
+                    now_elapsed=elapsed,
+                    linkage=linkage,
+                    trusted_source=spec,
+                )
+            )
+    return rows
+
+
+def finalise_attempt(
+    *,
+    store: CampaignStore,
+    adapter: Any,
+    job: Any,
+    job_id: str,
+    intent: str,
+    pubs_meta: list[dict[str, Any]] | None,
+    tags: list[str],
+    decoded: dict[str, Any],
+    usage_seconds: float | None,
+    physical: bool,
+    dispatched_utc: str,
+    received_utc: str,
+    elapsed_s: float,
+    metrics: Any = None,
+) -> dict[str, Any]:
+    usage = _job_usage_report(job, usage_seconds)
+    n_ok = shots_are_valid(decoded)
+    archive = {
+        "evidence_type": "decision_hardware" if physical else "sampled_simulation",
+        "mock": not physical,
+        "job_id": job_id,
+        "intent": intent,
+        "pubs": decoded.get("pubs"),
+        "n_pubs_observed": decoded.get("n_pubs"),
+        "pub_mapping": pubs_meta,
+        "created_utc": dispatched_utc,
+        "result_received_utc": received_utc,
+        "client_elapsed_seconds": elapsed_s,
+        "charged_usage_seconds": usage.get("seconds"),
+        "usage_state": usage.get("state"),
+        "usage_final_zero": usage.get("final_zero"),
+        "status": job.status() if callable(getattr(job, "status", None)) else getattr(job, "status", None),
+        "metrics": metrics,
+        "tags": tags,
+        "shots_valid": n_ok,
+        "label": store.label if not physical else None,
+    }
+    write_json_atomic(store.raw_dir / f"{job_id}.json", archive)
+    policy_rows = _evaluate_policies(decoded, pubs_meta or [], intent, elapsed_s)
+    write_json_atomic(store.derived_dir / f"policies_{job_id}.json", {"intent": intent, "job_id": job_id, "rows": policy_rows})
+    decisions = {}
+    if store.decisions_path.is_file():
+        decisions = json.loads(store.decisions_path.read_text(encoding="utf-8"))
+    if intent not in decisions:
+        decisions[intent] = {"job_id": job_id, "policy_rows": policy_rows, "final": True}
+        write_json_atomic(store.decisions_path, decisions)
+    ledger = store.load_ledger()
+    if _already_finalised(ledger, job_id):
+        ledger["outstanding_job"] = None
+        for item in ledger.get("reservations", []):
+            if item.get("intent") == intent or item.get("job_id") == job_id:
+                item["open"] = False
+                item["job_id"] = job_id
+        store.save_ledger(ledger)
+        return {"ok": n_ok, "already_finalised": True, "job_id": job_id, "shots_valid": n_ok, "n_pubs": decoded.get("n_pubs"), "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0}
+
+    if usage.get("state") != "resolved":
+        ledger["outstanding_job"] = {"intent": intent, "job_id": job_id, "tags": tags, "physical": physical, "usage_state": usage.get("state")}
+        for item in ledger.get("reservations", []):
+            if item.get("intent") == intent:
+                item["open"] = True
+                item["job_id"] = job_id
+        store.save_ledger(ledger)
+        write_json_atomic(
+            store.derived_dir / "last_dispatch.json",
+            {
+                "intent": intent,
+                "job_id": job_id,
+                "n_pubs": decoded.get("n_pubs"),
+                "shots_valid": n_ok,
+                "usage_state": usage.get("state"),
+                "ok": False,
+                "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if physical else 0,
+            },
+        )
+        return {
+            "ok": False,
+            "unresolved": True,
+            "reason": "USAGE_UNRESOLVED",
+            "job_id": job_id,
+            "intent": intent,
+            "shots_valid": n_ok,
+            "n_pubs": decoded.get("n_pubs"),
+            "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if physical else 0,
+        }
+
+    charged = float(usage["seconds"])
+    ledger["jobs_submitted"] = int(ledger.get("jobs_submitted", 0)) + 1
+    ledger["outstanding_job"] = None
+    for item in ledger.get("reservations", []):
+        if item.get("intent") == intent or item.get("job_id") == job_id:
+            item["open"] = False
+            item["job_id"] = job_id
+    ledger["usage_reconciled_seconds"] = float(ledger.get("usage_reconciled_seconds", 0.0)) + charged
+    remaining = float(ledger.get("campaign_remaining_seconds", 0.0)) - max(charged, 0.0)
+    ledger["campaign_remaining_seconds"] = max(0.0, remaining)
+    ledger.setdefault("history", []).append(
+        {
+            "intent": intent,
+            "job_id": job_id,
+            "mock": not physical,
+            "physical": physical,
+            "shots_valid": n_ok,
+            "charged_usage_seconds": charged,
+            "finalised": True,
+        }
+    )
+    store.save_ledger(ledger)
+    write_json_atomic(
+        store.derived_dir / "last_dispatch.json",
+        {
+            "intent": intent,
+            "job_id": job_id,
+            "n_pubs": decoded.get("n_pubs"),
+            "shots": [row.get("n_shots") for row in (decoded.get("pubs") or [])],
+            "shots_valid": n_ok,
+            "evidence_type": archive["evidence_type"],
+            "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if physical else 0,
+        },
+    )
+    return {
+        "ok": n_ok,
+        "blocked": False,
+        "mock": not physical,
+        "job_id": job_id,
+        "intent": intent,
+        "n_pubs": decoded.get("n_pubs"),
+        "shots_valid": n_ok,
+        "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if physical else 0,
+    }
 
 
 def dispatch_block(
@@ -116,7 +338,6 @@ def dispatch_block(
         }
     if physical and adapter is None:
         from .budget import bind_open_plan
-        from qiskit_ibm_runtime import QiskitRuntimeService
 
         if not skip_readiness:
             status = engineering_status()
@@ -150,16 +371,17 @@ def dispatch_block(
         }
     if getattr(adapter, "physical", False):
         estimate_path = DERIVED_DIR / "usage_estimate.json"
-        if estimate_path.is_file():
-            estimate = json.loads(estimate_path.read_text(encoding="utf-8"))
-            if estimate.get("exceeds_45s_cap") or float(estimate.get("block_estimate_seconds") or 99) > 45:
-                return {
-                    "blocked": True,
-                    "ok": False,
-                    "reason": "DURATION_ESTIMATE_EXCEEDS_45S",
-                    "estimate": estimate.get("block_estimate_seconds"),
-                    "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
-                }
+        if not estimate_path.is_file():
+            return {"blocked": True, "ok": False, "reason": "DURATION_ESTIMATE_MISSING", "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0}
+        estimate = json.loads(estimate_path.read_text(encoding="utf-8"))
+        if estimate.get("exceeds_45s_cap") or float(estimate.get("block_estimate_seconds") or 99) > 45:
+            return {
+                "blocked": True,
+                "ok": False,
+                "reason": "DURATION_ESTIMATE_EXCEEDS_45S",
+                "estimate": estimate.get("block_estimate_seconds"),
+                "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
+            }
     with store.lock():
         ledger = store.load_ledger()
         if ledger.get("frozen_allowance_seconds") is None and live_remaining is not None:
@@ -177,12 +399,16 @@ def dispatch_block(
         reservation = {"intent": intent, "seconds": 45, "open": True}
         ledger.setdefault("reservations", []).append(reservation)
         tags = [f"decision-{intent[:8]}", "decision-study"]
-        ledger["outstanding_job"] = {"intent": intent, "job_id": None, "tags": tags, "physical": bool(physical and adapter and getattr(adapter, "physical", False))}
+        ledger["outstanding_job"] = {
+            "intent": intent,
+            "job_id": None,
+            "tags": tags,
+            "physical": bool(getattr(adapter, "physical", False)),
+        }
         store.save_ledger(ledger)
         try:
             circuits, pubs_meta = load_isa_pubs(pubs_meta_plan)
         except Exception as exc:
-            reservation["open"] = True
             ledger["outstanding_job"]["error"] = f"{type(exc).__name__}:{exc}"
             store.save_ledger(ledger)
             return {
@@ -193,8 +419,10 @@ def dispatch_block(
                 "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
             }
         write_json_atomic(store.attempts_dir / f"{intent}.json", {"intent": intent, "pubs": pubs_meta, "tags": tags})
+        dispatched_utc = datetime.now(timezone.utc).isoformat()
+        started = time.monotonic()
         try:
-            job = adapter.submit(circuits, shots=1024)
+            job = adapter.submit(circuits, shots=1024, tags=tags)
             jid = job_id_of(job)
         except Exception as exc:
             ledger["outstanding_job"]["error"] = f"{type(exc).__name__}:{exc}"
@@ -210,78 +438,70 @@ def dispatch_block(
         ledger["outstanding_job"]["job_id"] = jid
         store.save_ledger(ledger)
         _persist_job_index(store, jid, {"intent": intent, "tags": tags, "physical": getattr(adapter, "physical", False)})
-        try:
-            decoded = decode_primitive_result(job.result())
-        except Exception as exc:
-            return {
-                "ok": False,
-                "unresolved": True,
-                "reason": "RESULT_DECODE_FAILED",
-                "job_id": jid,
-                "intent": intent,
-                "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if getattr(adapter, "physical", False) else 0,
-                "error": f"{type(exc).__name__}:{exc}",
-            }
-        charged = usage_seconds
-        if charged is None:
-            usage = job.usage() if hasattr(job, "usage") else {}
-            charged = float((usage or {}).get("quantum_seconds") or (usage or {}).get("qpu_usage") or 0.0)
-        archive = {
-            "evidence_type": "decision_hardware" if getattr(adapter, "physical", False) else "sampled_simulation",
-            "mock": not getattr(adapter, "physical", False),
-            "job_id": jid,
-            "intent": intent,
-            "pubs": decoded["pubs"],
-            "pub_mapping": pubs_meta,
-            "created_utc": datetime.now(timezone.utc).isoformat(),
-            "charged_usage_seconds": charged,
-            "status": job.status() if callable(getattr(job, "status", None)) else getattr(job, "status", None),
-        }
-        if archive["evidence_type"] != "decision_hardware":
-            archive["label"] = store.label
-        write_json_atomic(store.raw_dir / f"{jid}.json", archive)
-        n_ok = len(decoded["pubs"]) == 12 and all(int(row["n_shots"]) == 1024 for row in decoded["pubs"])
-        ledger["jobs_submitted"] = int(ledger.get("jobs_submitted", 0)) + 1
-        ledger["outstanding_job"] = None
-        reservation["open"] = False
-        reservation["job_id"] = jid
-        ledger["usage_reconciled_seconds"] = float(ledger.get("usage_reconciled_seconds", 0.0)) + float(charged or 0.0)
-        remaining = float(ledger.get("campaign_remaining_seconds", 0.0)) - max(float(charged or 0.0), 0.0)
-        ledger["campaign_remaining_seconds"] = max(0.0, remaining)
-        ledger.setdefault("history", []).append(
-            {
-                "intent": intent,
-                "job_id": jid,
-                "mock": not getattr(adapter, "physical", False),
-                "physical": getattr(adapter, "physical", False),
-                "shots_valid": n_ok,
-            }
-        )
-        store.save_ledger(ledger)
-        write_json_atomic(
-            store.derived_dir / "last_dispatch.json",
-            {
-                "intent": intent,
-                "job_id": jid,
-                "n_pubs": decoded["n_pubs"],
-                "shots": [row["n_shots"] for row in decoded["pubs"]],
-                "shots_valid": n_ok,
-                "evidence_type": archive["evidence_type"],
-                "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if getattr(adapter, "physical", False) else 0,
-            },
-        )
-        physical_count = 1 if getattr(adapter, "physical", False) else 0
+
+    from .agents import Bus, Coordinator, Encoder, Message, SolverAdapter, Validator
+
+    bus = Bus()
+    coordinator = Coordinator(persist_path=store.decisions_path)
+    bus.register(coordinator)
+
+    def encode_fn(payload):
+        return payload
+
+    def solve_fn(payload):
+        return payload
+
+    def validate_fn(payload):
+        return {"request_id": payload.get("request_id") or intent, "event": payload.get("event"), "ok": True}
+
+    bus.register(Encoder(encode_fn))
+    bus.register(SolverAdapter(solve_fn, hold=True))
+    bus.register(Validator(validate_fn))
+    bus.post("dispatch", "spec.ready", {"request_id": intent}, "coordinator")
+    bus.drain()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+        future = pool.submit(job.result)
+        bus.post("dispatch", "timeout", {"request_id": intent}, "coordinator")
+        bus.drain()
+        result_obj = future.result()
+    received_utc = datetime.now(timezone.utc).isoformat()
+    elapsed = time.monotonic() - started
+    try:
+        decoded = decode_primitive_result(result_obj)
+    except Exception as exc:
         return {
-            "ok": True,
-            "blocked": False,
-            "mock": not getattr(adapter, "physical", False),
+            "ok": False,
+            "unresolved": True,
+            "reason": "RESULT_DECODE_FAILED",
             "job_id": jid,
             "intent": intent,
-            "n_pubs": 12,
-            "shots_valid": n_ok,
-            "run_calls": getattr(getattr(adapter, "sampler", adapter), "run_calls", getattr(adapter, "run_calls", 1)),
-            "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": physical_count,
+            "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1 if getattr(adapter, "physical", False) else 0,
+            "error": f"{type(exc).__name__}:{exc}",
         }
+    metrics = None
+    try:
+        metrics = job.metrics() if hasattr(job, "metrics") else None
+    except Exception:
+        metrics = None
+    with store.lock():
+        out = finalise_attempt(
+            store=store,
+            adapter=adapter,
+            job=job,
+            job_id=jid,
+            intent=intent,
+            pubs_meta=pubs_meta,
+            tags=tags,
+            decoded=decoded,
+            usage_seconds=usage_seconds,
+            physical=bool(getattr(adapter, "physical", False)),
+            dispatched_utc=dispatched_utc,
+            received_utc=received_utc,
+            elapsed_s=elapsed,
+            metrics=metrics,
+        )
+    out["run_calls"] = getattr(getattr(adapter, "sampler", adapter), "run_calls", getattr(adapter, "run_calls", 1))
+    return out
 
 
 def resume_block(
@@ -297,46 +517,102 @@ def resume_block(
         if not outstanding:
             return {"blocked": True, "ok": False, "reason": "NO_OUTSTANDING_JOB", "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0}
         job_id = outstanding.get("job_id")
+        tags = list(outstanding.get("tags") or [])
+        intent = outstanding.get("intent")
         if job_id is None:
-            return {
-                "blocked": True,
-                "ok": False,
-                "reason": "AMBIGUOUS_SUBMISSION_NO_JOB_ID",
-                "intent": outstanding.get("intent"),
-                "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
-                "did_call_run": False,
-            }
-        raw = store.raw_dir / f"{job_id}.json"
-        if raw.is_file():
-            return {"ok": True, "resumed": True, "job_id": job_id, "did_call_run": False, "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0}
-        if adapter is None:
+            if adapter is None:
+                return {
+                    "blocked": True,
+                    "ok": False,
+                    "reason": "AMBIGUOUS_SUBMISSION_NO_JOB_ID",
+                    "intent": intent,
+                    "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
+                    "did_call_run": False,
+                }
+            recovered = adapter.retrieve_by_tags(tags) if tags else []
+            if len(recovered) != 1:
+                return {
+                    "blocked": True,
+                    "ok": False,
+                    "reason": "AMBIGUOUS_SUBMISSION_NO_JOB_ID",
+                    "intent": intent,
+                    "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0,
+                    "did_call_run": False,
+                }
+            job_id = job_id_of(recovered[0])
+            outstanding["job_id"] = job_id
+            store.save_ledger(ledger)
+        raw_path = store.raw_dir / f"{job_id}.json"
+        attempt_path = store.attempts_dir / f"{intent}.json" if intent else None
+        pubs_meta = None
+        if attempt_path and attempt_path.is_file():
+            pubs_meta = json.loads(attempt_path.read_text(encoding="utf-8")).get("pubs")
+        if adapter is None and not raw_path.is_file():
             from .budget import bind_open_plan
 
             bound = bind_open_plan()
             if not bound.get("bound"):
                 return {"blocked": True, "ok": False, "reason": "RESUME_SERVICE_UNAVAILABLE", "job_id": job_id, "did_call_run": False}
-            adapter = PhysicalAdapter(bound["service"].backend(json.loads((DERIVED_DIR / "backend_pin.json").read_text())["backend"]), bound["service"])
+            adapter = PhysicalAdapter(
+                bound["service"].backend(json.loads((DERIVED_DIR / "backend_pin.json").read_text())["backend"]),
+                bound["service"],
+            )
+        if raw_path.is_file():
+            existing = json.loads(raw_path.read_text(encoding="utf-8"))
+            decoded = {"pubs": existing.get("pubs"), "n_pubs": existing.get("n_pubs_observed") or len(existing.get("pubs") or [])}
+            pubs_meta = existing.get("pub_mapping") or pubs_meta
+            job = None
+            if adapter is not None:
+                try:
+                    job = adapter.retrieve(job_id)
+                except Exception:
+                    job = None
+            if job is None:
+                from .runtime_adapter import FakePrimitiveResult, FakePubResult, FakeRuntimeJob
+
+                pubs = [FakePubResult(row.get("shots") or []) for row in (existing.get("pubs") or [])]
+                job = FakeRuntimeJob(job_id, FakePrimitiveResult(pubs), tags=tags)
+            now = datetime.now(timezone.utc).isoformat()
+            out = finalise_attempt(
+                store=store,
+                adapter=adapter,
+                job=job,
+                job_id=job_id,
+                intent=intent,
+                pubs_meta=pubs_meta,
+                tags=tags,
+                decoded=decoded,
+                usage_seconds=existing.get("charged_usage_seconds") if existing.get("usage_state") == "resolved" else None,
+                physical=bool(outstanding.get("physical")),
+                dispatched_utc=existing.get("created_utc") or now,
+                received_utc=existing.get("result_received_utc") or now,
+                elapsed_s=float(existing.get("client_elapsed_seconds") or 0.0),
+                metrics=existing.get("metrics"),
+            )
+            out["resumed"] = True
+            out["did_call_run"] = False
+            return out
         job = adapter.retrieve(job_id)
         decoded = decode_primitive_result(job.result())
-        write_json_atomic(
-            store.raw_dir / f"{job_id}.json",
-            {
-                "evidence_type": "sampled_simulation" if not getattr(adapter, "physical", False) else "decision_hardware",
-                "mock": not getattr(adapter, "physical", False),
-                "job_id": job_id,
-                "intent": outstanding.get("intent"),
-                "pubs": decoded["pubs"],
-                "resumed": True,
-            },
+        now = datetime.now(timezone.utc).isoformat()
+        out = finalise_attempt(
+            store=store,
+            adapter=adapter,
+            job=job,
+            job_id=job_id,
+            intent=intent,
+            pubs_meta=pubs_meta,
+            tags=tags,
+            decoded=decoded,
+            usage_seconds=None,
+            physical=bool(outstanding.get("physical") or getattr(adapter, "physical", False)),
+            dispatched_utc=now,
+            received_utc=now,
+            elapsed_s=0.0,
         )
-        for item in ledger.get("reservations", []):
-            if item.get("intent") == outstanding.get("intent"):
-                item["open"] = False
-                item["job_id"] = job_id
-        ledger["jobs_submitted"] = int(ledger.get("jobs_submitted", 0)) + 1
-        ledger["outstanding_job"] = None
-        store.save_ledger(ledger)
-        return {"ok": True, "resumed": True, "job_id": job_id, "did_call_run": False, "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 0}
+        out["resumed"] = True
+        out["did_call_run"] = False
+        return out
 
 
 def interrupted_dispatch_then_resume(store: CampaignStore | None = None) -> dict[str, Any]:
@@ -362,10 +638,14 @@ def interrupted_dispatch_then_resume(store: CampaignStore | None = None) -> dict
         ledger["outstanding_job"] = {
             "intent": first["intent"],
             "job_id": first["job_id"],
-            "tags": [f"decision-{first['intent'][:8]}"],
+            "tags": [f"decision-{first['intent'][:8]}", "decision-study"],
             "physical": False,
         }
         ledger["jobs_submitted"] = max(0, int(ledger.get("jobs_submitted", 1)) - 1)
+        ledger["history"] = [item for item in ledger.get("history", []) if item.get("job_id") != first["job_id"]]
+        ledger["usage_reconciled_seconds"] = 0.0
+        if ledger.get("frozen_allowance_seconds") is not None:
+            ledger["campaign_remaining_seconds"] = float(ledger["frozen_allowance_seconds"])
         for item in ledger.get("reservations", []):
             if item.get("intent") == first["intent"]:
                 item["open"] = True

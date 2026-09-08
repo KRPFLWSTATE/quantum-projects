@@ -9,7 +9,7 @@ from .budget import campaign_allowance, inspect_open_plan_usage
 from .ledger import can_submit, load_ledger
 from .legacy_audit import verify_hashes
 from .paths import DERIVED_DIR, HASHES_PATH, PROTOCOL_PATH, SRC_DIR, STUDY_ROOT
-from .hashing import sha256_file
+from .hashing import sha256_file, sha256_json
 
 
 REQUIRED_ISA = [f"D{i}_p{p}_isa.qpy" for i in range(1, 7) for p in (1, 2)]
@@ -78,6 +78,36 @@ def engineering_status(*, live_usage: dict | None = None) -> dict:
         blockers.append("LEGACY_HASH_BASELINE_MISSING")
     if not PROTOCOL_PATH.is_file():
         blockers.append("PROTOCOL_MISSING")
+    else:
+        protocol = json.loads(PROTOCOL_PATH.read_text(encoding="utf-8"))
+        body = {k: v for k, v in protocol.items() if k != "protocol_hash"}
+        if protocol.get("protocol_hash") != sha256_json(body):
+            blockers.append("PROTOCOL_HASH_MISMATCH")
+        if not protocol.get("freeze_complete"):
+            blockers.append("PROTOCOL_NOT_FROZEN")
+        recorded_code = protocol.get("code_sha256") or {}
+        for rel, expected in recorded_code.items():
+            path = STUDY_ROOT / rel
+            if not path.is_file() or sha256_file(path) != expected:
+                blockers.append("CODE_HASH_MISMATCH")
+                break
+        recorded_params = protocol.get("qaoa_parameters_sha256")
+        param_path = DERIVED_DIR / "qaoa_parameters.json"
+        if recorded_params and (not param_path.is_file() or sha256_file(param_path) != recorded_params):
+            blockers.append("PARAMETER_HASH_MISMATCH")
+        recorded_eq = protocol.get("circuit_equivalence_sha256")
+        eq_path = DERIVED_DIR / "circuit_equivalence.json"
+        if recorded_eq and (not eq_path.is_file() or sha256_file(eq_path) != recorded_eq):
+            blockers.append("EQUIVALENCE_HASH_MISMATCH")
+        recorded_isa = protocol.get("isa_qpy_sha256") or {}
+        for name, expected in recorded_isa.items():
+            path = DERIVED_DIR / "compile" / "qpy" / name
+            if not path.is_file() or sha256_file(path) != expected:
+                blockers.append("FROZEN_ISA_HASH_MISMATCH")
+                break
+        tests_hash = protocol.get("validate_unittests_sha256")
+        if tests_hash and tests_path.is_file() and sha256_file(tests_path) != tests_hash:
+            blockers.append("TEST_RECORD_HASH_MISMATCH")
     usage = live_usage if live_usage is not None else inspect_open_plan_usage()
     remaining = usage.get("remaining_seconds")
     if remaining is None:
@@ -90,7 +120,11 @@ def engineering_status(*, live_usage: dict | None = None) -> dict:
     if not submit_ok:
         blockers.append(submit_reason)
     estimate_path = DERIVED_DIR / "usage_estimate.json"
-    estimate = json.loads(estimate_path.read_text()) if estimate_path.is_file() else {}
+    if not estimate_path.is_file():
+        blockers.append("DURATION_ESTIMATE_MISSING")
+        estimate = {}
+    else:
+        estimate = json.loads(estimate_path.read_text())
     if estimate.get("exceeds_45s_cap") or (estimate.get("block_estimate_seconds") is not None and float(estimate["block_estimate_seconds"]) > 45):
         blockers.append("DURATION_ESTIMATE_EXCEEDS_45S")
     if estimate.get("error"):

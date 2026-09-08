@@ -6,7 +6,7 @@ import uuid
 from typing import Any
 
 
-def sampler_options_object():
+def sampler_options_object(job_tags: list[str] | None = None):
     from qiskit_ibm_runtime.options import SamplerOptions
 
     options = SamplerOptions()
@@ -18,6 +18,8 @@ def sampler_options_object():
             options.twirling.enable_measure = False
     if getattr(options, "dynamical_decoupling", None) is not None and hasattr(options.dynamical_decoupling, "enable"):
         options.dynamical_decoupling.enable = False
+    if job_tags:
+        options.environment.job_tags = list(job_tags)
     return options
 
 
@@ -67,8 +69,8 @@ class FakeRuntimeJob:
     def result(self) -> FakePrimitiveResult:
         return self._result
 
-    def usage(self) -> dict[str, Any]:
-        return {"quantum_seconds": 2.0, "qpu_usage": 2.0}
+    def usage(self, partial: bool = False) -> float:
+        return 2.0
 
 
 class FakeSamplerV2:
@@ -90,7 +92,11 @@ class FakeSamplerV2:
         pub_results = []
         for _ in pubs:
             pub_results.append(FakePubResult(["000111"] * int(shots)))
-        job = FakeRuntimeJob(job_id, FakePrimitiveResult(pub_results), tags=["decision-study"])
+        tags = []
+        env = getattr(self.options, "environment", None)
+        if env is not None and getattr(env, "job_tags", None):
+            tags = list(env.job_tags)
+        job = FakeRuntimeJob(job_id, FakePrimitiveResult(pub_results), tags=tags)
         self.jobs[job_id] = job
         return job
 
@@ -102,6 +108,14 @@ class FakeService:
 
     def job(self, job_id: str) -> FakeRuntimeJob:
         return self.jobs[job_id]
+
+    def jobs_by_tags(self, tags: list[str]) -> list[FakeRuntimeJob]:
+        wanted = set(tags or [])
+        found = []
+        for job in self.jobs.values():
+            if wanted and wanted.issubset(set(job.tags or [])):
+                found.append(job)
+        return found
 
 
 def decode_primitive_result(result: Any) -> dict[str, Any]:
@@ -128,6 +142,67 @@ def decode_primitive_result(result: Any) -> dict[str, Any]:
             }
         )
     return {"pubs": pubs, "n_pubs": len(pubs)}
+
+
+def interpret_usage(raw: Any, *, metrics: Any = None, status: Any = None) -> dict[str, Any]:
+    """Map RuntimeJobV2.usage() (scalar seconds) and pending metrics to a resolved charge."""
+    report = {"raw": raw if not isinstance(raw, float) else raw, "state": "unknown", "seconds": None, "final_zero": False}
+    if raw is None:
+        report["state"] = "unknown"
+        return report
+    if isinstance(raw, dict):
+        for key in ("quantum_seconds", "qpu_usage", "seconds"):
+            if isinstance(raw.get(key), (int, float)):
+                raw = float(raw[key])
+                break
+        else:
+            report["state"] = "unknown"
+            return report
+    if not isinstance(raw, (int, float)) or isinstance(raw, bool):
+        report["state"] = "unknown"
+        return report
+    seconds = float(raw)
+    metrics = metrics or {}
+    usage_block = metrics.get("usage") if isinstance(metrics, dict) else None
+    timestamps = metrics.get("timestamps") if isinstance(metrics, dict) else None
+    finished = False
+    if isinstance(timestamps, dict) and timestamps.get("finished"):
+        finished = True
+    if isinstance(usage_block, dict) and usage_block.get("quantum_seconds") is not None:
+        finished = True
+    status_s = str(status() if callable(status) else status or "").upper()
+    if seconds != 0.0:
+        report["state"] = "resolved"
+        report["seconds"] = seconds
+        report["final_zero"] = False
+        return report
+    if finished or "DONE" in status_s and isinstance(usage_block, dict):
+        report["state"] = "resolved"
+        report["seconds"] = 0.0
+        report["final_zero"] = True
+        return report
+    report["state"] = "pending"
+    report["seconds"] = None
+    return report
+
+
+def shots_are_valid(decoded: dict[str, Any]) -> bool:
+    from collections import Counter
+
+    pubs = decoded.get("pubs") or []
+    if len(pubs) != 12:
+        return False
+    for row in pubs:
+        shots = list(row.get("shots") or [])
+        if len(shots) != 1024 or int(row.get("n_shots") or 0) != 1024:
+            return False
+        for item in shots:
+            if not isinstance(item, str) or len(item) != 6 or any(ch not in "01" for ch in item):
+                return False
+        counts = {str(k): int(v) for k, v in (row.get("counts") or {}).items()}
+        if Counter(shots) != Counter(counts):
+            return False
+    return True
 
 
 def job_id_of(job: Any) -> str:

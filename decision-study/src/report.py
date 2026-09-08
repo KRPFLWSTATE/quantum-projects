@@ -14,12 +14,27 @@ from .paths import (
     FIGURES_DIR,
     MANUSCRIPT_DIR,
     PROTOCOL_PATH,
+    RAW_DIR,
     REPORTS_DIR,
     REPO_ROOT,
     TABLES_DIR,
     HASHES_PATH,
 )
 from .legacy_audit import verify_hashes
+
+
+def _hardware_record_stats() -> dict:
+    n = 0
+    usage = 0.0
+    if RAW_DIR.is_dir():
+        for path in RAW_DIR.glob("*.json"):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if data.get("evidence_type") == "decision_hardware" and not data.get("mock"):
+                n += 1
+                charged = data.get("charged_usage_seconds")
+                if isinstance(charged, (int, float)):
+                    usage += float(charged)
+    return {"n_jobs": n, "usage_seconds": usage}
 
 
 def write_reports() -> dict:
@@ -179,7 +194,7 @@ For each issue: affected section / factual correction / evidence / claimable now
     (MANUSCRIPT_DIR / "claims_to_evidence.csv").write_text(
         "claim,evidence_type,status,location\n"
         "20 GHZ jobs exist,historical_hardware,observed,dba-qpu-run/results/runs\n"
-        "QAOA decision hardware performance,decision_hardware,unavailable,not submitted\n"
+        "QAOA decision hardware performance,decision_hardware,from_raw_archives_if_any,decision-study/data/raw\n"
         "Independent QUBO/Ising agreement,ideal_simulation,tested,decision-study/tests\n"
         "Policy behaviour under spec change,policy_replay,simulated,derived/policy_replay.json\n"
         "Injected linkage faults,injected_fault,simulated,src/replay.py\n"
@@ -252,7 +267,7 @@ def _compose_report(audit, greedy, replay, usage, protocol, hash_check, extra=No
         "",
         "7. Prior art: see manuscript_support/prior_art.md. Links: Farhi https://arxiv.org/abs/1411.4028; Hadfield https://arxiv.org/abs/1709.03489; QProv https://doi.org/10.1049/qtc2.12012; Weder workflow https://doi.org/10.1007/s42979-022-01625-9; Gerlach https://proceedings.mlr.press/v267/gerlach25a.html; Shi https://cpb.iphy.ac.cn/article/doi/10.1088/1674-1056/adefd7; Hevner https://aisel.aisnet.org/misq/vol28/iss1/6/; Descazeaux https://aisel.aisnet.org/icis2025/quantum/quantum/5/. Candidate contribution: accept/reject/revalidate sampled pools when the organisational specification changes during an asynchronous request. Overlap: QAOA, provenance, hybrid workflows, MAPF agents are established. Novelty: UNRESOLVED because full texts were not uniformly read. Do not mark publication-ready on novelty grounds. Classical analogues (cache invalidation / stale-result handling) are conceptual only.",
         "",
-        f"8. Protocol id={protocol.get('protocol_id')} hash={protocol.get('protocol_hash')}. Local evidence: encodings, greedy, ideal QAOA parameters, policy replay, ISA compile. Decision hardware evidence count: 0. No protocol retune after hardware (none exists).",
+        f"8. Protocol id={protocol.get('protocol_id')} hash={protocol.get('protocol_hash')}. Local evidence: encodings, greedy, ideal QAOA parameters, policy replay, ISA compile. Decision hardware evidence count: {_hardware_record_stats()['n_jobs']}. No protocol retune after hardware outcomes.",
         "",
         "9. Classical: exact enumeration is the independent oracle and a practical baseline at n=6 and may dominate the hybrid workflow. Greedy+swaps is the operational incumbent source and may be suboptimal (D3 greedy 21 vs 23; D5 greedy 22 vs 23; D1/D2/D4/D6 greedy already optimal so no incumbent headroom). Uniform bitstrings and cardinality-k sampling are in reports/tables/. Prefixes [1,4,16,64,256,1024] are dependent analyses of one stream.",
         f"greedy={json.dumps(greedy)[:4000]}",
@@ -261,7 +276,7 @@ def _compose_report(audit, greedy, replay, usage, protocol, hash_check, extra=No
         "",
         f"11. Quantum budget: user-stated remaining ~540s is an upper planning bound. Live service.usage() remaining was extracted from usage_remaining_seconds. usage_probe_redacted={json.dumps(usage)[:2000]} estimate={json.dumps(extra.get('estimate') or {})[:1500]}",
         "",
-        "12. NEW QPU JOBS SUBMITTED: 0",
+        f"12. NEW QPU JOBS SUBMITTED (from decision_hardware archives): {_hardware_record_stats()['n_jobs']}; charged_usage_seconds_sum={_hardware_record_stats()['usage_seconds']}",
         "",
         "13. Manuscript DOCX not found locally; correction map written under manuscript_support/. Canonical manuscript not modified. Proposed working title is a proposal only.",
         "",

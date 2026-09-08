@@ -1,6 +1,6 @@
 claim,evidence_type,status,location
 20 GHZ jobs exist,historical_hardware,observed,dba-qpu-run/results/runs
-QAOA decision hardware performance,decision_hardware,unavailable,not submitted
+QAOA decision hardware performance,decision_hardware,from_raw_archives_if_any,decision-study/data/raw
 Independent QUBO/Ising agreement,ideal_simulation,tested,decision-study/tests
 Policy behaviour under spec change,policy_replay,simulated,derived/policy_replay.json
 Injected linkage faults,injected_fault,simulated,src/replay.py
