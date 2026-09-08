@@ -1,0 +1,106 @@
+{
+  "backend_rule": "Pin one Open Plan operational backend chosen by documented deterministic rule before block 1; do not use historical GHZ fidelity.",
+  "blocks_planned": 6,
+  "candidate_prefixes": [
+    1,
+    4,
+    16,
+    64,
+    256,
+    1024
+  ],
+  "circuit_equivalence_sha256": "002c87ddc0b6e696e8062a463454c0ce9452062d1d996330c1b5a045bdcc0eba",
+  "code_sha256": {
+    "src/__init__.py": "d0352ce338cf5f91bb17e7723cf9511885f4cd6061640fba934b5bafe43ccbb8",
+    "src/agents.py": "902ca6ccba65e38a3e7e5e5d4215751aaae63045a7e6491293569963c2f5255e",
+    "src/analysis.py": "67d3c5b29904da2a59670a25723fd09740a013bd8f8bca3575934ed761c35003",
+    "src/archive.py": "45d66b1de17a8ae1beb825e74546fe5172bfb494a19c5f1d48196d65bf18ab16",
+    "src/budget.py": "c930fb270b42f7e64f6b37b0619acc66a8b2e8768d3b6b183d613cac084c9f4a",
+    "src/classical.py": "39b99810441b0d74839830e9a87e7b4992213cece9f5473eede4b5d7bc88cdef",
+    "src/compile.py": "1163b4ba08767da093f4838c1c261694e25a2c0419588873f8e1e7f8233fc6cb",
+    "src/fake_provider.py": "b79a759ce02c979ab5f4b9a419ead705af69c48522a35138c559ff6ee85d03e2",
+    "src/figures.py": "e11f5fa27aed92d62de93aab199276f2dc9749aacecc01bf586779e66f6d4de4",
+    "src/fixtures.py": "6a8b043466326abcec9260767c97deec2ec21f294c2b7408eaaf0b2478ed02f4",
+    "src/freeze.py": "87871aabd0053b175020d93cdd6634ab0e34a2c7f73f90a35841c91f5740e2e4",
+    "src/hardware.py": "b6517306f5c1b1d381cb0ea540f24a22030b93670836ce6f3c08220c815303c0",
+    "src/hashing.py": "cb16e255e62068bbcdc6e79b3dcfe1635f1f47e9a63961da766729c954de127d",
+    "src/ledger.py": "883a89425b075cd0e433be0ef515065cd38fa627eeb2fc0ebf487a31ebe75746",
+    "src/legacy_audit.py": "9878e268ebbdb29cd2642a1ffab9e19cf3d341f68488902f16186a23986387e2",
+    "src/model.py": "c234ed17a45c5fbf3bf6e55f9f11cd799c72a8a823fb99281bfe3b0ff654164c",
+    "src/optimiser.py": "edd9fc09077a488446b1c6a0d6b63bb177ac82ee81fab4f0b1d815c27a622bad",
+    "src/oracle.py": "6cf0784c886cb74006fbb7454e3f023e5f8ea747b956756fa182fe89470019f9",
+    "src/packet.py": "8065007783882655d7bf70d6ee69647547bac552ed04c71a17b2d15af3c02a1a",
+    "src/paths.py": "112d6cd209d49e0fbc48948a19bf585394329e2a05a044fa16349b741fca56fd",
+    "src/policies.py": "4425162dfd03073fc6d9957cd634934016d3146134c8dd8e805640ed8a967bce",
+    "src/provenance.py": "6136fac7cec108c0a16f976498257e3f592394bcdd2eeb95ce1ed4b2aa167952",
+    "src/qaoa.py": "94a7b650a3bb71f438bc68bd14724766c87007e1420b15c3656f24e897d1c818",
+    "src/readiness.py": "31d7a0f9d38a81af640fc78da6ffe460fb99c74635d833cb051bd19fdfdc3537",
+    "src/replay.py": "f78736c52bff9dcb966787421bc31f40e803bf0f48280b8143fe8adc260137e0",
+    "src/report.py": "da86e94134593ee4f25767918cd13607502c75bfcc215da255bfb33a31ab73d0",
+    "src/runner.py": "8c1afb27018fac90f2d9fac27e2f641f5b75dd9f59e21fe2ef339a86b4d715ce",
+    "src/runtime_adapter.py": "30f594d705a825da360a0341f2d3319e051d598278defcaa25fb5d81b1696593",
+    "src/sampler_api.py": "030e6da403fd4a35f6dc5254e31a6df0700c451a47f5435503ea0edaff7ba020",
+    "src/spec.py": "4e2de910bea2a1784f1868f8a4aac126e7218b86c65fa393d11e1b1c31744ef8",
+    "src/store.py": "87292f4213f303221430ab24492e45a144953f089d81490b5f1bd8e7cb930b18",
+    "src/usage_estimate.py": "07f75fba37f229d00a83ae3f678320e34c8d4d6dba8b69c5c6b761628aae4ca8",
+    "src/verifier.py": "722de2bd4f20106064cbd8f6b8146de6ac78f14bed8c59b1ceea81c658156dea",
+    "study.py": "07b613bc589ad75941a24891832784b0cbd960a22f37fe6d85fd471f4a3d48bd"
+  },
+  "created_utc": "2026-09-08T17:51:57.481137+00:00",
+  "deadlines_seconds": [
+    5,
+    30,
+    300
+  ],
+  "depths": [
+    1,
+    2
+  ],
+  "dynamical_decoupling": "disabled_if_api_exposes",
+  "fixtures": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "freeze_complete": true,
+  "frozen_utc": "2026-09-08T22:07:24.934911+00:00",
+  "isa_qpy_sha256": {
+    "D1_p1_isa.qpy": "103d4e893368bdb247d0ec08bc490d38e76a045931e32c0a58356ac28107567a",
+    "D1_p2_isa.qpy": "2307af2fe41c10492e361ed27a2e7228371633fa77f6cae10c64ea44f784307f",
+    "D2_p1_isa.qpy": "6d858106402fa4a1c4f7a99a0ca8c8d6d50370f5eecdbe8f4fa12c8658ce614d",
+    "D2_p2_isa.qpy": "c3401971302e82c9204e2b3c0005100da97ade048b54dfad0eb1bc777b47f244",
+    "D3_p1_isa.qpy": "6f65e347d9c98917141a91c66f9d7ea02dbee0879e12fe5e33772d397122c3de",
+    "D3_p2_isa.qpy": "f3ef652268b92f04b13f32bd30b5db5ee9916df5ccf9be381f240178487215ba",
+    "D4_p1_isa.qpy": "0e92af39d85f7b85dbcbf61e08d14f07920e9019a4f650ee11ce2e5776ccdd6a",
+    "D4_p2_isa.qpy": "064db2c31e5f942c07cb51ee3100ef70e835c1dcb72908a17ff62a6b072fc136",
+    "D5_p1_isa.qpy": "37be7f480e67f3201d200e06b6695b51a6bd044106dca6d6758fad5412dba875",
+    "D5_p2_isa.qpy": "c6ba69bed63dd92f6d10b0f1f9da96c2ca4a0cd71dea2aaf3e336090128d25c2",
+    "D6_p1_isa.qpy": "1a0c0a5c26f8a54f943e32343e1228a1ab449800ab939e276db8cdaf39e567a6",
+    "D6_p2_isa.qpy": "e9e0cf2edfc94433432e65325bac3594b4b8a82dd400bce79b7a0554f4fa6c0a"
+  },
+  "max_execution_time_seconds": 45,
+  "notes": [
+    "Simulator-optimised QAOA evaluated on hardware later.",
+    "Do not retune after hardware outcomes without a new protocol version.",
+    "Frozen QAOA parameters are the saved pre-repair Powell selections (scipy result.x). Callback-best retention is implemented in the optimiser but was not used to replace this frozen set."
+  ],
+  "parameter_selection": "pre_repair_powell_result_x",
+  "protocol_hash": "8cd97a0287c1f7d80f3daa9cec1e7fc4a9ee30d7e29f0a23654f5de14ea7eb2c",
+  "protocol_id": "decision-qaoa-p1p2-v1",
+  "pubs_per_block": 12,
+  "qaoa_parameters_sha256": "9bdb51a97b890b3535407f3d35b34f390612862c49a33459d8c6b8defa0b8d26",
+  "shots_per_pub": 1024,
+  "structural_ceilings": {
+    "active_qubits": 12,
+    "depth": 600,
+    "two_qubit": 250
+  },
+  "transpiler": {
+    "optimization_level": 1,
+    "seed": 20260908
+  },
+  "twirling": "disabled_if_api_exposes"
+}

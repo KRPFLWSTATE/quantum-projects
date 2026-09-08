@@ -1,0 +1,32 @@
+{
+  "bound": true,
+  "error": null,
+  "instance_name": "open-instance",
+  "instance_redacted": true,
+  "open_instance_count": 1,
+  "plan": "open",
+  "queried": true,
+  "raw_usage_keys": [
+    "instance_id",
+    "plan_id",
+    "usage_consumed_seconds",
+    "usage_limit_reached",
+    "usage_limit_seconds",
+    "usage_period",
+    "usage_remaining_seconds"
+  ],
+  "remaining_seconds": 554.0,
+  "timestamp_utc": "2026-09-08T22:07:24.938959+00:00",
+  "usage": {
+    "instance_id": "<redacted>",
+    "plan_id": "<redacted>",
+    "usage_consumed_seconds": 46,
+    "usage_limit_reached": false,
+    "usage_limit_seconds": 600,
+    "usage_period": {
+      "end_time": "2026-09-08T22:07:33.063Z",
+      "start_time": "2026-08-11T22:07:33.063Z"
+    },
+    "usage_remaining_seconds": 554
+  }
+}

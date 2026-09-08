@@ -1,0 +1,169 @@
+{
+  "created_utc": "2026-09-08T18:02:13.891006+00:00",
+  "error": null,
+  "jobs": [
+    {
+      "archive_file": "run_01_ibm_kingston.json",
+      "backend": "<IBMBackend('ibm_kingston')>",
+      "file": "run_01_ibm_kingston_supplementary.json",
+      "job_id": "da6c1u60ukec7381slv0",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_02_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_02_ibm_fez_supplementary.json",
+      "job_id": "da715qe0ukec7382m480",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_03_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_03_ibm_fez_supplementary.json",
+      "job_id": "dabb4gpl216s739pap00",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_04_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_04_ibm_marrakesh_supplementary.json",
+      "job_id": "dabjia809bds739s745g",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_05_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_05_ibm_marrakesh_supplementary.json",
+      "job_id": "dac1dm0c4p7c738kmq6g",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_06_ibm_kingston.json",
+      "backend": "<IBMBackend('ibm_kingston')>",
+      "file": "run_06_ibm_kingston_supplementary.json",
+      "job_id": "dac7fr5nj4cs73ac93vg",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_07_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_07_ibm_fez_supplementary.json",
+      "job_id": "dacku7tnj4cs73acpgn0",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_08_ibm_kingston.json",
+      "backend": "<IBMBackend('ibm_kingston')>",
+      "file": "run_08_ibm_kingston_supplementary.json",
+      "job_id": "dacqshe42tqs73asiaa0",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_09_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_09_ibm_marrakesh_supplementary.json",
+      "job_id": "dadbm2d1ierc738klg2g",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_10_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_10_ibm_fez_supplementary.json",
+      "job_id": "dae9knm42tqs73audj90",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_11_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_11_ibm_fez_supplementary.json",
+      "job_id": "daej6ht1ierc738m806g",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_12_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_12_ibm_marrakesh_supplementary.json",
+      "job_id": "daekkq5nj4cs73af9tq0",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_13_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_13_ibm_marrakesh_supplementary.json",
+      "job_id": "daetchd1ierc738mk190",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_14_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_14_ibm_fez_supplementary.json",
+      "job_id": "daf6dhm42tqs73avhlc0",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_15_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_15_ibm_fez_supplementary.json",
+      "job_id": "dafjq4m42tqs73b01qhg",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_16_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_16_ibm_marrakesh_supplementary.json",
+      "job_id": "dafqipe42tqs73b0bfsg",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_17_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_17_ibm_fez_supplementary.json",
+      "job_id": "dag140omhr3c73e4h5hg",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_18_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_18_ibm_marrakesh_supplementary.json",
+      "job_id": "dag1u40mhr3c73e4i5ag",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_19_ibm_marrakesh.json",
+      "backend": "<IBMBackend('ibm_marrakesh')>",
+      "file": "run_19_ibm_marrakesh_supplementary.json",
+      "job_id": "dag30qj9k43c73acqeu0",
+      "retrieved": true,
+      "status": "DONE"
+    },
+    {
+      "archive_file": "run_20_ibm_fez.json",
+      "backend": "<IBMBackend('ibm_fez')>",
+      "file": "run_20_ibm_fez_supplementary.json",
+      "job_id": "dag3hpb9k43c73acr12g",
+      "retrieved": true,
+      "status": "DONE"
+    }
+  ],
+  "label": "supplementary_retrieval_not_historical_export",
+  "new_qpu_jobs_submitted": 0,
+  "rewrote_historical_exports": false
+}

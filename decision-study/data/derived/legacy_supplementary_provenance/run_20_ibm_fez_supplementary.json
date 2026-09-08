@@ -1,0 +1,15 @@
+{
+  "archive_file": "run_20_ibm_fez.json",
+  "backend": "<IBMBackend('ibm_fez')>",
+  "job_id": "dag3hpb9k43c73acr12g",
+  "metrics_keys": [
+    "caller",
+    "qiskit_version",
+    "timestamps",
+    "usage",
+    "circuits_execution_time_ns"
+  ],
+  "note": "Supplementary. Does not replace dba-qpu-run exports. Missing fields remain unknown.",
+  "status": "DONE",
+  "usage": 2
+}

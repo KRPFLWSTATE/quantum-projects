@@ -1,0 +1,14 @@
+{
+  "campaign_cap_seconds": 300,
+  "campaign_id": "decision-qaoa-20260908",
+  "campaign_remaining_seconds": 300.0,
+  "history": [],
+  "jobs_cap": 6,
+  "jobs_submitted": 0,
+  "outstanding_job": null,
+  "per_job_reserve_seconds": 45,
+  "preserve_free_seconds": 90,
+  "protocol_id": "decision-qaoa-p1p2-v1",
+  "reservations": [],
+  "usage_reconciled_seconds": 0.0
+}

@@ -1,0 +1,8 @@
+claim,evidence_type,status,location
+20 GHZ jobs exist,historical_hardware,observed,dba-qpu-run/results/runs
+QAOA decision hardware performance,decision_hardware,unavailable,not submitted
+Independent QUBO/Ising agreement,ideal_simulation,tested,decision-study/tests
+Policy behaviour under spec change,policy_replay,simulated,derived/policy_replay.json
+Injected linkage faults,injected_fault,simulated,src/replay.py
+ISA compile on ibm_fez rule,ideal_simulation,local_compile,derived/compile/isa_summary.json
+Novelty of spec-change policy,literature,unresolved,manuscript_support/prior_art.md

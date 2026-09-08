@@ -1,0 +1,21 @@
+{
+  "self_hash_excluded": true,
+  "files": {
+    "START-HERE.md": {
+      "sha256": "76e66aa9e21c42b7b9fa2663c9f3ee7bfa722334ad32d19c23cb2c2bd42d18b5",
+      "bytes": 15741
+    },
+    "circuit-verification.json": {
+      "sha256": "0835a6329349d894e65dcd363b6c093d38a68d7265cf0431ee466855ccd161ff",
+      "bytes": 10266
+    },
+    "independent-test-log.txt": {
+      "sha256": "df843efea249ec2ef7c56dceeda4bf403794e8f1615d6d4a79a27e477217aa8a",
+      "bytes": 2424
+    },
+    "verify_isa.py": {
+      "sha256": "896dccbc5b7c2c59512b82220579c6d491f8a25ab253ce484aae14b5d5310963",
+      "bytes": 7519
+    }
+  }
+}

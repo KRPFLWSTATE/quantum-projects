@@ -1,0 +1,56 @@
+[
+  {
+    "accepted": 607,
+    "evidence_type": "sampled_simulation",
+    "instance_id": "D1",
+    "proposals": 1024,
+    "rejected_conflicts": 417,
+    "subset_space": 20,
+    "work": 1024
+  },
+  {
+    "accepted": 411,
+    "evidence_type": "sampled_simulation",
+    "instance_id": "D2",
+    "proposals": 1024,
+    "rejected_conflicts": 613,
+    "subset_space": 20,
+    "work": 1024
+  },
+  {
+    "accepted": 439,
+    "evidence_type": "sampled_simulation",
+    "instance_id": "D3",
+    "proposals": 1024,
+    "rejected_conflicts": 585,
+    "subset_space": 20,
+    "work": 1024
+  },
+  {
+    "accepted": 316,
+    "evidence_type": "sampled_simulation",
+    "instance_id": "D4",
+    "proposals": 1024,
+    "rejected_conflicts": 708,
+    "subset_space": 20,
+    "work": 1024
+  },
+  {
+    "accepted": 298,
+    "evidence_type": "sampled_simulation",
+    "instance_id": "D5",
+    "proposals": 1024,
+    "rejected_conflicts": 726,
+    "subset_space": 20,
+    "work": 1024
+  },
+  {
+    "accepted": 290,
+    "evidence_type": "sampled_simulation",
+    "instance_id": "D6",
+    "proposals": 1024,
+    "rejected_conflicts": 734,
+    "subset_space": 20,
+    "work": 1024
+  }
+]

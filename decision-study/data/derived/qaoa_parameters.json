@@ -1,0 +1,3210 @@
+{
+  "fixtures": [
+    {
+      "instance_id": "D1",
+      "p1": {
+        "best": {
+          "betas": [
+            2.945243112740431
+          ],
+          "expectation_e_over_a": 0.3828397406854764,
+          "gammas": [
+            0.39269908169872414
+          ],
+          "ideal_feasibility_probability": 0.4341740033880601,
+          "ideal_optimal_hit_probability": 0.03754015811353558,
+          "kind": "grid_start",
+          "message": "grid_point",
+          "nfev": 1,
+          "success": true,
+          "uniform_feasibility_probability": 0.1875
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "grid_points": 289,
+        "instance_id": "D1",
+        "p": 1,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.3111983339268765
+              ],
+              "expectation_e_over_a": 0.9422185835838705,
+              "gammas": [
+                2.4689502749966703
+              ],
+              "ideal_feasibility_probability": 0.18913055936303547,
+              "ideal_optimal_hit_probability": 0.015747410524173774,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 20,
+              "objective_evals": 20,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                2.945243112740431
+              ],
+              "expectation_e_over_a": 0.3828397406854764,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.4341740033880601,
+              "ideal_optimal_hit_probability": 0.03754015811353558,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3058772768066214
+              ],
+              "expectation_e_over_a": 0.929627370076907,
+              "gammas": [
+                2.5080311099680626
+              ],
+              "ideal_feasibility_probability": 0.1746644936908852,
+              "ideal_optimal_hit_probability": 0.014200574480196862,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 22,
+              "objective_evals": 22,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                1.3744467859455345
+              ],
+              "expectation_e_over_a": 0.4261423463791288,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.4123252829124675,
+              "ideal_optimal_hit_probability": 0.037322277196221915,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3063807743944738
+              ],
+              "expectation_e_over_a": 0.9302474316725812,
+              "gammas": [
+                2.5040015068881996
+              ],
+              "ideal_feasibility_probability": 0.17614405207538705,
+              "ideal_optimal_hit_probability": 0.014359905989143792,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                2.748893571891069
+              ],
+              "expectation_e_over_a": 0.7890151295573169,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.39389631033612565,
+              "ideal_optimal_hit_probability": 0.03487540532687323,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3000602141604454
+              ],
+              "expectation_e_over_a": 0.9363705128837903,
+              "gammas": [
+                2.561152300348025
+              ],
+              "ideal_feasibility_probability": 0.1556027926071989,
+              "ideal_optimal_hit_probability": 0.012129811978380825,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 23,
+              "objective_evals": 23,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                1.1780972450961724
+              ],
+              "expectation_e_over_a": 0.86902791176686,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.36243864434147016,
+              "ideal_optimal_hit_probability": 0.03452706356916733,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          }
+        ],
+        "wall_seconds": 0.25816525000846013
+      },
+      "p2": {
+        "best": {
+          "betas": [
+            1.1383106937967755,
+            2.322456619996583
+          ],
+          "expectation_e_over_a": 0.23004307348322237,
+          "gammas": [
+            3.099382127958236,
+            1.6124536741631312
+          ],
+          "ideal_feasibility_probability": 0.47493611977249767,
+          "ideal_optimal_hit_probability": 0.05393030525424697,
+          "kind": "powell",
+          "message": "Maximum number of function evaluations has been exceeded.",
+          "nfev": 500,
+          "note": "seeded_random",
+          "objective_evals": 500,
+          "success": false,
+          "uniform_feasibility_probability": 0.1875
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "instance_id": "D1",
+        "p": 2,
+        "seed": 20261025,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.3111983339268634,
+                1.3231279295605967
+              ],
+              "expectation_e_over_a": 0.9508033427748952,
+              "gammas": [
+                2.4689502749966703,
+                2.6356091070558314
+              ],
+              "ideal_feasibility_probability": 0.34201271563722546,
+              "ideal_optimal_hit_probability": 0.030086896137179294,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 55,
+              "note": "p1_embedded_identity_second_layer",
+              "objective_evals": 55,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                2.945243112740431,
+                0.0
+              ],
+              "expectation_e_over_a": 0.3828397406854764,
+              "gammas": [
+                0.39269908169872414,
+                0.0
+              ],
+              "ideal_feasibility_probability": 0.4341740033880601,
+              "ideal_optimal_hit_probability": 0.03754015811353558,
+              "kind": "start",
+              "nfev": 1,
+              "note": "p1_embedded_identity_second_layer",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.1383106937967755,
+                2.322456619996583
+              ],
+              "expectation_e_over_a": 0.23004307348322237,
+              "gammas": [
+                3.099382127958236,
+                1.6124536741631312
+              ],
+              "ideal_feasibility_probability": 0.47493611977249767,
+              "ideal_optimal_hit_probability": 0.05393030525424697,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                0.9815854488011613,
+                2.1032545298715846
+              ],
+              "expectation_e_over_a": 3.3588976917568756,
+              "gammas": [
+                1.0065062397993578,
+                0.8947350552856745
+              ],
+              "ideal_feasibility_probability": 0.14989819948004793,
+              "ideal_optimal_hit_probability": 0.011941238938744707,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.370426089729721,
+                1.3126542734508944
+              ],
+              "expectation_e_over_a": 0.9817906628884264,
+              "gammas": [
+                2.517520997533272,
+                2.3120919931802995
+              ],
+              "ideal_feasibility_probability": 0.27406793791660977,
+              "ideal_optimal_hit_probability": 0.02639591135821797,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 195,
+              "note": "seeded_random",
+              "objective_evals": 195,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                1.0071283835272067,
+                1.7141374635334656
+              ],
+              "expectation_e_over_a": 2.262775008678198,
+              "gammas": [
+                0.5141013124302859,
+                3.440307973446291
+              ],
+              "ideal_feasibility_probability": 0.07368563445741798,
+              "ideal_optimal_hit_probability": 0.008721158382133448,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.297738200292442,
+                1.8576471727866073
+              ],
+              "expectation_e_over_a": 1.4808282580672205,
+              "gammas": [
+                2.48686754600598,
+                2.617676797442815
+              ],
+              "ideal_feasibility_probability": 0.07244806198409516,
+              "ideal_optimal_hit_probability": 0.00514525926752143,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 238,
+              "note": "seeded_random",
+              "objective_evals": 238,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                2.7463453205519928,
+                0.11159939841421178
+              ],
+              "expectation_e_over_a": 3.6578296528378864,
+              "gammas": [
+                4.972762170690592,
+                4.025093083706114
+              ],
+              "ideal_feasibility_probability": 0.03400415487555918,
+              "ideal_optimal_hit_probability": 0.002620759810195904,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3575509716525536,
+                1.2606327204103864
+              ],
+              "expectation_e_over_a": 0.8508097182166363,
+              "gammas": [
+                2.3425682701131407,
+                2.535512505291937
+              ],
+              "ideal_feasibility_probability": 0.32935777275945644,
+              "ideal_optimal_hit_probability": 0.03169481640789739,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 312,
+              "note": "seeded_random",
+              "objective_evals": 312,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                1.332944085429033,
+                2.965743858777655
+              ],
+              "expectation_e_over_a": 2.3265507752215995,
+              "gammas": [
+                5.732632960801411,
+                0.7204118473045684
+              ],
+              "ideal_feasibility_probability": 0.17362039704533042,
+              "ideal_optimal_hit_probability": 0.012699623368527223,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                2.0949220454371833,
+                2.3289672136280233
+              ],
+              "expectation_e_over_a": 1.4710729450603348,
+              "gammas": [
+                4.574828305533501,
+                3.325844803933567
+              ],
+              "ideal_feasibility_probability": 0.16525766696653663,
+              "ideal_optimal_hit_probability": 0.007121242451899792,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 165,
+              "note": "seeded_random",
+              "objective_evals": 165,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                2.6581638320990706,
+                2.0806788314028575
+              ],
+              "expectation_e_over_a": 3.592300378285099,
+              "gammas": [
+                2.026515642415947,
+                5.619045914045201
+              ],
+              "ideal_feasibility_probability": 0.018586339544222525,
+              "ideal_optimal_hit_probability": 0.00019935666653600595,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3302582872635111,
+                1.2686446150225927
+              ],
+              "expectation_e_over_a": 1.4894138886568737,
+              "gammas": [
+                1.6109296223711858,
+                2.289103803582362
+              ],
+              "ideal_feasibility_probability": 0.2914445792725375,
+              "ideal_optimal_hit_probability": 0.018277255107519697,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 154,
+              "note": "seeded_random",
+              "objective_evals": 154,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                0.3768800866418878,
+                1.5963749466484867
+              ],
+              "expectation_e_over_a": 2.031577684810598,
+              "gammas": [
+                1.2930362926700616,
+                6.108324245739595
+              ],
+              "ideal_feasibility_probability": 0.24372237428419505,
+              "ideal_optimal_hit_probability": 0.023249552619533338,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                2.1824354976657125,
+                2.254873429204716
+              ],
+              "expectation_e_over_a": 1.4509401329755798,
+              "gammas": [
+                4.734544820420584,
+                2.800428210296387
+              ],
+              "ideal_feasibility_probability": 0.06931666705934211,
+              "ideal_optimal_hit_probability": 0.011976206122382406,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 107,
+              "note": "seeded_random",
+              "objective_evals": 107,
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            },
+            "start": {
+              "betas": [
+                2.063162277138961,
+                0.9601865122745564
+              ],
+              "expectation_e_over_a": 3.4606592548979447,
+              "gammas": [
+                4.120445863494001,
+                3.0549260966001586
+              ],
+              "ideal_feasibility_probability": 0.1383903663678859,
+              "ideal_optimal_hit_probability": 0.011522305115156587,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.1875
+            }
+          }
+        ],
+        "wall_seconds": 1.2836599170113914
+      }
+    },
+    {
+      "instance_id": "D2",
+      "p1": {
+        "best": {
+          "betas": [
+            2.945243112740431
+          ],
+          "expectation_e_over_a": 0.5622343912241758,
+          "gammas": [
+            0.39269908169872414
+          ],
+          "ideal_feasibility_probability": 0.3152524196414115,
+          "ideal_optimal_hit_probability": 0.07946271031232066,
+          "kind": "grid_start",
+          "message": "grid_point",
+          "nfev": 1,
+          "success": true,
+          "uniform_feasibility_probability": 0.125
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "grid_points": 289,
+        "instance_id": "D2",
+        "p": 1,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.3554761337636714
+              ],
+              "expectation_e_over_a": 1.4110747901755916,
+              "gammas": [
+                2.3441307443754864
+              ],
+              "ideal_feasibility_probability": 0.08915372565338756,
+              "ideal_optimal_hit_probability": 0.022594594641690672,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 27,
+              "objective_evals": 27,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                2.945243112740431
+              ],
+              "expectation_e_over_a": 0.5622343912241758,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.3152524196414115,
+              "ideal_optimal_hit_probability": 0.07946271031232066,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3493887080179774
+              ],
+              "expectation_e_over_a": 1.3967255739522033,
+              "gammas": [
+                2.3933289370872544
+              ],
+              "ideal_feasibility_probability": 0.08077193978818582,
+              "ideal_optimal_hit_probability": 0.02057662048406505,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                1.3744467859455345
+              ],
+              "expectation_e_over_a": 0.6281602476869454,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.3152524196414111,
+              "ideal_optimal_hit_probability": 0.07794730602759761,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3531582378158067
+              ],
+              "expectation_e_over_a": 1.4042308810548443,
+              "gammas": [
+                2.3587420408073627
+              ],
+              "ideal_feasibility_probability": 0.08639040679369914,
+              "ideal_optimal_hit_probability": 0.021919357121405428,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 27,
+              "objective_evals": 27,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                2.748893571891069
+              ],
+              "expectation_e_over_a": 0.9923583047595037,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.2933312084807277,
+              "ideal_optimal_hit_probability": 0.07445131825406945,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.348353914511032
+              ],
+              "expectation_e_over_a": 1.39927099285855,
+              "gammas": [
+                2.4168083957999453
+              ],
+              "ideal_feasibility_probability": 0.07768017322056522,
+              "ideal_optimal_hit_probability": 0.019867365493758324,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                1.1780972450961724
+              ],
+              "expectation_e_over_a": 1.1141734036579622,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.2933312084807277,
+              "ideal_optimal_hit_probability": 0.07187248721504413,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          }
+        ],
+        "wall_seconds": 0.275242083997
+      },
+      "p2": {
+        "best": {
+          "betas": [
+            1.0039324958198246,
+            2.3397963110029534
+          ],
+          "expectation_e_over_a": -0.2685501673815466,
+          "gammas": [
+            3.1509861936328956,
+            2.362448124318263
+          ],
+          "ideal_feasibility_probability": 0.9064565938651559,
+          "ideal_optimal_hit_probability": 0.2270119177317691,
+          "kind": "powell",
+          "message": "Optimization terminated successfully.",
+          "nfev": 167,
+          "note": "seeded_random",
+          "objective_evals": 167,
+          "success": true,
+          "uniform_feasibility_probability": 0.125
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "instance_id": "D2",
+        "p": 2,
+        "seed": 20261026,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.3554761337629055,
+                1.75101501063676
+              ],
+              "expectation_e_over_a": 1.2571130195950753,
+              "gammas": [
+                2.3441307443754864,
+                6.149439940314558
+              ],
+              "ideal_feasibility_probability": 0.15769134510825467,
+              "ideal_optimal_hit_probability": 0.034968118944072424,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 69,
+              "note": "p1_embedded_identity_second_layer",
+              "objective_evals": 69,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                2.945243112740431,
+                0.0
+              ],
+              "expectation_e_over_a": 0.5622343912241758,
+              "gammas": [
+                0.39269908169872414,
+                0.0
+              ],
+              "ideal_feasibility_probability": 0.3152524196414115,
+              "ideal_optimal_hit_probability": 0.07946271031232066,
+              "kind": "start",
+              "nfev": 1,
+              "note": "p1_embedded_identity_second_layer",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.4890189306521464,
+                1.8463399638258262
+              ],
+              "expectation_e_over_a": 1.5963773449125913,
+              "gammas": [
+                2.441471196723744,
+                2.421700436024628
+              ],
+              "ideal_feasibility_probability": 0.22951083824575802,
+              "ideal_optimal_hit_probability": 0.05992113184659415,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 230,
+              "note": "seeded_random",
+              "objective_evals": 230,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                2.854112868054836,
+                1.4701594887217742
+              ],
+              "expectation_e_over_a": 3.3411761592542764,
+              "gammas": [
+                4.944428797609106,
+                3.9556369230281296
+              ],
+              "ideal_feasibility_probability": 0.0409981482724238,
+              "ideal_optimal_hit_probability": 0.01631546222551827,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5706196585574772,
+                2.355532690389111
+              ],
+              "expectation_e_over_a": 1.3627926854759065,
+              "gammas": [
+                3.8665449585333636,
+                3.8865756762039414
+              ],
+              "ideal_feasibility_probability": 0.10428284170062652,
+              "ideal_optimal_hit_probability": 0.02331848122752552,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 296,
+              "note": "seeded_random",
+              "objective_evals": 296,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                2.4436408652878026,
+                3.042888724734868
+              ],
+              "expectation_e_over_a": 2.380093295882456,
+              "gammas": [
+                0.1251354939125455,
+                3.345823939173822
+              ],
+              "ideal_feasibility_probability": 0.06530322115892552,
+              "ideal_optimal_hit_probability": 0.015814962321925752,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.0039324958198246,
+                2.3397963110029534
+              ],
+              "expectation_e_over_a": -0.2685501673815466,
+              "gammas": [
+                3.1509861936328956,
+                2.362448124318263
+              ],
+              "ideal_feasibility_probability": 0.9064565938651559,
+              "ideal_optimal_hit_probability": 0.2270119177317691,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 167,
+              "note": "seeded_random",
+              "objective_evals": 167,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                0.848841571546584,
+                2.165754058448289
+              ],
+              "expectation_e_over_a": 2.5110782521759214,
+              "gammas": [
+                4.793258415400221,
+                2.246291837587248
+              ],
+              "ideal_feasibility_probability": 0.1977256315970219,
+              "ideal_optimal_hit_probability": 0.06428435078960838,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5823604686829909,
+                1.3039660809330937
+              ],
+              "expectation_e_over_a": 1.1564042809536306,
+              "gammas": [
+                2.1365314021496014,
+                1.7096534421660354
+              ],
+              "ideal_feasibility_probability": 0.13314944383271907,
+              "ideal_optimal_hit_probability": 0.03327178660465804,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 329,
+              "note": "seeded_random",
+              "objective_evals": 329,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                3.1229512651265847,
+                2.0837609403746966
+              ],
+              "expectation_e_over_a": 5.762289078708825,
+              "gammas": [
+                0.6305746775964464,
+                4.285868500414174
+              ],
+              "ideal_feasibility_probability": 0.06365220753763917,
+              "ideal_optimal_hit_probability": 0.02034461802979111,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.890685469815196,
+                1.9110059433475055
+              ],
+              "expectation_e_over_a": 0.7546580177422499,
+              "gammas": [
+                2.8596637008790338,
+                4.70533382694645
+              ],
+              "ideal_feasibility_probability": 0.3472612618827649,
+              "ideal_optimal_hit_probability": 0.08512300156859465,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 299,
+              "note": "seeded_random",
+              "objective_evals": 299,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                1.8708327506133418,
+                2.021690958458777
+              ],
+              "expectation_e_over_a": 1.80610171345621,
+              "gammas": [
+                6.073226741269877,
+                6.069542998461597
+              ],
+              "ideal_feasibility_probability": 0.1530238003467685,
+              "ideal_optimal_hit_probability": 0.027403086445210625,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5570389423230788,
+                1.8091750932339636
+              ],
+              "expectation_e_over_a": 1.286441028344367,
+              "gammas": [
+                4.8010026497310925,
+                3.885620628219284
+              ],
+              "ideal_feasibility_probability": 0.12477290148648792,
+              "ideal_optimal_hit_probability": 0.03323423711289816,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 200,
+              "note": "seeded_random",
+              "objective_evals": 200,
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                1.4716283705763318,
+                2.0658732339721118
+              ],
+              "expectation_e_over_a": 3.0516072390194138,
+              "gammas": [
+                4.136519106218159,
+                2.438015838047092
+              ],
+              "ideal_feasibility_probability": 0.028685273322253742,
+              "ideal_optimal_hit_probability": 0.010676161830023592,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                0.990891908121632,
+                2.0101338348775157
+              ],
+              "expectation_e_over_a": 1.4916685357935238,
+              "gammas": [
+                2.5777749767943963,
+                3.7098580516509796
+              ],
+              "ideal_feasibility_probability": 0.07288101102293414,
+              "ideal_optimal_hit_probability": 0.01452484986434546,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.125
+            },
+            "start": {
+              "betas": [
+                0.5758040651975808,
+                0.2050134215820048
+              ],
+              "expectation_e_over_a": 2.9721881160997596,
+              "gammas": [
+                2.6542297023876698,
+                3.4302452740839255
+              ],
+              "ideal_feasibility_probability": 0.08863246536319168,
+              "ideal_optimal_hit_probability": 0.021215029870672072,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.125
+            }
+          }
+        ],
+        "wall_seconds": 1.5532801669905894
+      }
+    },
+    {
+      "instance_id": "D3",
+      "p1": {
+        "best": {
+          "betas": [
+            2.945243112740431
+          ],
+          "expectation_e_over_a": 0.5791332746281336,
+          "gammas": [
+            0.39269908169872414
+          ],
+          "ideal_feasibility_probability": 0.33728976519503806,
+          "ideal_optimal_hit_probability": 0.03839674571522838,
+          "kind": "grid_start",
+          "message": "grid_point",
+          "nfev": 1,
+          "success": true,
+          "uniform_feasibility_probability": 0.140625
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "grid_points": 289,
+        "instance_id": "D3",
+        "p": 1,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.308112050101001
+              ],
+              "expectation_e_over_a": 1.335136841067067,
+              "gammas": [
+                2.41209460042076
+              ],
+              "ideal_feasibility_probability": 0.08885981257419236,
+              "ideal_optimal_hit_probability": 0.007609519842349696,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                2.945243112740431
+              ],
+              "expectation_e_over_a": 0.5791332746281336,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.33728976519503806,
+              "ideal_optimal_hit_probability": 0.03839674571522838,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3056895772953925
+              ],
+              "expectation_e_over_a": 1.320489361607649,
+              "gammas": [
+                2.4686738050337267
+              ],
+              "ideal_feasibility_probability": 0.08631260964638197,
+              "ideal_optimal_hit_probability": 0.007257059759808636,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 23,
+              "objective_evals": 23,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                1.3744467859455345
+              ],
+              "expectation_e_over_a": 0.6764636827288842,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.3085119469276488,
+              "ideal_optimal_hit_probability": 0.038905223755674734,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3092724601680648
+              ],
+              "expectation_e_over_a": 1.3412742547231715,
+              "gammas": [
+                2.4013128161928146
+              ],
+              "ideal_feasibility_probability": 0.08973835229609509,
+              "ideal_optimal_hit_probability": 0.007737257681452466,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 23,
+              "objective_evals": 23,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                2.748893571891069
+              ],
+              "expectation_e_over_a": 0.999948811317661,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.3045060985355642,
+              "ideal_optimal_hit_probability": 0.035074995669596334,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3056746205717031
+              ],
+              "expectation_e_over_a": 1.3204879353724261,
+              "gammas": [
+                2.46678811819299
+              ],
+              "ideal_feasibility_probability": 0.08634858665053052,
+              "ideal_optimal_hit_probability": 0.007262139519182462,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 23,
+              "objective_evals": 23,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                1.1780972450961724
+              ],
+              "expectation_e_over_a": 1.1797919551881686,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.26077176401977276,
+              "ideal_optimal_hit_probability": 0.03600810437289806,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          }
+        ],
+        "wall_seconds": 0.2652474580099806
+      },
+      "p2": {
+        "best": {
+          "betas": [
+            2.945243112740431,
+            0.0
+          ],
+          "expectation_e_over_a": 0.5791332746281336,
+          "gammas": [
+            0.39269908169872414,
+            0.0
+          ],
+          "ideal_feasibility_probability": 0.33728976519503806,
+          "ideal_optimal_hit_probability": 0.03839674571522838,
+          "kind": "start",
+          "nfev": 1,
+          "note": "p1_embedded_identity_second_layer",
+          "success": true,
+          "uniform_feasibility_probability": 0.140625
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "instance_id": "D3",
+        "p": 2,
+        "seed": 20261027,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.308112050100905,
+                1.8855099311113768
+              ],
+              "expectation_e_over_a": 1.1273556031514893,
+              "gammas": [
+                2.41209460042076,
+                4.584353156407148
+              ],
+              "ideal_feasibility_probability": 0.25896401577127326,
+              "ideal_optimal_hit_probability": 0.04174548403990074,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 68,
+              "note": "p1_embedded_identity_second_layer",
+              "objective_evals": 68,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                2.945243112740431,
+                0.0
+              ],
+              "expectation_e_over_a": 0.5791332746281336,
+              "gammas": [
+                0.39269908169872414,
+                0.0
+              ],
+              "ideal_feasibility_probability": 0.33728976519503806,
+              "ideal_optimal_hit_probability": 0.03839674571522838,
+              "kind": "start",
+              "nfev": 1,
+              "note": "p1_embedded_identity_second_layer",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5787219107357113,
+                1.9261990771465856
+              ],
+              "expectation_e_over_a": 1.5066061843188086,
+              "gammas": [
+                4.858969367071243,
+                3.8588512010414826
+              ],
+              "ideal_feasibility_probability": 0.13363456386684236,
+              "ideal_optimal_hit_probability": 0.027910816267243312,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 98,
+              "note": "seeded_random",
+              "objective_evals": 98,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                0.10639859922617242,
+                1.39214563627734
+              ],
+              "expectation_e_over_a": 1.3959408246093101,
+              "gammas": [
+                6.202088971172954,
+                6.046047843393985
+              ],
+              "ideal_feasibility_probability": 0.161192351849113,
+              "ideal_optimal_hit_probability": 0.014791236701564636,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.7158697691266234,
+                1.1969302948889642
+              ],
+              "expectation_e_over_a": 0.7200018362619244,
+              "gammas": [
+                3.2556982628461384,
+                2.657554717587197
+              ],
+              "ideal_feasibility_probability": 0.2999528302111809,
+              "ideal_optimal_hit_probability": 0.04468929355349705,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                0.715082458518265,
+                1.1139158878795392
+              ],
+              "expectation_e_over_a": 2.9530854671316815,
+              "gammas": [
+                2.4082582947703304,
+                0.8914938122120333
+              ],
+              "ideal_feasibility_probability": 0.05813413066512082,
+              "ideal_optimal_hit_probability": 0.018763091853282607,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.7484240986744908,
+                1.9314370954695792
+              ],
+              "expectation_e_over_a": 0.7670438680327093,
+              "gammas": [
+                3.27849370447978,
+                3.570419325436318
+              ],
+              "ideal_feasibility_probability": 0.3074733877969589,
+              "ideal_optimal_hit_probability": 0.05852498811511793,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                1.5497002922699452,
+                0.7801122546120961
+              ],
+              "expectation_e_over_a": 1.9464310680506873,
+              "gammas": [
+                1.7603415439930226,
+                1.2780501788561354
+              ],
+              "ideal_feasibility_probability": 0.15607293589620946,
+              "ideal_optimal_hit_probability": 0.030551829439305577,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5184592400498083,
+                1.1684230158946305
+              ],
+              "expectation_e_over_a": 0.8638203358471882,
+              "gammas": [
+                2.3710388089585734,
+                3.542454424262376
+              ],
+              "ideal_feasibility_probability": 0.21103600559856817,
+              "ideal_optimal_hit_probability": 0.03103824974249258,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                2.7343659842053043,
+                2.565625626915566
+              ],
+              "expectation_e_over_a": 4.718576585965403,
+              "gammas": [
+                0.9822455208307117,
+                5.256656923841729
+              ],
+              "ideal_feasibility_probability": 0.07442785001606014,
+              "ideal_optimal_hit_probability": 0.011048615082446074,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5184576343816008,
+                1.1684246973193033
+              ],
+              "expectation_e_over_a": 0.8638203358349502,
+              "gammas": [
+                2.371039688804021,
+                3.5424593634217354
+              ],
+              "ideal_feasibility_probability": 0.21103401837795346,
+              "ideal_optimal_hit_probability": 0.03103786127988088,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 488,
+              "note": "seeded_random",
+              "objective_evals": 488,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                2.300288622091218,
+                1.8132374614994098
+              ],
+              "expectation_e_over_a": 5.254577413326015,
+              "gammas": [
+                0.820109955125474,
+                0.15065080580541396
+              ],
+              "ideal_feasibility_probability": 0.061927267593829105,
+              "ideal_optimal_hit_probability": 0.004295088112819684,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5211143166057144,
+                1.06875848268815
+              ],
+              "expectation_e_over_a": 1.6793881264077972,
+              "gammas": [
+                4.841471321707849,
+                2.684233766611795
+              ],
+              "ideal_feasibility_probability": 0.09813649715571407,
+              "ideal_optimal_hit_probability": 0.010111163197483918,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 99,
+              "note": "seeded_random",
+              "objective_evals": 99,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                0.4388880471369564,
+                2.982040692628028
+              ],
+              "expectation_e_over_a": 2.7079011558292914,
+              "gammas": [
+                2.04200687281044,
+                2.29395246260022
+              ],
+              "ideal_feasibility_probability": 0.12014396081417311,
+              "ideal_optimal_hit_probability": 0.006881375391960768,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5184571390374821,
+                1.1684302693880333
+              ],
+              "expectation_e_over_a": 0.8638203361493969,
+              "gammas": [
+                2.371029260846685,
+                3.5424695815377247
+              ],
+              "ideal_feasibility_probability": 0.2110338473398168,
+              "ideal_optimal_hit_probability": 0.03103748842383404,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 417,
+              "note": "seeded_random",
+              "objective_evals": 417,
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            },
+            "start": {
+              "betas": [
+                2.8435203963005686,
+                1.224765718440315
+              ],
+              "expectation_e_over_a": 2.0140933501274043,
+              "gammas": [
+                2.257003984428984,
+                0.296970559459225
+              ],
+              "ideal_feasibility_probability": 0.11147965719733995,
+              "ideal_optimal_hit_probability": 0.0070238785188703945,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.140625
+            }
+          }
+        ],
+        "wall_seconds": 1.972571083024377
+      }
+    },
+    {
+      "instance_id": "D4",
+      "p1": {
+        "best": {
+          "betas": [
+            2.945243112740431
+          ],
+          "expectation_e_over_a": 0.7632322726311626,
+          "gammas": [
+            0.39269908169872414
+          ],
+          "ideal_feasibility_probability": 0.2333144402087105,
+          "ideal_optimal_hit_probability": 0.040902202807594754,
+          "kind": "grid_start",
+          "message": "grid_point",
+          "nfev": 1,
+          "success": true,
+          "uniform_feasibility_probability": 0.09375
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "grid_points": 289,
+        "instance_id": "D4",
+        "p": 1,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.3905246159038869
+              ],
+              "expectation_e_over_a": 1.9229442278760636,
+              "gammas": [
+                3.9554072426412117
+              ],
+              "ideal_feasibility_probability": 0.11241795277324385,
+              "ideal_optimal_hit_probability": 0.007339216754701153,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 25,
+              "objective_evals": 25,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.945243112740431
+              ],
+              "expectation_e_over_a": 0.7632322726311626,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.2333144402087105,
+              "ideal_optimal_hit_probability": 0.040902202807594754,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3315772968872415
+              ],
+              "expectation_e_over_a": 1.746341497018844,
+              "gammas": [
+                2.4310332190166095
+              ],
+              "ideal_feasibility_probability": 0.04901929330984299,
+              "ideal_optimal_hit_probability": 0.019453468122609053,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 27,
+              "objective_evals": 27,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.3744467859455345
+              ],
+              "expectation_e_over_a": 0.9196954289409099,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.2098421032927933,
+              "ideal_optimal_hit_probability": 0.04032702397382479,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3960787689289473
+              ],
+              "expectation_e_over_a": 1.9435341656458005,
+              "gammas": [
+                3.9116617170526555
+              ],
+              "ideal_feasibility_probability": 0.11249308850279133,
+              "ideal_optimal_hit_probability": 0.007399604986862672,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.748893571891069
+              ],
+              "expectation_e_over_a": 1.2022834908702416,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.2101129459036885,
+              "ideal_optimal_hit_probability": 0.03809443734914621,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3297526992169644
+              ],
+              "expectation_e_over_a": 1.7474036886602569,
+              "gammas": [
+                2.4058009178769817
+              ],
+              "ideal_feasibility_probability": 0.04802143648968039,
+              "ideal_optimal_hit_probability": 0.019847086661017064,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 26,
+              "objective_evals": 26,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.1780972450961724
+              ],
+              "expectation_e_over_a": 1.49138970628362,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.1720108573330034,
+              "ideal_optimal_hit_probability": 0.0370909493792275,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          }
+        ],
+        "wall_seconds": 0.27601108301314525
+      },
+      "p2": {
+        "best": {
+          "betas": [
+            1.5978989175184386,
+            2.298909730778879
+          ],
+          "expectation_e_over_a": 0.2184850746074602,
+          "gammas": [
+            2.2326103592441,
+            4.097141513478269
+          ],
+          "ideal_feasibility_probability": 0.40457140075696607,
+          "ideal_optimal_hit_probability": 0.0003611757653116725,
+          "kind": "powell",
+          "message": "Maximum number of function evaluations has been exceeded.",
+          "nfev": 500,
+          "note": "seeded_random",
+          "objective_evals": 500,
+          "success": false,
+          "uniform_feasibility_probability": 0.09375
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "instance_id": "D4",
+        "p": 2,
+        "seed": 20261028,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.3905246159073095,
+                1.31318613084186
+              ],
+              "expectation_e_over_a": 1.4558415543819028,
+              "gammas": [
+                3.9554072426412117,
+                5.67781215051017
+              ],
+              "ideal_feasibility_probability": 0.22285864349952078,
+              "ideal_optimal_hit_probability": 0.0598746611517109,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 70,
+              "note": "p1_embedded_identity_second_layer",
+              "objective_evals": 70,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.945243112740431,
+                0.0
+              ],
+              "expectation_e_over_a": 0.7632322726311626,
+              "gammas": [
+                0.39269908169872414,
+                0.0
+              ],
+              "ideal_feasibility_probability": 0.2333144402087105,
+              "ideal_optimal_hit_probability": 0.040902202807594754,
+              "kind": "start",
+              "nfev": 1,
+              "note": "p1_embedded_identity_second_layer",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.640294414892526,
+                1.1533032790369346
+              ],
+              "expectation_e_over_a": 1.727662978545418,
+              "gammas": [
+                1.4064026157799128,
+                2.215885801921193
+              ],
+              "ideal_feasibility_probability": 0.18345569722899374,
+              "ideal_optimal_hit_probability": 0.06080014779812836,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 150,
+              "note": "seeded_random",
+              "objective_evals": 150,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.0562497873655774,
+                0.06802078459252112
+              ],
+              "expectation_e_over_a": 3.1006785615493895,
+              "gammas": [
+                0.10073115125284646,
+                1.0626396549016377
+              ],
+              "ideal_feasibility_probability": 0.022062723767416272,
+              "ideal_optimal_hit_probability": 0.0030804984624047743,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                2.1343104335821605,
+                2.4079393764646357
+              ],
+              "expectation_e_over_a": 1.2248392032362427,
+              "gammas": [
+                2.5619793713930026,
+                3.8241554084375684
+              ],
+              "ideal_feasibility_probability": 0.23214447698363572,
+              "ideal_optimal_hit_probability": 0.005598575399395551,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 116,
+              "note": "seeded_random",
+              "objective_evals": 116,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.132682614966216,
+                1.9802940171276728
+              ],
+              "expectation_e_over_a": 3.90957452724537,
+              "gammas": [
+                3.520928332756799,
+                0.3904386978749286
+              ],
+              "ideal_feasibility_probability": 0.03751259996872868,
+              "ideal_optimal_hit_probability": 0.0024373719912627254,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.6041269672157847,
+                1.9999561795073721
+              ],
+              "expectation_e_over_a": 1.8542458380739641,
+              "gammas": [
+                4.927670647512487,
+                5.047746251907542
+              ],
+              "ideal_feasibility_probability": 0.015623568396071066,
+              "ideal_optimal_hit_probability": 0.0011695202714079988,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 157,
+              "note": "seeded_random",
+              "objective_evals": 157,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.759151117091869,
+                2.5595901720914815
+              ],
+              "expectation_e_over_a": 2.263705149113582,
+              "gammas": [
+                1.147592451883434,
+                1.2457403175343784
+              ],
+              "ideal_feasibility_probability": 0.16375703380246123,
+              "ideal_optimal_hit_probability": 0.07087389843169194,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                2.1384897475387943,
+                2.2947385245272858
+              ],
+              "expectation_e_over_a": 1.0536045309160265,
+              "gammas": [
+                2.7999405367442387,
+                3.1066341392888415
+              ],
+              "ideal_feasibility_probability": 0.28778260494537167,
+              "ideal_optimal_hit_probability": 0.07353603960024732,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.1453956893022403,
+                0.5887768686386463
+              ],
+              "expectation_e_over_a": 3.5682584041218637,
+              "gammas": [
+                3.5680134866957065,
+                1.9297022535586268
+              ],
+              "ideal_feasibility_probability": 0.04902204573826158,
+              "ideal_optimal_hit_probability": 0.02194491391800565,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                0.6368477520129283,
+                0.8490397383188418
+              ],
+              "expectation_e_over_a": 0.6522650209545605,
+              "gammas": [
+                3.144674598638776,
+                3.9715914234080203
+              ],
+              "ideal_feasibility_probability": 0.32596041211745674,
+              "ideal_optimal_hit_probability": 0.11790697726169866,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 390,
+              "note": "seeded_random",
+              "objective_evals": 390,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.8150677593536577,
+                2.782055328539225
+              ],
+              "expectation_e_over_a": 4.39795285816975,
+              "gammas": [
+                5.660117243365516,
+                6.234035445603672
+              ],
+              "ideal_feasibility_probability": 0.03620350980671533,
+              "ideal_optimal_hit_probability": 0.004786610186305496,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.8983401085505205,
+                1.327027625900782
+              ],
+              "expectation_e_over_a": 1.0506463307961922,
+              "gammas": [
+                3.3603010429265248,
+                2.3646045013772445
+              ],
+              "ideal_feasibility_probability": 0.3285150377246325,
+              "ideal_optimal_hit_probability": 0.059379735280629176,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 106,
+              "note": "seeded_random",
+              "objective_evals": 106,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.9321761578541392,
+                1.8629671042627434
+              ],
+              "expectation_e_over_a": 3.6456527061649453,
+              "gammas": [
+                4.766379989771642,
+                2.4409528184640856
+              ],
+              "ideal_feasibility_probability": 0.021323356977888626,
+              "ideal_optimal_hit_probability": 0.005634246578312549,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5978989175184386,
+                2.298909730778879
+              ],
+              "expectation_e_over_a": 0.2184850746074602,
+              "gammas": [
+                2.2326103592441,
+                4.097141513478269
+              ],
+              "ideal_feasibility_probability": 0.40457140075696607,
+              "ideal_optimal_hit_probability": 0.0003611757653116725,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.10568645489338278,
+                1.9302314569910686
+              ],
+              "expectation_e_over_a": 3.4212209607277617,
+              "gammas": [
+                5.149017293236606,
+                0.4031014676773083
+              ],
+              "ideal_feasibility_probability": 0.045960765204146374,
+              "ideal_optimal_hit_probability": 0.013052392965046419,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          }
+        ],
+        "wall_seconds": 1.4847685420245398
+      }
+    },
+    {
+      "instance_id": "D5",
+      "p1": {
+        "best": {
+          "betas": [
+            2.945243112740431
+          ],
+          "expectation_e_over_a": 0.7776271777589954,
+          "gammas": [
+            0.39269908169872414
+          ],
+          "ideal_feasibility_probability": 0.23977313032114228,
+          "ideal_optimal_hit_probability": 0.040843253386546284,
+          "kind": "grid_start",
+          "message": "grid_point",
+          "nfev": 1,
+          "success": true,
+          "uniform_feasibility_probability": 0.09375
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "grid_points": 289,
+        "instance_id": "D5",
+        "p": 1,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.4069810226265913
+              ],
+              "expectation_e_over_a": 1.9598517126751256,
+              "gammas": [
+                3.990930085042121
+              ],
+              "ideal_feasibility_probability": 0.0880897148680857,
+              "ideal_optimal_hit_probability": 0.008069565104524171,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.945243112740431
+              ],
+              "expectation_e_over_a": 0.7776271777589954,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.23977313032114228,
+              "ideal_optimal_hit_probability": 0.040843253386546284,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3072132700086718
+              ],
+              "expectation_e_over_a": 1.7359559005332295,
+              "gammas": [
+                2.4146499523572866
+              ],
+              "ideal_feasibility_probability": 0.09669711865716803,
+              "ideal_optimal_hit_probability": 0.022824697242061296,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 26,
+              "objective_evals": 26,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.3744467859455345
+              ],
+              "expectation_e_over_a": 0.9341620242150322,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.22659110321414058,
+              "ideal_optimal_hit_probability": 0.04017489407920669,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.413258686920237
+              ],
+              "expectation_e_over_a": 1.9737122920949375,
+              "gammas": [
+                3.9554386071096017
+              ],
+              "ideal_feasibility_probability": 0.08824722303451885,
+              "ideal_optimal_hit_probability": 0.008209720366478282,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.748893571891069
+              ],
+              "expectation_e_over_a": 1.2196371487091253,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.21921470048517044,
+              "ideal_optimal_hit_probability": 0.03789696765821131,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3057967903848018
+              ],
+              "expectation_e_over_a": 1.7361323799973247,
+              "gammas": [
+                2.3975713293893266
+              ],
+              "ideal_feasibility_probability": 0.096465981407861,
+              "ideal_optimal_hit_probability": 0.02303493102381781,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 25,
+              "objective_evals": 25,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.1780972450961724
+              ],
+              "expectation_e_over_a": 1.5088758302401817,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.19822939021296446,
+              "ideal_optimal_hit_probability": 0.036709009831475604,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          }
+        ],
+        "wall_seconds": 0.2735731250140816
+      },
+      "p2": {
+        "best": {
+          "betas": [
+            1.5674567203510692,
+            1.9794906090566664
+          ],
+          "expectation_e_over_a": 0.3935945271339338,
+          "gammas": [
+            1.5454362216756596,
+            1.4596474220750502
+          ],
+          "ideal_feasibility_probability": 0.5379544734148147,
+          "ideal_optimal_hit_probability": 0.09949201771414133,
+          "kind": "powell",
+          "message": "Maximum number of function evaluations has been exceeded.",
+          "nfev": 500,
+          "note": "seeded_random",
+          "objective_evals": 500,
+          "success": false,
+          "uniform_feasibility_probability": 0.09375
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "instance_id": "D5",
+        "p": 2,
+        "seed": 20261029,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.406981022627021,
+                1.9910627037195099
+              ],
+              "expectation_e_over_a": 1.6243610093017518,
+              "gammas": [
+                3.990930085042121,
+                4.229983552345457
+              ],
+              "ideal_feasibility_probability": 0.10867594294551844,
+              "ideal_optimal_hit_probability": 0.010642455655837286,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 68,
+              "note": "p1_embedded_identity_second_layer",
+              "objective_evals": 68,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.945243112740431,
+                0.0
+              ],
+              "expectation_e_over_a": 0.7776271777589954,
+              "gammas": [
+                0.39269908169872414,
+                0.0
+              ],
+              "ideal_feasibility_probability": 0.23977313032114228,
+              "ideal_optimal_hit_probability": 0.040843253386546284,
+              "kind": "start",
+              "nfev": 1,
+              "note": "p1_embedded_identity_second_layer",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.008533038654398,
+                2.1792548459711436
+              ],
+              "expectation_e_over_a": 1.3070360304715543,
+              "gammas": [
+                3.478593895431248,
+                4.048841924003053
+              ],
+              "ideal_feasibility_probability": 0.09207952426673029,
+              "ideal_optimal_hit_probability": 0.008623640060087897,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 462,
+              "note": "seeded_random",
+              "objective_evals": 462,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                3.0723159979435266,
+                2.707614647418127
+              ],
+              "expectation_e_over_a": 1.9327982278547544,
+              "gammas": [
+                2.6736555841886047,
+                6.035860726699197
+              ],
+              "ideal_feasibility_probability": 0.07021473802676095,
+              "ideal_optimal_hit_probability": 0.006709801790099262,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5674567203510692,
+                1.9794906090566664
+              ],
+              "expectation_e_over_a": 0.3935945271339338,
+              "gammas": [
+                1.5454362216756596,
+                1.4596474220750502
+              ],
+              "ideal_feasibility_probability": 0.5379544734148147,
+              "ideal_optimal_hit_probability": 0.09949201771414133,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.5938017178887074,
+                2.429202828941784
+              ],
+              "expectation_e_over_a": 3.279644698306178,
+              "gammas": [
+                5.0493595343318995,
+                3.104450048911935
+              ],
+              "ideal_feasibility_probability": 0.03563436889793318,
+              "ideal_optimal_hit_probability": 0.00799217810997108,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.7793026124538192,
+                2.221222304278198
+              ],
+              "expectation_e_over_a": 1.6949871962783134,
+              "gammas": [
+                1.2821795653563497,
+                1.3526229087392663
+              ],
+              "ideal_feasibility_probability": 0.08603531573162337,
+              "ideal_optimal_hit_probability": 0.020553141936711098,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 155,
+              "note": "seeded_random",
+              "objective_evals": 155,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.708771293596652,
+                0.03150105046994634
+              ],
+              "expectation_e_over_a": 2.3492412525050814,
+              "gammas": [
+                2.154826849648046,
+                2.722773551810393
+              ],
+              "ideal_feasibility_probability": 0.09221594091241768,
+              "ideal_optimal_hit_probability": 0.016021607021788457,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5864047876587468,
+                2.3270283211226626
+              ],
+              "expectation_e_over_a": 1.7389793445146278,
+              "gammas": [
+                2.103646382317343,
+                2.514725383099966
+              ],
+              "ideal_feasibility_probability": 0.10957290715841618,
+              "ideal_optimal_hit_probability": 0.003417048487321437,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 98,
+              "note": "seeded_random",
+              "objective_evals": 98,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                3.0866270274887175,
+                1.8664040112774503
+              ],
+              "expectation_e_over_a": 3.072680461553804,
+              "gammas": [
+                5.048854327662633,
+                3.314840926137304
+              ],
+              "ideal_feasibility_probability": 0.1566171454518254,
+              "ideal_optimal_hit_probability": 0.026607133518575677,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5806613171897528,
+                2.006324966985515
+              ],
+              "expectation_e_over_a": 0.8652758400988341,
+              "gammas": [
+                2.33172172706626,
+                4.20887708858709
+              ],
+              "ideal_feasibility_probability": 0.2753832583620169,
+              "ideal_optimal_hit_probability": 0.016325736112951204,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.8471263845704071,
+                0.4961253430089934
+              ],
+              "expectation_e_over_a": 3.4158524072650875,
+              "gammas": [
+                0.49196806697192663,
+                3.805607803294305
+              ],
+              "ideal_feasibility_probability": 0.18685475360439763,
+              "ideal_optimal_hit_probability": 0.024650056186025157,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5834190697956267,
+                2.0012173001005427
+              ],
+              "expectation_e_over_a": 0.8665621064770564,
+              "gammas": [
+                2.3388467112744746,
+                4.193858071444622
+              ],
+              "ideal_feasibility_probability": 0.27485922078842107,
+              "ideal_optimal_hit_probability": 0.016015097684601673,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.3209286860210363,
+                1.5409543036556297
+              ],
+              "expectation_e_over_a": 2.752207175665863,
+              "gammas": [
+                2.981062440592674,
+                3.532722110969324
+              ],
+              "ideal_feasibility_probability": 0.02256062156704034,
+              "ideal_optimal_hit_probability": 0.00216796648556041,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.772956800078218,
+                1.0854528528910035
+              ],
+              "expectation_e_over_a": 1.750342057588743,
+              "gammas": [
+                1.386354335020868,
+                4.047173591314961
+              ],
+              "ideal_feasibility_probability": 0.04118775454127281,
+              "ideal_optimal_hit_probability": 0.005487163281281423,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 107,
+              "note": "seeded_random",
+              "objective_evals": 107,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.39660894886948683,
+                0.02753887621288911
+              ],
+              "expectation_e_over_a": 4.151830124078243,
+              "gammas": [
+                4.828484553842328,
+                2.7464517266165873
+              ],
+              "ideal_feasibility_probability": 0.02424603538225211,
+              "ideal_optimal_hit_probability": 0.00435571790498237,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          }
+        ],
+        "wall_seconds": 1.7959467089967802
+      }
+    },
+    {
+      "instance_id": "D6",
+      "p1": {
+        "best": {
+          "betas": [
+            2.945243112740431
+          ],
+          "expectation_e_over_a": 0.7639481955662851,
+          "gammas": [
+            0.39269908169872414
+          ],
+          "ideal_feasibility_probability": 0.23980778812715547,
+          "ideal_optimal_hit_probability": 0.08146669699023676,
+          "kind": "grid_start",
+          "message": "grid_point",
+          "nfev": 1,
+          "success": true,
+          "uniform_feasibility_probability": 0.09375
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "grid_points": 289,
+        "instance_id": "D6",
+        "p": 1,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.400285225172579
+              ],
+              "expectation_e_over_a": 1.9350326871670789,
+              "gammas": [
+                4.00263563649138
+              ],
+              "ideal_feasibility_probability": 0.08881458290559517,
+              "ideal_optimal_hit_probability": 0.013114762820163375,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.945243112740431
+              ],
+              "expectation_e_over_a": 0.7639481955662851,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.23980778812715547,
+              "ideal_optimal_hit_probability": 0.08146669699023676,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3096477493574121
+              ],
+              "expectation_e_over_a": 1.720619230102273,
+              "gammas": [
+                2.4049428582697776
+              ],
+              "ideal_feasibility_probability": 0.09285411859879834,
+              "ideal_optimal_hit_probability": 0.04257251021355504,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.3744467859455345
+              ],
+              "expectation_e_over_a": 0.914956623988679,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.2274672415515982,
+              "ideal_optimal_hit_probability": 0.08146669699023665,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.406688245849945
+              ],
+              "expectation_e_over_a": 1.9519581789522422,
+              "gammas": [
+                3.9595504778600823
+              ],
+              "ideal_feasibility_probability": 0.08891973962073754,
+              "ideal_optimal_hit_probability": 0.013649754392927201,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 24,
+              "objective_evals": 24,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.748893571891069
+              ],
+              "expectation_e_over_a": 1.2065496488655996,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.21935629388705086,
+              "ideal_optimal_hit_probability": 0.07538159588552637,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.309023758360724
+              ],
+              "expectation_e_over_a": 1.7206919566046566,
+              "gammas": [
+                2.393931101197791
+              ],
+              "ideal_feasibility_probability": 0.09259981452239402,
+              "ideal_optimal_hit_probability": 0.042798539359121854,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 25,
+              "objective_evals": 25,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                1.1780972450961724
+              ],
+              "expectation_e_over_a": 1.4855768413778887,
+              "gammas": [
+                0.39269908169872414
+              ],
+              "ideal_feasibility_probability": 0.1997085856848883,
+              "ideal_optimal_hit_probability": 0.07538159588552634,
+              "kind": "grid_start",
+              "message": "grid_point",
+              "nfev": 1,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          }
+        ],
+        "wall_seconds": 0.269924499996705
+      },
+      "p2": {
+        "best": {
+          "betas": [
+            2.945243112740431,
+            0.0
+          ],
+          "expectation_e_over_a": 0.7639481955662851,
+          "gammas": [
+            0.39269908169872414,
+            0.0
+          ],
+          "ideal_feasibility_probability": 0.23980778812715547,
+          "ideal_optimal_hit_probability": 0.08146669699023676,
+          "kind": "start",
+          "nfev": 1,
+          "note": "p1_embedded_identity_second_layer",
+          "success": true,
+          "uniform_feasibility_probability": 0.09375
+        },
+        "bounds": {
+          "beta": [
+            0.0,
+            3.141592653589793
+          ],
+          "gamma": [
+            0.0,
+            6.283185307179586
+          ]
+        },
+        "instance_id": "D6",
+        "p": 2,
+        "seed": 20261030,
+        "starts": [
+          {
+            "refined": {
+              "betas": [
+                1.4002852251728788,
+                1.2874990855922273
+              ],
+              "expectation_e_over_a": 1.65769763840661,
+              "gammas": [
+                4.00263563649138,
+                4.99723265153323
+              ],
+              "ideal_feasibility_probability": 0.21934925499076025,
+              "ideal_optimal_hit_probability": 0.05342912975440113,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 67,
+              "note": "p1_embedded_identity_second_layer",
+              "objective_evals": 67,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.945243112740431,
+                0.0
+              ],
+              "expectation_e_over_a": 0.7639481955662851,
+              "gammas": [
+                0.39269908169872414,
+                0.0
+              ],
+              "ideal_feasibility_probability": 0.23980778812715547,
+              "ideal_optimal_hit_probability": 0.08146669699023676,
+              "kind": "start",
+              "nfev": 1,
+              "note": "p1_embedded_identity_second_layer",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.7475836060675107,
+                2.257219968177956
+              ],
+              "expectation_e_over_a": 1.625668149012032,
+              "gammas": [
+                1.2864259306796961,
+                1.3646234229460035
+              ],
+              "ideal_feasibility_probability": 0.11014443646322675,
+              "ideal_optimal_hit_probability": 0.05479299033307325,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 154,
+              "note": "seeded_random",
+              "objective_evals": 154,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.6176764344087636,
+                1.4913932729671502
+              ],
+              "expectation_e_over_a": 2.838976986063538,
+              "gammas": [
+                2.9281990225065395,
+                3.851846328555743
+              ],
+              "ideal_feasibility_probability": 0.12427159010636787,
+              "ideal_optimal_hit_probability": 0.021028305915431176,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.1783624923534182,
+                1.0204096886941214
+              ],
+              "expectation_e_over_a": 1.4896899054128774,
+              "gammas": [
+                1.4325774340150892,
+                1.9662001662546602
+              ],
+              "ideal_feasibility_probability": 0.0749019508656002,
+              "ideal_optimal_hit_probability": 0.02686921545141198,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 393,
+              "note": "seeded_random",
+              "objective_evals": 393,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.84222170867451,
+                2.0554889253084623
+              ],
+              "expectation_e_over_a": 2.8936092617503824,
+              "gammas": [
+                6.1537204798753065,
+                1.5862363725010977
+              ],
+              "ideal_feasibility_probability": 0.13012321929707937,
+              "ideal_optimal_hit_probability": 0.052727803345712074,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5980127335131298,
+                1.1337073792326324
+              ],
+              "expectation_e_over_a": 0.885318964851546,
+              "gammas": [
+                4.032388731735268,
+                2.0311908043634745
+              ],
+              "ideal_feasibility_probability": 0.2651527266939003,
+              "ideal_optimal_hit_probability": 0.027017679136330814,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.26349931881649613,
+                0.30018808921472107
+              ],
+              "expectation_e_over_a": 2.3119137770838387,
+              "gammas": [
+                1.1141701400039628,
+                2.046824200237881
+              ],
+              "ideal_feasibility_probability": 0.02603120641306428,
+              "ideal_optimal_hit_probability": 0.011011821050083042,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                2.641920098042945,
+                1.1370840182297544
+              ],
+              "expectation_e_over_a": 1.7735645689032675,
+              "gammas": [
+                2.664304269762529,
+                3.964470421622931
+              ],
+              "ideal_feasibility_probability": 0.04050619830409564,
+              "ideal_optimal_hit_probability": 0.005627087889831522,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 115,
+              "note": "seeded_random",
+              "objective_evals": 115,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.6582084658427804,
+                1.234896956814628
+              ],
+              "expectation_e_over_a": 4.047335486772706,
+              "gammas": [
+                0.14161566826006422,
+                4.82204394379031
+              ],
+              "ideal_feasibility_probability": 0.0599246360305806,
+              "ideal_optimal_hit_probability": 0.004603492087294142,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.5641105187658595,
+                1.1488011316526932
+              ],
+              "expectation_e_over_a": 0.8922677893139483,
+              "gammas": [
+                3.93761070972927,
+                2.097851904479187
+              ],
+              "ideal_feasibility_probability": 0.2591127840412779,
+              "ideal_optimal_hit_probability": 0.029206078221606018,
+              "kind": "powell",
+              "message": "Maximum number of function evaluations has been exceeded.",
+              "nfev": 500,
+              "note": "seeded_random",
+              "objective_evals": 500,
+              "success": false,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.13447912272257215,
+                1.0915301228319825
+              ],
+              "expectation_e_over_a": 5.404237670988461,
+              "gammas": [
+                4.775396398661219,
+                0.6673315102466597
+              ],
+              "ideal_feasibility_probability": 0.06593764988795286,
+              "ideal_optimal_hit_probability": 0.02030207060373332,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.3317774169817975,
+                2.0558661196406884
+              ],
+              "expectation_e_over_a": 1.7832128456143224,
+              "gammas": [
+                2.298620216518338,
+                2.4599972985506717
+              ],
+              "ideal_feasibility_probability": 0.04400150742366025,
+              "ideal_optimal_hit_probability": 0.0009769417387247388,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 103,
+              "note": "seeded_random",
+              "objective_evals": 103,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                2.7901273303733776,
+                3.1057273094547355
+              ],
+              "expectation_e_over_a": 2.161398204724406,
+              "gammas": [
+                2.4693684982095974,
+                4.477558392995134
+              ],
+              "ideal_feasibility_probability": 0.13494783262736887,
+              "ideal_optimal_hit_probability": 0.057635365768273175,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          },
+          {
+            "refined": {
+              "betas": [
+                1.7875972900611563,
+                1.0496348659507035
+              ],
+              "expectation_e_over_a": 1.5092608911016363,
+              "gammas": [
+                2.23031608759556,
+                3.252806947761118
+              ],
+              "ideal_feasibility_probability": 0.198975132505185,
+              "ideal_optimal_hit_probability": 0.023382203440300488,
+              "kind": "powell",
+              "message": "Optimization terminated successfully.",
+              "nfev": 277,
+              "note": "seeded_random",
+              "objective_evals": 277,
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            },
+            "start": {
+              "betas": [
+                0.905367361782654,
+                2.9285136443388216
+              ],
+              "expectation_e_over_a": 2.211496841934738,
+              "gammas": [
+                3.279697749367188,
+                1.8773712783569878
+              ],
+              "ideal_feasibility_probability": 0.05458265028082189,
+              "ideal_optimal_hit_probability": 0.019123889032517567,
+              "kind": "start",
+              "nfev": 1,
+              "note": "seeded_random",
+              "success": true,
+              "uniform_feasibility_probability": 0.09375
+            }
+          }
+        ],
+        "wall_seconds": 1.6191295419994276
+      }
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "backend": "ibm_fez",
+  "block_estimate_seconds": 7.2225713664,
+  "default_rep_delay": 0.00025,
+  "do_not_confuse_with_queue_or_client_wait": true,
+  "dt": 4e-09,
+  "error": null,
+  "exceeds_45s_cap": false,
+  "ibm_execution_overhead_s": 2.0,
+  "method": "isa_target_durations_times_shots_plus_rep_delay_plus_one_execution_overhead",
+  "n_pubs": 12,
+  "note": "Target durations used when present; missing gates use conservative 500 ns two-qubit / 50 ns one-qubit fallbacks. Not measured charged usage.",
+  "partition_assumption": "One SamplerV2.run of 12 PUBs is treated as one execution/sub-job, so IBM's approximate 2 s classical overhead is applied once, not per PUB.",
+  "per_pub_approx": [
+    {
+      "approx_circuit_s": 1.9496000000000004e-05,
+      "approx_per_shot_s": 0.00026949600000000004,
+      "approx_pub_s": 0.27596390400000004,
+      "instance_id": "D1",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 276,
+      "p": 1
+    },
+    {
+      "approx_circuit_s": 2.6840000000000024e-05,
+      "approx_per_shot_s": 0.00027684000000000004,
+      "approx_pub_s": 0.28348416000000004,
+      "instance_id": "D1",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 563,
+      "p": 2
+    },
+    {
+      "approx_circuit_s": 1.9496000000000004e-05,
+      "approx_per_shot_s": 0.00026949600000000004,
+      "approx_pub_s": 0.27596390400000004,
+      "instance_id": "D2",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 276,
+      "p": 1
+    },
+    {
+      "approx_circuit_s": 2.6840000000000024e-05,
+      "approx_per_shot_s": 0.00027684000000000004,
+      "approx_pub_s": 0.28348416000000004,
+      "instance_id": "D2",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 563,
+      "p": 2
+    },
+    {
+      "approx_circuit_s": 1.9496000000000004e-05,
+      "approx_per_shot_s": 0.00026949600000000004,
+      "approx_pub_s": 0.27596390400000004,
+      "instance_id": "D3",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 276,
+      "p": 1
+    },
+    {
+      "approx_circuit_s": 2.3600000000000018e-05,
+      "approx_per_shot_s": 0.00027360000000000004,
+      "approx_pub_s": 0.28016640000000004,
+      "instance_id": "D3",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 385,
+      "p": 2
+    },
+    {
+      "approx_circuit_s": 1.9496000000000004e-05,
+      "approx_per_shot_s": 0.00026949600000000004,
+      "approx_pub_s": 0.27596390400000004,
+      "instance_id": "D4",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 276,
+      "p": 1
+    },
+    {
+      "approx_circuit_s": 2.6840000000000024e-05,
+      "approx_per_shot_s": 0.00027684000000000004,
+      "approx_pub_s": 0.28348416000000004,
+      "instance_id": "D4",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 563,
+      "p": 2
+    },
+    {
+      "approx_circuit_s": 1.9496000000000004e-05,
+      "approx_per_shot_s": 0.00026949600000000004,
+      "approx_pub_s": 0.27596390400000004,
+      "instance_id": "D5",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 276,
+      "p": 1
+    },
+    {
+      "approx_circuit_s": 2.6840000000000024e-05,
+      "approx_per_shot_s": 0.00027684000000000004,
+      "approx_pub_s": 0.28348416000000004,
+      "instance_id": "D5",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 563,
+      "p": 2
+    },
+    {
+      "approx_circuit_s": 1.9496000000000004e-05,
+      "approx_per_shot_s": 0.00026949600000000004,
+      "approx_pub_s": 0.27596390400000004,
+      "instance_id": "D6",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 276,
+      "p": 1
+    },
+    {
+      "approx_circuit_s": 2.3600000000000018e-05,
+      "approx_per_shot_s": 0.00027360000000000004,
+      "approx_pub_s": 0.28016640000000004,
+      "instance_id": "D6",
+      "instructions_fallback": 0,
+      "instructions_with_target_duration": 385,
+      "p": 2
+    }
+  ],
+  "point_estimate_seconds": 5.350052864,
+  "shots_per_pub": 1024,
+  "sum_pub_seconds_approx": 3.3500528640000002,
+  "uncertain": true,
+  "uncertainty_margin": 0.35
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "bits": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "bitstring": "011001",
+    "evaluations": 24,
+    "feasible": true,
+    "instance_id": "D1",
+    "reason": null,
+    "status": "ok",
+    "stopping_rule": "no_improving_feasible_swap",
+    "utility": 23.0
+  },
+  {
+    "bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "bitstring": "011100",
+    "evaluations": 24,
+    "feasible": true,
+    "instance_id": "D2",
+    "reason": null,
+    "status": "ok",
+    "stopping_rule": "no_improving_feasible_swap",
+    "utility": 23.0
+  },
+  {
+    "bits": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "bitstring": "101010",
+    "evaluations": 24,
+    "feasible": true,
+    "instance_id": "D3",
+    "reason": null,
+    "status": "ok",
+    "stopping_rule": "no_improving_feasible_swap",
+    "utility": 21.0
+  },
+  {
+    "bits": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "bitstring": "101010",
+    "evaluations": 24,
+    "feasible": true,
+    "instance_id": "D4",
+    "reason": null,
+    "status": "ok",
+    "stopping_rule": "no_improving_feasible_swap",
+    "utility": 24.0
+  },
+  {
+    "bits": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "bitstring": "100011",
+    "evaluations": 24,
+    "feasible": true,
+    "instance_id": "D5",
+    "reason": null,
+    "status": "ok",
+    "stopping_rule": "no_improving_feasible_swap",
+    "utility": 22.0
+  },
+  {
+    "bits": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "bitstring": "110010",
+    "evaluations": 24,
+    "feasible": true,
+    "instance_id": "D6",
+    "reason": null,
+    "status": "ok",
+    "stopping_rule": "no_improving_feasible_swap",
+    "utility": 22.0
+  }
+]

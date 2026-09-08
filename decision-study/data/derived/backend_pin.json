@@ -1,0 +1,10 @@
+{
+  "backend": "ibm_fez",
+  "eligible": [
+    "ibm_fez",
+    "ibm_kingston",
+    "ibm_marrakesh"
+  ],
+  "frozen_for_campaign": true,
+  "rule": "lexicographic_name_among_operational_nonsimulator_backends_with_num_qubits_ge_6; do_not_use_historical_GHZ_fidelity"
+}

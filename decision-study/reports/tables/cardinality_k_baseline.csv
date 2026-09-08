@@ -1,0 +1,7 @@
+instance_id,proposals,rejected_conflicts,accepted,subset_space,work,evidence_type
+D1,1024,417,607,20,1024,sampled_simulation
+D2,1024,613,411,20,1024,sampled_simulation
+D3,1024,585,439,20,1024,sampled_simulation
+D4,1024,708,316,20,1024,sampled_simulation
+D5,1024,726,298,20,1024,sampled_simulation
+D6,1024,734,290,20,1024,sampled_simulation

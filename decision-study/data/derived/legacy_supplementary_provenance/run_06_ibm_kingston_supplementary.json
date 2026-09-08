@@ -1,0 +1,15 @@
+{
+  "archive_file": "run_06_ibm_kingston.json",
+  "backend": "<IBMBackend('ibm_kingston')>",
+  "job_id": "dac7fr5nj4cs73ac93vg",
+  "metrics_keys": [
+    "caller",
+    "qiskit_version",
+    "timestamps",
+    "usage",
+    "circuits_execution_time_ns"
+  ],
+  "note": "Supplementary. Does not replace dba-qpu-run exports. Missing fields remain unknown.",
+  "status": "DONE",
+  "usage": 2
+}

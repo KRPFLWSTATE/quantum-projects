@@ -1,0 +1,210 @@
+{
+  "pinned_backend": "ibm_fez",
+  "rule": "lexicographic_name_among_operational_nonsim_ge6",
+  "rows": [
+    {
+      "instance_id": "D1",
+      "p": 1,
+      "ops": {
+        "rz": 111,
+        "sx": 105,
+        "cz": 54,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 145,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 54,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D1",
+      "p": 2,
+      "ops": {
+        "sx": 224,
+        "rz": 213,
+        "cz": 120,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 280,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 120,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D2",
+      "p": 1,
+      "ops": {
+        "rz": 111,
+        "sx": 105,
+        "cz": 54,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 145,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 54,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D2",
+      "p": 2,
+      "ops": {
+        "sx": 224,
+        "rz": 213,
+        "cz": 120,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 280,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 120,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D3",
+      "p": 1,
+      "ops": {
+        "rz": 111,
+        "sx": 105,
+        "cz": 54,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 145,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 54,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D3",
+      "p": 2,
+      "ops": {
+        "sx": 174,
+        "rz": 115,
+        "cz": 90,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 187,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 90,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D4",
+      "p": 1,
+      "ops": {
+        "rz": 111,
+        "sx": 105,
+        "cz": 54,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 145,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 54,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D4",
+      "p": 2,
+      "ops": {
+        "sx": 224,
+        "rz": 213,
+        "cz": 120,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 280,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 120,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D5",
+      "p": 1,
+      "ops": {
+        "rz": 111,
+        "sx": 105,
+        "cz": 54,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 145,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 54,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D5",
+      "p": 2,
+      "ops": {
+        "sx": 224,
+        "rz": 213,
+        "cz": 120,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 280,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 120,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D6",
+      "p": 1,
+      "ops": {
+        "rz": 111,
+        "sx": 105,
+        "cz": 54,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 145,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 54,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    },
+    {
+      "instance_id": "D6",
+      "p": 2,
+      "ops": {
+        "sx": 174,
+        "rz": 115,
+        "cz": 90,
+        "measure": 6,
+        "barrier": 1
+      },
+      "depth": 187,
+      "num_qubits_circuit": 156,
+      "two_qubit_est": 90,
+      "exceeds_250_2q": false,
+      "exceeds_depth_600": false,
+      "exceeds_12_active_warning": true
+    }
+  ]
+}

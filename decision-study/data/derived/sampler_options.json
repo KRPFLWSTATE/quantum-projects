@@ -1,0 +1,55 @@
+{
+  "applied_locally_without_submit": {
+    "dynamical_decoupling": "DynamicalDecouplingOptions(enable=False, sequence_type=Unset, extra_slack_distribution=Unset, scheduling_method=Unset, skip_reset_qubits=Unset)",
+    "max_execution_time": "45",
+    "twirling": "TwirlingOptions(enable_gates=False, enable_measure=False, num_randomizations=Unset, shots_per_randomization=Unset, strategy=Unset)"
+  },
+  "dynamical_decoupling_api": {
+    "dir": [
+      "enable",
+      "extra_slack_distribution",
+      "scheduling_method",
+      "sequence_type",
+      "skip_reset_qubits"
+    ],
+    "present": true,
+    "type": "DynamicalDecouplingOptions"
+  },
+  "error": null,
+  "max_execution_time_api": {
+    "present": true,
+    "value_default": "Unset"
+  },
+  "option_fields": [
+    "default_shots",
+    "dynamical_decoupling",
+    "environment",
+    "execution",
+    "experimental",
+    "max_execution_time",
+    "simulator",
+    "twirling",
+    "update"
+  ],
+  "package": "qiskit-ibm-runtime",
+  "planned_settings": {
+    "dynamical_decoupling": "disabled_if_exposed",
+    "max_execution_time_seconds": 45,
+    "rep_delay": "provider_default",
+    "sessions": "not_used",
+    "twirling": "disabled_if_exposed"
+  },
+  "sampler_class": "SamplerV2",
+  "twirling_api": {
+    "dir": [
+      "enable_gates",
+      "enable_measure",
+      "num_randomizations",
+      "shots_per_randomization",
+      "strategy"
+    ],
+    "present": true,
+    "type": "TwirlingOptions"
+  },
+  "version": "0.49.0"
+}

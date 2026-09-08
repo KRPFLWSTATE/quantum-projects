@@ -1,0 +1,250 @@
+{
+  "analysis": {
+    "cardinality_rows": 6,
+    "ideal_rows": 12,
+    "prefix_rows": 180
+  },
+  "compile": {
+    "blocked": true,
+    "error": "CircuitError:'Bit \\'<Clbit register=(6, \"meas\"), index=0>\\' is not in the circuit.'"
+  },
+  "errors": [],
+  "failures": [
+    [
+      "test_no_physical_sampler_submit_in_source (test_core.IsolationTests.test_no_physical_sampler_submit_in_source)",
+      "Traceback (most recent call last):\n  File \"/Users/kawinperera/Downloads/Quantum Projects/decision-study/tests/test_core.py\", line 87, in test_no_physical_sampler_submit_in_source\n    self.assertNotIn(\"Sampler.run\", text)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'Sampler.run' unexpectedly found in '\"\"\"ISA transpilation, compact remap, QPY, and layout maps. No Sampler.run.\"\"\"\\n\\nfrom __future__ import annotations\\n\\nimport json\\nfrom datetime import datetime, timezone\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nfrom qiskit import qpy\\nfrom qiskit.converters import circuit_to_dag, dag_to_circuit\\nfrom qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager\\n\\nfrom .fixtures import hardware_instances\\nfrom .hashing import sha256_file, write_json_atomic\\nfrom .paths import DERIVED_DIR, STUDY_ROOT\\nfrom .qaoa import bind_measure, qaoa_circuit\\n\\nBACKEND_RULE = (\\n    \"lexicographic_name_among_operational_nonsimulator_backends_with_num_qubits_ge_6; \"\\n    \"do_not_use_historical_GHZ_fidelity\"\\n)\\nTRANSPILER_SEED = 20260908\\nOPT_LEVEL = 1\\nCEILING_2Q = 250\\nCEILING_DEPTH = 600\\nCEILING_ACTIVE = 12\\n\\n\\ndef _active_qubit_indices(circuit) -> list[int]:\\n    dag = circuit_to_dag(circuit)\\n    idle = set(dag.idle_wires())\\n    idle_idx = set()\\n    for wire in idle:\\n        if wire._register is circuit.qregs[0] or getattr(wire, \"register\", None) is not None:\\n            try:\\n                idle_idx.add(circuit.find_bit(wire).index)\\n            except Exception:\\n                continue\\n    used = [i for i in range(circuit.num_qubits) if i not in idle_idx]\\n    if not used:\\n        used = list(range(min(circuit.num_qubits, 6)))\\n    return used\\n\\n\\ndef compact_remap(circuit):\\n    \"\"\"Drop idle backend qubits. Never statevector-simulate a 156-qubit pad.\"\"\"\\n    used = []\\n    seen: set[int] = set()\\n    for inst in circuit.data:\\n        if inst.operation.name == \"barrier\":\\n            continue\\n        for qubit in inst.qubits:\\n            idx = circuit.find_bit(qubit).index\\n            if idx not in seen:\\n                seen.add(idx)\\n                used.append(idx)\\n    used = sorted(seen)\\n    if not used:\\n        used = list(range(min(6, circuit.num_qubits)))\\n    if len(used) == circuit.num_qubits:\\n        circuit.metadata = {**(circuit.metadata or {}), \"physical_indices\": used, \"compacted\": False}\\n        return circuit\\n    from qiskit import QuantumCircuit as QC\\n\\n    index_map = {old: i for i, old in enumerate(used)}\\n    compact = QC(len(used), circuit.num_clbits)\\n    for inst in circuit.data:\\n        if inst.operation.name == \"barrier\":\\n            continue\\n        qidx = [circuit.find_bit(q).index for q in inst.qubits]\\n        if any(i not in index_map for i in qidx):\\n            continue\\n        compact.append(\\n            inst.operation,\\n            [compact.qubits[index_map[i]] for i in qidx],\\n            list(inst.clbits),\\n        )\\n    compact.metadata = {\"physical_indices\": used, \"compacted\": True, \"source_num_qubits\": circuit.num_qubits}\\n    if getattr(circuit, \"layout\", None) is not None:\\n        compact._layout = circuit.layout  # preserve for records; compact indices differ\\n    return compact\\n\\n\\ndef two_qubit_count(circuit) -> int:\\n    ops = circuit.count_ops()\\n    return int(sum(ops.get(name, 0) for name in (\"cx\", \"cz\", \"ecr\", \"rzz\", \"swap\")))\\n\\n\\ndef pin_backend(service):\\n    backends = [\\n        b\\n        for b in service.backends(simulator=False, operational=True)\\n        if getattr(b, \"num_qubits\", 0) >= 6\\n    ]\\n    names = sorted(b.name for b in backends)\\n    if not names:\\n        raise RuntimeError(\"NO_ELIGIBLE_BACKEND\")\\n    name = names[0]\\n    return service.backend(name), names, BACKEND_RULE\\n\\n\\ndef compile_all_fixtures(params: dict[str, Any], timeout_note: str | None = None) -> dict[str, Any]:\\n    from qiskit_ibm_runtime import QiskitRuntimeService\\n\\n    out_dir = DERIVED_DIR / \"compile\"\\n    qpy_dir = out_dir / \"qpy\"\\n    out_dir.mkdir(parents=True, exist_ok=True)\\n    qpy_dir.mkdir(parents=True, exist_ok=True)\\n    service = QiskitRuntimeService()\\n    backend, eligible, rule = pin_backend(service)\\n    pm = generate_preset_pass_manager(\\n        optimization_level=OPT_LEVEL,\\n        backend=backend,\\n        seed_transpiler=TRANSPILER_SEED,\\n    )\\n    instances = {inst.instance_id: inst for inst in hardware_instances()}\\n    rows = []\\n    structural_ok = True\\n    compact_ok = True\\n    for fx in params[\"fixtures\"]:\\n        inst = instances[fx[\"instance_id\"]]\\n        for depth, key in ((1, \"p1\"), (2, \"p2\")):\\n            best = fx[key][\"best\"]\\n            logical = bind_measure(qaoa_circuit(inst, best[\"gammas\"], best[\"betas\"]))\\n            isa = pm.run(logical)\\n            compact = compact_remap(isa)\\n            n2q = two_qubit_count(isa)\\n            depth_v = int(isa.depth())\\n            active = int(compact.num_qubits)\\n            layout = None\\n            if getattr(isa, \"layout\", None) is not None:\\n                try:\\n                    layout = {\\n                        \"initial\": str(isa.layout.initial_layout),\\n                        \"final_index_layout\": list(isa.layout.final_index_layout()),\\n                    }\\n                except Exception as exc:\\n                    layout = {\"error\": f\"{type(exc).__name__}:{exc}\"}\\n            qpy_path = qpy_dir / f\"{inst.instance_id}_p{depth}_compact.qpy\"\\n            with qpy_path.open(\"wb\") as handle:\\n                qpy.dump(compact, handle)\\n            logical_qpy = qpy_dir / f\"{inst.instance_id}_p{depth}_logical.qpy\"\\n            with logical_qpy.open(\"wb\") as handle:\\n                qpy.dump(logical, handle)\\n            row = {\\n                \"instance_id\": inst.instance_id,\\n                \"p\": depth,\\n                \"ops\": {k: int(v) for k, v in isa.count_ops().items()},\\n                \"isa_num_qubits_padded\": int(isa.num_qubits),\\n                \"compact_num_qubits\": active,\\n                \"depth\": depth_v,\\n                \"two_qubit\": n2q,\\n                \"exceeds_250_2q\": n2q > CEILING_2Q,\\n                \"exceeds_depth_600\": depth_v > CEILING_DEPTH,\\n                \"exceeds_12_active\": active > CEILING_ACTIVE,\\n                \"layout\": layout,\\n                \"compact_qpy\": str(qpy_path.relative_to(STUDY_ROOT)),\\n                \"logical_qpy\": str(logical_qpy.relative_to(STUDY_ROOT)),\\n                \"compact_qpy_sha256\": sha256_file(qpy_path),\\n                \"logical_qpy_sha256\": sha256_file(logical_qpy),\\n            }\\n            if row[\"exceeds_250_2q\"] or row[\"exceeds_depth_600\"]:\\n                structural_ok = False\\n            if row[\"exceeds_12_active\"]:\\n                compact_ok = False\\n            rows.append(row)\\n    summary = {\\n        \"created_utc\": datetime.now(timezone.utc).isoformat(),\\n        \"pinned_backend\": backend.name,\\n        \"backend_num_qubits\": backend.num_qubits,\\n        \"eligible_operational_names\": eligible,\\n        \"selection_rule\": rule,\\n        \"transpiler\": {\"optimization_level\": OPT_LEVEL, \"seed\": TRANSPILER_SEED},\\n        \"timeout_note\": timeout_note,\\n        \"rows\": rows,\\n        \"structural_ok\": structural_ok,\\n        \"compact_ok\": compact_ok,\\n        \"new_qpu_jobs_submitted\": 0,\\n    }\\n    write_json_atomic(out_dir / \"isa_summary.json\", summary)\\n    pin = {\\n        \"backend\": backend.name,\\n        \"rule\": rule,\\n        \"eligible\": eligible,\\n        \"frozen_for_campaign\": True,\\n    }\\n    write_json_atomic(DERIVED_DIR / \"backend_pin.json\", pin)\\n    return summary\\n'\n"
+    ]
+  ],
+  "hash_check": {
+    "added": [],
+    "changed": {},
+    "missing": [],
+    "ok": true
+  },
+  "legacy_supplementary": {
+    "created_utc": "2026-09-08T18:02:13.891006+00:00",
+    "error": null,
+    "jobs": [
+      {
+        "archive_file": "run_01_ibm_kingston.json",
+        "backend": "<IBMBackend('ibm_kingston')>",
+        "file": "run_01_ibm_kingston_supplementary.json",
+        "job_id": "da6c1u60ukec7381slv0",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_02_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_02_ibm_fez_supplementary.json",
+        "job_id": "da715qe0ukec7382m480",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_03_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_03_ibm_fez_supplementary.json",
+        "job_id": "dabb4gpl216s739pap00",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_04_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_04_ibm_marrakesh_supplementary.json",
+        "job_id": "dabjia809bds739s745g",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_05_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_05_ibm_marrakesh_supplementary.json",
+        "job_id": "dac1dm0c4p7c738kmq6g",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_06_ibm_kingston.json",
+        "backend": "<IBMBackend('ibm_kingston')>",
+        "file": "run_06_ibm_kingston_supplementary.json",
+        "job_id": "dac7fr5nj4cs73ac93vg",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_07_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_07_ibm_fez_supplementary.json",
+        "job_id": "dacku7tnj4cs73acpgn0",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_08_ibm_kingston.json",
+        "backend": "<IBMBackend('ibm_kingston')>",
+        "file": "run_08_ibm_kingston_supplementary.json",
+        "job_id": "dacqshe42tqs73asiaa0",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_09_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_09_ibm_marrakesh_supplementary.json",
+        "job_id": "dadbm2d1ierc738klg2g",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_10_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_10_ibm_fez_supplementary.json",
+        "job_id": "dae9knm42tqs73audj90",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_11_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_11_ibm_fez_supplementary.json",
+        "job_id": "daej6ht1ierc738m806g",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_12_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_12_ibm_marrakesh_supplementary.json",
+        "job_id": "daekkq5nj4cs73af9tq0",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_13_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_13_ibm_marrakesh_supplementary.json",
+        "job_id": "daetchd1ierc738mk190",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_14_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_14_ibm_fez_supplementary.json",
+        "job_id": "daf6dhm42tqs73avhlc0",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_15_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_15_ibm_fez_supplementary.json",
+        "job_id": "dafjq4m42tqs73b01qhg",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_16_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_16_ibm_marrakesh_supplementary.json",
+        "job_id": "dafqipe42tqs73b0bfsg",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_17_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_17_ibm_fez_supplementary.json",
+        "job_id": "dag140omhr3c73e4h5hg",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_18_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_18_ibm_marrakesh_supplementary.json",
+        "job_id": "dag1u40mhr3c73e4i5ag",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_19_ibm_marrakesh.json",
+        "backend": "<IBMBackend('ibm_marrakesh')>",
+        "file": "run_19_ibm_marrakesh_supplementary.json",
+        "job_id": "dag30qj9k43c73acqeu0",
+        "retrieved": true,
+        "status": "DONE"
+      },
+      {
+        "archive_file": "run_20_ibm_fez.json",
+        "backend": "<IBMBackend('ibm_fez')>",
+        "file": "run_20_ibm_fez_supplementary.json",
+        "job_id": "dag3hpb9k43c73acr12g",
+        "retrieved": true,
+        "status": "DONE"
+      }
+    ],
+    "label": "supplementary_retrieval_not_historical_export",
+    "new_qpu_jobs_submitted": 0,
+    "rewrote_historical_exports": false
+  },
+  "ok": false,
+  "sampler_options": {
+    "applied_locally_without_submit": {
+      "dynamical_decoupling": "DynamicalDecouplingOptions(enable=False, sequence_type=Unset, extra_slack_distribution=Unset, scheduling_method=Unset, skip_reset_qubits=Unset)",
+      "max_execution_time": "45",
+      "twirling": "TwirlingOptions(enable_gates=False, enable_measure=False, num_randomizations=Unset, shots_per_randomization=Unset, strategy=Unset)"
+    },
+    "dynamical_decoupling_api": {
+      "dir": [
+        "enable",
+        "extra_slack_distribution",
+        "scheduling_method",
+        "sequence_type",
+        "skip_reset_qubits"
+      ],
+      "present": true,
+      "type": "DynamicalDecouplingOptions"
+    },
+    "error": null,
+    "max_execution_time_api": {
+      "present": true,
+      "value_default": "Unset"
+    },
+    "option_fields": [
+      "default_shots",
+      "dynamical_decoupling",
+      "environment",
+      "execution",
+      "experimental",
+      "max_execution_time",
+      "simulator",
+      "twirling",
+      "update"
+    ],
+    "package": "qiskit-ibm-runtime",
+    "planned_settings": {
+      "dynamical_decoupling": "disabled_if_exposed",
+      "max_execution_time_seconds": 45,
+      "rep_delay": "provider_default",
+      "sessions": "not_used",
+      "twirling": "disabled_if_exposed"
+    },
+    "sampler_class": "SamplerV2",
+    "twirling_api": {
+      "dir": [
+        "enable_gates",
+        "enable_measure",
+        "num_randomizations",
+        "shots_per_randomization",
+        "strategy"
+      ],
+      "present": true,
+      "type": "TwirlingOptions"
+    },
+    "version": "0.49.0"
+  },
+  "tests_run": 13
+}

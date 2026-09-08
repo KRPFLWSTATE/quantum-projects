@@ -1,0 +1,1282 @@
+{
+  "attempts": 24,
+  "kept": [
+    {
+      "benefits": [
+        5,
+        5,
+        7,
+        4,
+        5,
+        9
+      ],
+      "computed_feasible_count": 10,
+      "computed_optimum_utility": 23.0,
+      "conflicts": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "generator_attempt": 1,
+      "instance_id": "S01",
+      "interaction_triples": [
+        [
+          3,
+          5,
+          -3
+        ],
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          1,
+          3,
+          -3
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          1,
+          5,
+          -1
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          -1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        7,
+        7,
+        7,
+        2,
+        3,
+        5
+      ],
+      "computed_feasible_count": 13,
+      "computed_optimum_utility": 22.0,
+      "conflicts": [
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "generator_attempt": 2,
+      "instance_id": "S02",
+      "interaction_triples": [
+        [
+          2,
+          4,
+          -1
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          3,
+          5,
+          -1
+        ],
+        [
+          2,
+          3,
+          -3
+        ],
+        [
+          3,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        4,
+        5,
+        2,
+        4,
+        2,
+        6
+      ],
+      "computed_feasible_count": 9,
+      "computed_optimum_utility": 13.0,
+      "conflicts": [
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "generator_attempt": 3,
+      "instance_id": "S03",
+      "interaction_triples": [
+        [
+          4,
+          5,
+          -1
+        ],
+        [
+          0,
+          3,
+          -2
+        ],
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          0,
+          2,
+          -2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        6,
+        4,
+        3,
+        9,
+        5,
+        8
+      ],
+      "computed_feasible_count": 13,
+      "computed_optimum_utility": 19.0,
+      "conflicts": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "generator_attempt": 4,
+      "instance_id": "S04",
+      "interaction_triples": [
+        [
+          1,
+          3,
+          -1
+        ],
+        [
+          3,
+          5,
+          -1
+        ],
+        [
+          0,
+          3,
+          -3
+        ],
+        [
+          2,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        6,
+        2,
+        9,
+        8,
+        4,
+        5
+      ],
+      "computed_feasible_count": 13,
+      "computed_optimum_utility": 26.0,
+      "conflicts": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "generator_attempt": 5,
+      "instance_id": "S05",
+      "interaction_triples": [
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        5,
+        5,
+        9,
+        9,
+        3,
+        4
+      ],
+      "computed_feasible_count": 8,
+      "computed_optimum_utility": 23.0,
+      "conflicts": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "generator_attempt": 6,
+      "instance_id": "S06",
+      "interaction_triples": [
+        [
+          1,
+          5,
+          -2
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          5,
+          -3
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        9,
+        3,
+        9,
+        3,
+        9,
+        8
+      ],
+      "computed_feasible_count": 12,
+      "computed_optimum_utility": 29.0,
+      "conflicts": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "generator_attempt": 7,
+      "instance_id": "S07",
+      "interaction_triples": [
+        [
+          2,
+          5,
+          -3
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          -1
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        7,
+        8,
+        2,
+        7,
+        8,
+        3
+      ],
+      "computed_feasible_count": 9,
+      "computed_optimum_utility": 23.0,
+      "conflicts": [
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "generator_attempt": 8,
+      "instance_id": "S08",
+      "interaction_triples": [
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          4,
+          5,
+          -1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        8,
+        4,
+        5,
+        7,
+        6,
+        7
+      ],
+      "computed_feasible_count": 9,
+      "computed_optimum_utility": 21.0,
+      "conflicts": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "generator_attempt": 9,
+      "instance_id": "S09",
+      "interaction_triples": [
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          0,
+          2,
+          -2
+        ],
+        [
+          2,
+          5,
+          -3
+        ],
+        [
+          4,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        4,
+        2,
+        2,
+        5,
+        3,
+        6
+      ],
+      "computed_feasible_count": 13,
+      "computed_optimum_utility": 13.0,
+      "conflicts": [
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "generator_attempt": 10,
+      "instance_id": "S10",
+      "interaction_triples": [
+        [
+          0,
+          5,
+          -1
+        ],
+        [
+          0,
+          3,
+          -2
+        ],
+        [
+          4,
+          5,
+          -3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        6,
+        7,
+        7,
+        3,
+        5,
+        4
+      ],
+      "computed_feasible_count": 10,
+      "computed_optimum_utility": 18.0,
+      "conflicts": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "generator_attempt": 11,
+      "instance_id": "S11",
+      "interaction_triples": [
+        [
+          0,
+          3,
+          -3
+        ],
+        [
+          1,
+          5,
+          -1
+        ],
+        [
+          0,
+          2,
+          -2
+        ],
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        5,
+        9,
+        3,
+        3,
+        3,
+        3
+      ],
+      "computed_feasible_count": 9,
+      "computed_optimum_utility": 19.0,
+      "conflicts": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "generator_attempt": 12,
+      "instance_id": "S12",
+      "interaction_triples": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        8,
+        3,
+        5,
+        5,
+        8,
+        8
+      ],
+      "computed_feasible_count": 12,
+      "computed_optimum_utility": 25.0,
+      "conflicts": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "generator_attempt": 13,
+      "instance_id": "S13",
+      "interaction_triples": [
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          -3
+        ],
+        [
+          0,
+          4,
+          -2
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        5,
+        8,
+        7,
+        3,
+        4,
+        7
+      ],
+      "computed_feasible_count": 8,
+      "computed_optimum_utility": 22.0,
+      "conflicts": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "generator_attempt": 14,
+      "instance_id": "S14",
+      "interaction_triples": [
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          1,
+          4,
+          -3
+        ],
+        [
+          4,
+          5,
+          1
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          5,
+          -1
+        ],
+        [
+          2,
+          5,
+          -1
+        ],
+        [
+          3,
+          4,
+          -3
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        7,
+        2,
+        7,
+        3,
+        9,
+        5
+      ],
+      "computed_feasible_count": 8,
+      "computed_optimum_utility": 24.0,
+      "conflicts": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "generator_attempt": 15,
+      "instance_id": "S15",
+      "interaction_triples": [
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        9,
+        2,
+        7,
+        9,
+        6,
+        5
+      ],
+      "computed_feasible_count": 12,
+      "computed_optimum_utility": 26.0,
+      "conflicts": [
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "generator_attempt": 16,
+      "instance_id": "S16",
+      "interaction_triples": [
+        [
+          2,
+          3,
+          -2
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        4,
+        8,
+        5,
+        9,
+        4,
+        9
+      ],
+      "computed_feasible_count": 9,
+      "computed_optimum_utility": 23.0,
+      "conflicts": [
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "generator_attempt": 17,
+      "instance_id": "S17",
+      "interaction_triples": [
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          5,
+          -1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          1,
+          3,
+          -2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        3,
+        7,
+        7,
+        2,
+        7,
+        5
+      ],
+      "computed_feasible_count": 8,
+      "computed_optimum_utility": 22.0,
+      "conflicts": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "generator_attempt": 18,
+      "instance_id": "S18",
+      "interaction_triples": [
+        [
+          2,
+          4,
+          -3
+        ],
+        [
+          1,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        9,
+        3,
+        2,
+        9,
+        8,
+        7
+      ],
+      "computed_feasible_count": 12,
+      "computed_optimum_utility": 26.0,
+      "conflicts": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "generator_attempt": 19,
+      "instance_id": "S19",
+      "interaction_triples": [
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          5,
+          -2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        6,
+        2,
+        9,
+        6,
+        7,
+        8
+      ],
+      "computed_feasible_count": 13,
+      "computed_optimum_utility": 23.0,
+      "conflicts": [
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "generator_attempt": 20,
+      "instance_id": "S20",
+      "interaction_triples": [
+        [
+          3,
+          5,
+          -3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          -2
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        9,
+        7,
+        5,
+        7,
+        7,
+        3
+      ],
+      "computed_feasible_count": 7,
+      "computed_optimum_utility": 24.0,
+      "conflicts": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "generator_attempt": 21,
+      "instance_id": "S21",
+      "interaction_triples": [
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          3,
+          4,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        8
+      ],
+      "computed_feasible_count": 7,
+      "computed_optimum_utility": 28.0,
+      "conflicts": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "generator_attempt": 22,
+      "instance_id": "S22",
+      "interaction_triples": [
+        [
+          1,
+          4,
+          -1
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          -1
+        ],
+        [
+          1,
+          5,
+          -1
+        ],
+        [
+          4,
+          5,
+          -1
+        ],
+        [
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        4,
+        2,
+        7,
+        2,
+        5,
+        5
+      ],
+      "computed_feasible_count": 10,
+      "computed_optimum_utility": 16.0,
+      "conflicts": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "generator_attempt": 23,
+      "instance_id": "S23",
+      "interaction_triples": [
+        [
+          2,
+          4,
+          -3
+        ],
+        [
+          3,
+          4,
+          -1
+        ]
+      ]
+    },
+    {
+      "benefits": [
+        2,
+        4,
+        9,
+        2,
+        4,
+        5
+      ],
+      "computed_feasible_count": 9,
+      "computed_optimum_utility": 18.0,
+      "conflicts": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "generator_attempt": 24,
+      "instance_id": "S24",
+      "interaction_triples": [
+        [
+          3,
+          5,
+          -3
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ]
+    }
+  ],
+  "protocol": {
+    "benefit_range": [
+      2,
+      9
+    ],
+    "conflict_count_range": [
+      2,
+      4
+    ],
+    "interaction_range": [
+      -3,
+      3
+    ],
+    "k": 3,
+    "n_requested": 24,
+    "reject_if_unsatisfiable": true,
+    "seed": 20260908
+  },
+  "rejected": []
+}
