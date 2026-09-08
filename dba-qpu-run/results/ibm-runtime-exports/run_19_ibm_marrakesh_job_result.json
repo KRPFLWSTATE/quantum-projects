@@ -1,0 +1,14 @@
+{
+  "id": "dag30qj9k43c73acqeu0",
+  "hardware_counts": {
+    "111": 463,
+    "000": 501,
+    "110": 17,
+    "100": 8,
+    "101": 2,
+    "011": 8,
+    "001": 1
+  },
+  "result_type": "PrimitiveResult",
+  "result_repr": "PrimitiveResult([SamplerPubResult(data=DataBin(meas=BitArray(<shape=(), num_shots=1000, num_bits=3>)), metadata={'circuit_metadata': {}})], metadata={'execution': {'execution_spans': ExecutionSpans([DoubleSliceSpan(<start='2026-09-08 15:57:37', stop='2026-09-08 15:57:38', size=1000>)])}, 'version': 2})"
+}

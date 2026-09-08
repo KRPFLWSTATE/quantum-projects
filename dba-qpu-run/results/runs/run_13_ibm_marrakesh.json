@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "run_label": "Run 13",
+  "result_status": "observed_hardware_execution",
+  "analysis_note": "Fidelity was computed over the union of all ideal and hardware measurement states. Leakage outcomes were retained and were not renormalized away.",
+  "backend_name": "ibm_marrakesh",
+  "processor_family": "Heron r2",
+  "num_qubits_on_backend": 156,
+  "circuit_qubits": 3,
+  "shots": 1000,
+  "job_id": "daetchd1ierc738mk190",
+  "submission_timestamp_utc": "2026-09-06T21:08:20.340104Z",
+  "queue_wait_seconds": 1.07479,
+  "client_side_wall_clock_seconds": 17.839301824569702,
+  "ideal_counts": {
+    "000": 512,
+    "111": 488
+  },
+  "hardware_counts": {
+    "111": 415,
+    "000": 520,
+    "110": 53,
+    "001": 1,
+    "011": 1,
+    "100": 3,
+    "101": 7
+  },
+  "hellinger_fidelity": 0.9331689783800481
+}

@@ -1,0 +1,14 @@
+{
+  "id": "daetchd1ierc738mk190",
+  "hardware_counts": {
+    "111": 415,
+    "000": 520,
+    "110": 53,
+    "001": 1,
+    "011": 1,
+    "100": 3,
+    "101": 7
+  },
+  "result_type": "PrimitiveResult",
+  "result_repr": "PrimitiveResult([SamplerPubResult(data=DataBin(meas=BitArray(<shape=(), num_shots=1000, num_bits=3>)), metadata={'circuit_metadata': {}})], metadata={'execution': {'execution_spans': ExecutionSpans([DoubleSliceSpan(<start='2026-09-06 21:08:24', stop='2026-09-06 21:08:25', size=1000>)])}, 'version': 2})"
+}

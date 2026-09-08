@@ -1,0 +1,23 @@
+{
+  "id": "dac7fr5nj4cs73ac93vg",
+  "backend": "ibm_kingston",
+  "status": "DONE",
+  "primitive_id": "sampler",
+  "metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.49.0,qiskit-2.5.2*,qiskit_aer-0.17.2*",
+    "timestamps": {
+      "created": "2026-09-02T19:24:28.787581Z",
+      "finished": "2026-09-02T19:25:17.168564Z",
+      "running": "2026-09-02T19:25:03.911309Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 2,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 261130752
+  },
+  "metadata": {},
+  "usage": 2,
+  "creation_date": "2026-09-03T00:54:28.787581+05:30"
+}

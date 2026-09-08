@@ -7,15 +7,16 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from run_archive import discover_run_files
+
 RESULTS_DIR = SCRIPT_DIR / "results"
 COMPARATIVE_SUMMARY_PATH = RESULTS_DIR / "comparative_summary.json"
 LEGACY_TELEMETRY_PATH = SCRIPT_DIR / "qpu_run_telemetry.json"
 
-RUN_DETAIL_PATHS = (
-    RESULTS_DIR / "runs" / "run_01_ibm_kingston.json",
-    RESULTS_DIR / "runs" / "run_02_ibm_fez.json",
-)
-
+RUNS_DIR = RESULTS_DIR / "runs"
 SECTION_WIDTH = 72
 
 
@@ -95,11 +96,9 @@ def load_comparative_summary() -> dict:
 
 
 def load_run_details() -> list[dict]:
-    """Load per-run detail files when present (read-only)."""
+    """Load every archived run_*.json file, sorted by run number."""
     details: list[dict] = []
-    for path in RUN_DETAIL_PATHS:
-        if not path.is_file():
-            continue
+    for _number, path in discover_run_files(RUNS_DIR):
         details.append(load_json_object(path, label=f"Run detail ({path.name})"))
     return details
 
@@ -149,68 +148,84 @@ def print_run_summary(run: dict) -> None:
 
 
 def print_side_by_side_comparison(runs: list[dict]) -> None:
-    """Print a compact side-by-side table of both runs."""
+    """Print a compact comparison table for all runs in the summary."""
     print_section_header("SIDE-BY-SIDE COMPARISON")
-    if len(runs) < 2:
-        print("(fewer than two runs in comparative summary)")
+    if not runs:
+        print("(no runs in comparative summary)")
         return
 
-    run_a, run_b = runs[0], runs[1]
-    headers = (
-        "Metric",
-        format_scalar(run_a.get("run_label"), fallback="Run 1"),
-        format_scalar(run_b.get("run_label"), fallback="Run 2"),
-    )
-    rows = [
-        (
-            "Backend",
-            format_scalar(run_a.get("backend_name")),
-            format_scalar(run_b.get("backend_name")),
-        ),
-        (
-            "Job ID",
-            format_scalar(run_a.get("job_id")),
-            format_scalar(run_b.get("job_id")),
-        ),
+    headers = ["Metric"] + [
+        format_scalar(run.get("run_label"), fallback=f"Run {index}")
+        for index, run in enumerate(runs, start=1)
+    ]
+    metrics = [
+        ("Backend", [format_scalar(run.get("backend_name")) for run in runs]),
+        ("Job ID", [format_scalar(run.get("job_id")) for run in runs]),
         (
             "Queue wait",
-            format_queue_wait(run_a.get("queue_wait_seconds")),
-            format_queue_wait(run_b.get("queue_wait_seconds")),
+            [format_queue_wait(run.get("queue_wait_seconds")) for run in runs],
         ),
         (
             "Wall-clock (s)",
-            format_seconds(run_a.get("client_side_wall_clock_seconds")),
-            format_seconds(run_b.get("client_side_wall_clock_seconds")),
+            [format_seconds(run.get("client_side_wall_clock_seconds")) for run in runs],
         ),
         (
             "Hellinger fidelity",
-            format_fidelity(run_a.get("hellinger_fidelity")),
-            format_fidelity(run_b.get("hellinger_fidelity")),
+            [format_fidelity(run.get("hellinger_fidelity")) for run in runs],
         ),
     ]
 
-    metric_width = max(len(headers[0]), max(len(row[0]) for row in rows))
-    col_a_width = max(len(headers[1]), max(len(row[1]) for row in rows))
-    col_b_width = max(len(headers[2]), max(len(row[2]) for row in rows))
-
-    header_line = (
-        f"{headers[0]:<{metric_width}} | "
-        f"{headers[1]:<{col_a_width}} | "
-        f"{headers[2]:<{col_b_width}}"
-    )
-    separator = (
-        f"{'-' * metric_width}-+-"
-        f"{'-' * col_a_width}-+-"
-        f"{'-' * col_b_width}"
-    )
-    print(header_line)
-    print(separator)
-    for metric, value_a, value_b in rows:
-        print(
-            f"{metric:<{metric_width}} | "
-            f"{value_a:<{col_a_width}} | "
-            f"{value_b:<{col_b_width}}"
+    widths = [max(len(headers[0]), max(len(metric[0]) for metric in metrics))]
+    for col_index in range(len(runs)):
+        widths.append(
+            max(
+                len(headers[col_index + 1]),
+                max(len(metric[1][col_index]) for metric in metrics),
+            )
         )
+
+    print(" | ".join(f"{headers[i]:<{widths[i]}}" for i in range(len(headers))))
+    print("-+-".join("-" * width for width in widths))
+    for metric_name, values in metrics:
+        cells = [f"{metric_name:<{widths[0]}}"]
+        for col_index, value in enumerate(values):
+            cells.append(f"{value:<{widths[col_index + 1]}}")
+        print(" | ".join(cells))
+
+
+def print_aggregate_statistics(summary: dict) -> None:
+    """Print aggregate_statistics from the comparative summary when present."""
+    stats = summary.get("aggregate_statistics")
+    if not isinstance(stats, dict) or not stats:
+        return
+    print_section_header("AGGREGATE STATISTICS")
+    print("Sample standard deviation (n-1) is used when at least two values exist.")
+    print()
+    headers = ("Metric", "Mean", "Stdev", "Min", "Max")
+    rows: list[tuple[str, str, str, str, str]] = []
+    for field, block in stats.items():
+        if not isinstance(block, dict):
+            continue
+        rows.append(
+            (
+                field,
+                format_scalar(block.get("mean")),
+                format_scalar(block.get("stdev")),
+                format_scalar(block.get("min")),
+                format_scalar(block.get("max")),
+            )
+        )
+    if not rows:
+        print("(no aggregate statistics recorded)")
+        return
+    widths = [
+        max(len(headers[i]), max(len(row[i]) for row in rows))
+        for i in range(len(headers))
+    ]
+    print(" | ".join(f"{headers[i]:<{widths[i]}}" for i in range(len(headers))))
+    print("-+-".join("-" * width for width in widths))
+    for row in rows:
+        print(" | ".join(f"{row[i]:<{widths[i]}}" for i in range(len(headers))))
 
 
 def print_counts_table(title: str, counts: dict[str, int], *, unavailable_note: str | None) -> None:
@@ -350,6 +365,7 @@ def main() -> int:
 
     dict_runs = [run for run in runs if isinstance(run, dict)]
     print_side_by_side_comparison(dict_runs)
+    print_aggregate_statistics(summary)
 
     try:
         run_details = load_run_details()

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,9 +15,15 @@ from qiskit_aer import AerSimulator
 from qiskit_ibm_runtime import QiskitRuntimeService
 from qiskit_ibm_runtime import SamplerV2 as Sampler
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from build_comparative_summary import build_summary, write_summary
+from run_archive import archive_successful_run
+
 SHOTS = 1000
 CIRCUIT_QUBITS = 3
-SCRIPT_DIR = Path(__file__).resolve().parent
 TELEMETRY_PATH = SCRIPT_DIR / "qpu_run_telemetry.json"
 
 
@@ -132,6 +139,7 @@ def main() -> None:
     pass_manager = generate_preset_pass_manager(optimization_level=1, backend=backend)
     transpiled_circuit = pass_manager.run(circuit)
 
+    job = None
     job_id = None
     submission_timestamp_utc = None
     queue_wait_seconds = None
@@ -195,6 +203,32 @@ def main() -> None:
         telemetry_file.write("\n")
 
     print(f"\nTelemetry saved to: {TELEMETRY_PATH}")
+
+    if (
+        hardware_error is None
+        and job_id is not None
+        and hardware_counts is not None
+        and hellinger_fidelity is not None
+        and submission_timestamp_utc is not None
+    ):
+        archive_path = archive_successful_run(
+            backend_name=backend.name,
+            processor_family=processor_family,
+            num_qubits_on_backend=backend.num_qubits,
+            circuit_qubits=CIRCUIT_QUBITS,
+            shots=SHOTS,
+            job_id=job_id,
+            submission_timestamp_utc=submission_timestamp_utc,
+            queue_wait_seconds=queue_wait_seconds,
+            client_side_wall_clock_seconds=execution_wall_time_seconds,
+            ideal_counts=ideal_counts,
+            hardware_counts=hardware_counts,
+            hellinger_fidelity=hellinger_fidelity,
+            job=job,
+        )
+        print(f"Immutable run archive saved to: {archive_path}")
+        summary_path = write_summary(build_summary())
+        print(f"Regenerated comparative summary: {summary_path}")
     print("\nSummary:")
     print(f"  backend_name: {telemetry['backend_name']}")
     print(f"  processor_family: {telemetry['processor_family']}")

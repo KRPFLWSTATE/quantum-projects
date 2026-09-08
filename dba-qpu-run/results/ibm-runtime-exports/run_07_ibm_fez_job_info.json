@@ -1,0 +1,23 @@
+{
+  "id": "dacku7tnj4cs73acpgn0",
+  "backend": "ibm_fez",
+  "status": "DONE",
+  "primitive_id": "sampler",
+  "metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.49.0,qiskit-2.5.2*,qiskit_aer-0.17.2*",
+    "timestamps": {
+      "created": "2026-09-03T10:42:39.480508Z",
+      "finished": "2026-09-03T10:43:01.762652Z",
+      "running": "2026-09-03T10:42:40.682978Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 2,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 258497280
+  },
+  "metadata": {},
+  "usage": 2,
+  "creation_date": "2026-09-03T16:12:39.480508+05:30"
+}

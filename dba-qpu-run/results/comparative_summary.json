@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "study_design": "two-run comparative pilot",
+  "study_design": "20-run comparative pilot",
   "circuit_description": "3-qubit GHZ-style telemetry-probe circuit",
   "shots_per_run": 1000,
   "runs": [
@@ -23,7 +23,207 @@
       "queue_wait_seconds": 1.046131,
       "client_side_wall_clock_seconds": 10.588152885437012,
       "hellinger_fidelity": 0.9310600068882383
+    },
+    {
+      "run_label": "Run 3",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "dabb4gpl216s739pap00",
+      "submission_timestamp_utc": "2026-09-01T11:08:49.852574Z",
+      "queue_wait_seconds": 1.196978,
+      "client_side_wall_clock_seconds": 216.5911831855774,
+      "hellinger_fidelity": 0.9249946426251118
+    },
+    {
+      "run_label": "Run 4",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "dabjia809bds739s745g",
+      "submission_timestamp_utc": "2026-09-01T20:44:23.818921Z",
+      "queue_wait_seconds": 1.714729,
+      "client_side_wall_clock_seconds": 68.98611497879028,
+      "hellinger_fidelity": 0.9672727143671567
+    },
+    {
+      "run_label": "Run 5",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "dac1dm0c4p7c738kmq6g",
+      "submission_timestamp_utc": "2026-09-02T12:30:14.748851Z",
+      "queue_wait_seconds": 1.84353,
+      "client_side_wall_clock_seconds": 15.635506868362427,
+      "hellinger_fidelity": 0.9799583366060217
+    },
+    {
+      "run_label": "Run 6",
+      "backend_name": "ibm_kingston",
+      "processor_family": "Heron r2",
+      "job_id": "dac7fr5nj4cs73ac93vg",
+      "submission_timestamp_utc": "2026-09-02T19:24:27.175564Z",
+      "queue_wait_seconds": 35.123728,
+      "client_side_wall_clock_seconds": 49.69556474685669,
+      "hellinger_fidelity": 0.6835891578876895
+    },
+    {
+      "run_label": "Run 7",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "dacku7tnj4cs73acpgn0",
+      "submission_timestamp_utc": "2026-09-03T10:42:37.777402Z",
+      "queue_wait_seconds": 1.20247,
+      "client_side_wall_clock_seconds": 23.017614126205444,
+      "hellinger_fidelity": 0.9189940519525712
+    },
+    {
+      "run_label": "Run 8",
+      "backend_name": "ibm_kingston",
+      "processor_family": "Heron r2",
+      "job_id": "dacqshe42tqs73asiaa0",
+      "submission_timestamp_utc": "2026-09-03T17:28:36.767431Z",
+      "queue_wait_seconds": 0.953737,
+      "client_side_wall_clock_seconds": 8.056244134902954,
+      "hellinger_fidelity": 0.5853527915556171
+    },
+    {
+      "run_label": "Run 9",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "dadbm2d1ierc738klg2g",
+      "submission_timestamp_utc": "2026-09-04T12:35:19.848220Z",
+      "queue_wait_seconds": 1.143676,
+      "client_side_wall_clock_seconds": 7.85809588432312,
+      "hellinger_fidelity": 0.9785668452751094
+    },
+    {
+      "run_label": "Run 10",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "dae9knm42tqs73audj90",
+      "submission_timestamp_utc": "2026-09-05T22:40:29.467483Z",
+      "queue_wait_seconds": 0.846913,
+      "client_side_wall_clock_seconds": 7.298269987106323,
+      "hellinger_fidelity": 0.9464689386776945
+    },
+    {
+      "run_label": "Run 11",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "daej6ht1ierc738m806g",
+      "submission_timestamp_utc": "2026-09-06T09:32:53.983946Z",
+      "queue_wait_seconds": 8.819207,
+      "client_side_wall_clock_seconds": 33.621010065078735,
+      "hellinger_fidelity": 0.9346480786998017
+    },
+    {
+      "run_label": "Run 12",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "daekkq5nj4cs73af9tq0",
+      "submission_timestamp_utc": "2026-09-06T11:11:34.871012Z",
+      "queue_wait_seconds": 1.222141,
+      "client_side_wall_clock_seconds": 14.700201272964478,
+      "hellinger_fidelity": 0.9555557695336403
+    },
+    {
+      "run_label": "Run 13",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "daetchd1ierc738mk190",
+      "submission_timestamp_utc": "2026-09-06T21:08:20.340104Z",
+      "queue_wait_seconds": 1.07479,
+      "client_side_wall_clock_seconds": 17.839301824569702,
+      "hellinger_fidelity": 0.9331689783800481
+    },
+    {
+      "run_label": "Run 14",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "daf6dhm42tqs73avhlc0",
+      "submission_timestamp_utc": "2026-09-07T07:24:52.977826Z",
+      "queue_wait_seconds": 1.408739,
+      "client_side_wall_clock_seconds": 8.042850971221924,
+      "hellinger_fidelity": 0.9397460321838972
+    },
+    {
+      "run_label": "Run 15",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "dafjq4m42tqs73b01qhg",
+      "submission_timestamp_utc": "2026-09-07T22:39:12.782720Z",
+      "queue_wait_seconds": 1.56452,
+      "client_side_wall_clock_seconds": 7.7089011669158936,
+      "hellinger_fidelity": 0.8854012537326047
+    },
+    {
+      "run_label": "Run 16",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "dafqipe42tqs73b0bfsg",
+      "submission_timestamp_utc": "2026-09-08T06:21:24.069016Z",
+      "queue_wait_seconds": 1.443633,
+      "client_side_wall_clock_seconds": 16.115031003952026,
+      "hellinger_fidelity": 0.9599915981197692
+    },
+    {
+      "run_label": "Run 17",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "dag140omhr3c73e4h5hg",
+      "submission_timestamp_utc": "2026-09-08T13:47:44.101602Z",
+      "queue_wait_seconds": 1.146283,
+      "client_side_wall_clock_seconds": 8.167666912078857,
+      "hellinger_fidelity": 0.9652427584038366
+    },
+    {
+      "run_label": "Run 18",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "dag1u40mhr3c73e4i5ag",
+      "submission_timestamp_utc": "2026-09-08T14:43:24.939286Z",
+      "queue_wait_seconds": 1.054296,
+      "client_side_wall_clock_seconds": 8.083191871643066,
+      "hellinger_fidelity": 0.98393469220306
+    },
+    {
+      "run_label": "Run 19",
+      "backend_name": "ibm_marrakesh",
+      "processor_family": "Heron r2",
+      "job_id": "dag30qj9k43c73acqeu0",
+      "submission_timestamp_utc": "2026-09-08T15:57:29.285928Z",
+      "queue_wait_seconds": 1.412515,
+      "client_side_wall_clock_seconds": 11.746185064315796,
+      "hellinger_fidelity": 0.9624023920073217
+    },
+    {
+      "run_label": "Run 20",
+      "backend_name": "ibm_fez",
+      "processor_family": "Heron r2",
+      "job_id": "dag3hpb9k43c73acr12g",
+      "submission_timestamp_utc": "2026-09-08T16:33:40.203059Z",
+      "queue_wait_seconds": 1660.303566,
+      "client_side_wall_clock_seconds": 1692.7952399253845,
+      "hellinger_fidelity": 0.9528646087411794
     }
   ],
-  "interpretation": "The two observed executions produced different fidelity values. This descriptive comparison is not a statistically powered estimate of backend performance, calibration stability, or general quantum-computing advantage."
+  "aggregate_statistics": {
+    "hellinger_fidelity": {
+      "mean": 0.9043692534809487,
+      "min": 0.5853527915556171,
+      "max": 0.98393469220306,
+      "stdev": 0.11148758083997115
+    },
+    "queue_wait_seconds": {
+      "mean": 86.2856719,
+      "min": 0.846913,
+      "max": 1660.303566,
+      "stdev": 370.56452635553075
+    },
+    "client_side_wall_clock_seconds": {
+      "mean": 111.67629798650742,
+      "min": 6.97963285446167,
+      "max": 1692.7952399253845,
+      "stdev": 375.1278973683267
+    }
+  },
+  "interpretation": "The observed executions produced different fidelity values. This descriptive comparison is not a statistically powered estimate of backend performance, calibration stability, or general quantum-computing advantage."
 }

@@ -1,0 +1,23 @@
+{
+  "id": "dac1dm0c4p7c738kmq6g",
+  "backend": "ibm_marrakesh",
+  "status": "DONE",
+  "primitive_id": "sampler",
+  "metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.49.0,qiskit-2.5.2*,qiskit_aer-0.17.2*",
+    "timestamps": {
+      "created": "2026-09-02T12:30:16.98812Z",
+      "finished": "2026-09-02T12:30:31.841359Z",
+      "running": "2026-09-02T12:30:18.83165Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 2,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 263676160
+  },
+  "metadata": {},
+  "usage": 2,
+  "creation_date": "2026-09-02T18:00:16.988120+05:30"
+}

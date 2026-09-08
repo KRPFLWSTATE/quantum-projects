@@ -1,0 +1,15 @@
+{
+  "id": "dabjia809bds739s745g",
+  "hardware_counts": {
+    "000": 507,
+    "111": 462,
+    "101": 9,
+    "110": 9,
+    "001": 4,
+    "100": 4,
+    "011": 4,
+    "010": 1
+  },
+  "result_type": "PrimitiveResult",
+  "result_repr": "PrimitiveResult([SamplerPubResult(data=DataBin(meas=BitArray(<shape=(), num_shots=1000, num_bits=3>)), metadata={'circuit_metadata': {}})], metadata={'execution': {'execution_spans': ExecutionSpans([DoubleSliceSpan(<start='2026-09-01 20:45:31', stop='2026-09-01 20:45:32', size=1000>)])}, 'version': 2})"
+}
