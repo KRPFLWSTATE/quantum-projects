@@ -1,0 +1,15 @@
+{
+  "n_jobs": 1,
+  "rows": [
+    {
+      "charged_usage_seconds": 5.0,
+      "created_utc": "2026-09-09T10:59:58.025926+00:00",
+      "evidence_type": "decision_hardware",
+      "intent": "d938fae1-f0e3-44d1-bb17-f2ba2f03f15e",
+      "job_id": "dagjoc8mhr3c73e58uk0",
+      "n_pubs": 12,
+      "result_received_utc": "2026-09-09T11:00:12.220462+00:00",
+      "shots_valid": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "NEW_PHYSICAL_QPU_JOBS_SUBMITTED": 1,
+  "evidence_type": "decision_hardware",
+  "intent": "d938fae1-f0e3-44d1-bb17-f2ba2f03f15e",
+  "job_id": "dagjoc8mhr3c73e58uk0",
+  "n_pubs": 12,
+  "shots": [
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024
+  ],
+  "shots_valid": true
+}

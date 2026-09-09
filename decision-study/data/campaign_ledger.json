@@ -1,14 +1,32 @@
 {
   "campaign_cap_seconds": 300,
   "campaign_id": "decision-qaoa-20260908",
-  "campaign_remaining_seconds": 300.0,
-  "history": [],
+  "campaign_remaining_seconds": 295.0,
+  "frozen_allowance_seconds": 300.0,
+  "history": [
+    {
+      "charged_usage_seconds": 5.0,
+      "finalised": true,
+      "intent": "d938fae1-f0e3-44d1-bb17-f2ba2f03f15e",
+      "job_id": "dagjoc8mhr3c73e58uk0",
+      "mock": false,
+      "physical": true,
+      "shots_valid": true
+    }
+  ],
   "jobs_cap": 6,
-  "jobs_submitted": 0,
+  "jobs_submitted": 1,
   "outstanding_job": null,
   "per_job_reserve_seconds": 45,
   "preserve_free_seconds": 90,
   "protocol_id": "decision-qaoa-p1p2-v1",
-  "reservations": [],
-  "usage_reconciled_seconds": 0.0
+  "reservations": [
+    {
+      "intent": "d938fae1-f0e3-44d1-bb17-f2ba2f03f15e",
+      "job_id": "dagjoc8mhr3c73e58uk0",
+      "open": false,
+      "seconds": 45
+    }
+  ],
+  "usage_reconciled_seconds": 5.0
 }
