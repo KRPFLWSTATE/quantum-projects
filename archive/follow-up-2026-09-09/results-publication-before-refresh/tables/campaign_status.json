@@ -1,0 +1,13 @@
+{
+  "campaign_remaining_seconds": 270.0,
+  "campaign_status": "COMPLETE",
+  "complete": true,
+  "finalised_physical_jobs": 6,
+  "jobs_cap": 6,
+  "jobs_submitted": 6,
+  "note": "COMPLETE is a public archive label. The hardware submission gate remains blocked at the job cap and is not weakened.",
+  "open_reservations": 0,
+  "outstanding_job": null,
+  "submission_gate": "JOB_CAP_REACHED",
+  "usage_reconciled_seconds": 30.0
+}

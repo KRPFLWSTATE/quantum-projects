@@ -1,0 +1,31 @@
+{
+  "analysis_version": "publication-analysis-v1",
+  "evidence_classes": {
+    "decision_hardware": "Observed IBM SamplerV2 archives under decision-study/data/raw/.",
+    "legacy_ghz_hardware": "Observed 3-qubit GHZ probes under dba-qpu-run/results/runs/.",
+    "post_collection_policy_replay": "New analysis of already-collected shots; not a new QPU job.",
+    "sampled_simulation": "Local random sampling, not hardware."
+  },
+  "tables": {
+    "ghz_jobs.csv": {
+      "hellinger_vs_exact_ghz_baseline": "Separate exact 000/111 split; not a substitute for Aer.",
+      "hellinger_vs_sampled_aer_baseline": "Primary archived comparison."
+    },
+    "job_level.csv": {
+      "charged_usage_seconds": "Reconciled IBM QPU charge for the job.",
+      "client_dispatch_utc": "Client created_utc in the raw archive; not IBM metrics.timestamps.created.",
+      "missing": "null if a provider timestamp was absent.",
+      "unit": "one SamplerV2 block"
+    },
+    "policy_level.csv": {
+      "independent_strict_improvement": "Recomputed from business utility versus greedy incumbent.",
+      "strict_improvement_field": "Value returned by frozen apply_policy. P0 does not populate this field; do not treat missing as measured zero."
+    },
+    "pub_level.csv": {
+      "absolute_optimality_gap": "exact_optimum - best_feasible_utility; null if no feasible shot (not observed).",
+      "feasible_shot_fraction": "Feasible shots / 1024. Denominator is all shots, including infeasible.",
+      "optimal_hit_fraction": "Shots equal to an exact optimum bitstring / 1024.",
+      "unit": "one PUB = one fixture \u00d7 depth inside one block"
+    }
+  }
+}

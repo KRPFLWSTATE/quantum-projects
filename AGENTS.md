@@ -17,4 +17,4 @@
 - Python env is repo-root `venv/` with tested pins in `requirements-repro.txt` and historical mins in `requirements.txt`; IBM credentials are local and gitignored.
 - Run IBM scripts with unbuffered Python (`PYTHONUNBUFFERED=1` / `python -u`); `QiskitRuntimeService()` / `least_busy()` can hang with empty buffered stdout.
 - Frozen protocol hash: `0e8c4283c971f672853d3dfdf9167911eb834a0b3dc0aad16e1ef377f0cd046a`. Do not format or refactor frozen `decision-study/src` or `study.py` in a way that changes those hashes.
-- Post-collection analysis lives under `tools/` with version `publication-analysis-v1`. Development installers live under `archive/development/`.
+- Post-collection analysis lives under `tools/` with version `publication-analysis-v2`. Development installers live under `archive/development/`. Isolated offline reproduction is `python tools/reproduce.py --output build/reproduction` and must not copy into `results/publication` unless `--refresh-publication` is passed.

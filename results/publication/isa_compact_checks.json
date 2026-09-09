@@ -1,6 +1,6 @@
 {
   "evidence_type": "ideal_simulation",
-  "created_utc": "2026-09-09T11:50:30.142436+00:00",
+  "created_utc": "2026-09-09T16:17:05.834479+00:00",
   "qiskit_version": "2.5.2",
   "tolerance": 1e-10,
   "n_circuits": 12,

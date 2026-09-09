@@ -15,11 +15,17 @@ This is **not** a quantum-advantage, organisational-effectiveness, or publicatio
 | License | MIT | [`LICENSE`](LICENSE) |
 | Tested env | Python 3.14.6 + [`requirements-repro.txt`](requirements-repro.txt) | Hosted CI is configured locally; a green badge is shown only after a real run. |
 
-Figures: [architecture](results/publication/figures/architecture_and_provenance.svg) · [sampling fractions](results/publication/figures/feasibility_and_optimal_hit.svg) · [policies](results/publication/figures/policy_selection.svg) · [GHZ](results/publication/figures/legacy_ghz.svg)
+Figures (regenerated; also under `build/reproduction/figures` after the offline command):
+
+![Hardware sampling fractions](results/publication/figures/feasibility_and_optimal_hit.svg)
+
+![Policy selections](results/publication/figures/policy_selection.svg)
+
+![Architecture](results/publication/figures/architecture_and_provenance.svg)
 
 ## Navigation
 
-[Results](docs/results.md) · [Reproduce](docs/reproduce.md) · [Methods](docs/methods.md) · [Data](docs/data-and-provenance.md) · [Architecture](docs/architecture-and-policies.md) · [Limitations](docs/limitations-and-contributions.md) · [Citation](CITATION.cff)
+[Results](docs/results.md) · [Reproduce](docs/reproduce.md) · [Methods](docs/methods.md) · [Data](docs/data-and-provenance.md) · [Architecture](docs/architecture-and-policies.md) · [Limitations](docs/limitations-and-contributions.md) · [Claim–evidence](docs/claim-evidence-limitation.md) · [Related work](docs/related-work-handoff.md) · [Citation](CITATION.cff)
 
 ## What the results mean (short)
 

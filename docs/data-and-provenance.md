@@ -9,7 +9,7 @@
 | `post_collection_policy_replay` | `results/publication/tables/post_collection_*` | New analysis of old shots |
 | `sampled_simulation` | derived local sampling | Not hardware |
 
-Raw archives, attempts, ledger, decisions, frozen QPY, protocol, and `legacy_sha256.json` are immutable inputs. Post-collection tables must not overwrite them.
+The current `decision-study/reports/CHATGPT_RETURN_REPORT.md` is a **historical** mixed document (completed-run totals together with setup-era unpublished/future statements). Do not treat it as the current public report. The dated current report is `results/publication/reports/CURRENT_REPORT.md` after a successful `--refresh-publication`, or `build/reproduction/reports/RESULTS.md` from isolated reproduction.
 
 `created_utc` in a decision raw file is the **client dispatch** time. IBM `metrics.timestamps.created/running/finished` are separate.
 

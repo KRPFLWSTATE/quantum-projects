@@ -1,0 +1,59 @@
+{
+  "analysis_version": "publication-analysis-v1",
+  "campaign": {
+    "campaign_remaining_seconds": 270.0,
+    "campaign_status": "COMPLETE",
+    "complete": true,
+    "finalised_physical_jobs": 6,
+    "jobs_cap": 6,
+    "jobs_submitted": 6,
+    "note": "COMPLETE is a public archive label. The hardware submission gate remains blocked at the job cap and is not weakened.",
+    "open_reservations": 0,
+    "outstanding_job": null,
+    "submission_gate": "JOB_CAP_REACHED",
+    "usage_reconciled_seconds": 30.0
+  },
+  "command": "python tools/reproduce.py --output /Users/kawinperera/Downloads/Quantum Projects/build/reproduction",
+  "created_utc": "2026-09-09T11:50:30.833020+00:00",
+  "environment": {
+    "executable": "/Users/kawinperera/Downloads/Quantum Projects/venv/bin/python",
+    "packages": {
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "qiskit": "2.5.2",
+      "qiskit_aer": "0.17.2",
+      "qiskit_ibm_runtime": "0.49.0",
+      "scipy": "1.18.1"
+    },
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]"
+  },
+  "errors": [],
+  "historical_account_balance_note": "524 seconds remaining was observed at 2026-09-09T11:17:44.252800+00:00 and is not live availability.",
+  "legacy_hashes": {
+    "n_expected": 65,
+    "ok": true
+  },
+  "new_physical_qpu_jobs_submitted": 0,
+  "ok": true,
+  "preservation": {
+    "changed": [],
+    "manifest_excluded_from_self_hash": true,
+    "missing": [],
+    "n_manifest_files": 176,
+    "n_protected_checked": 168,
+    "note": "Public README/CITATION copies were snapshotted then updated; protected experiment bytes are the check.",
+    "ok": true
+  },
+  "protocol": {
+    "code_ok": true,
+    "equivalence_ok": true,
+    "isa_ok": true,
+    "mismatches": [],
+    "ok": true,
+    "parameters_ok": true,
+    "protocol_hash_ok": true,
+    "protocol_hash_recomputed": "0e8c4283c971f672853d3dfdf9167911eb834a0b3dc0aad16e1ef377f0cd046a",
+    "protocol_hash_recorded": "0e8c4283c971f672853d3dfdf9167911eb834a0b3dc0aad16e1ef377f0cd046a"
+  }
+}

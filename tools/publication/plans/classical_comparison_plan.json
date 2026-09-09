@@ -1,0 +1,27 @@
+{
+  "analysis_type": "post_collection_classical_controls",
+  "plan_id": "classical-fair-pools-2026-09-09",
+  "dated_utc": "2026-09-09T16:00:00+00:00",
+  "preregistered_before_hardware": false,
+  "note": "This plan was written after hardware collection. It is not a preregistered protocol.",
+  "fixtures": ["D1", "D2", "D3", "D4", "D5", "D6"],
+  "max_sample_budget": 1024,
+  "prefixes": [1, 4, 16, 64, 256, 1024],
+  "n_monte_carlo_replications": 32,
+  "seed_root": 20260909,
+  "seed_rule": "numpy.random.RandomState(seed_root + 1000 * fixture_index). Seeds are frozen in this file before outcomes are computed.",
+  "replacement": "with_replacement",
+  "replication_count_justification": "32 inexpensive Monte Carlo replications to report sampling uncertainty on six-variable instances. These are not extra physical jobs or organisations.",
+  "shared_across_qaoa_depth": true,
+  "shared_across_qaoa_depth_disclosure": "The same classical pools are reused for p=1 and p=2 comparison panels because the controls do not depend on QAOA depth. Do not treat duplicated controls as independent experiments.",
+  "sources": [
+    "exact_enumeration_64_unique_states",
+    "greedy_then_swaps_incumbent",
+    "uniform_all_64_with_replacement",
+    "uniform_cardinality_k3_20_strings_with_replacement",
+    "hardware_qaoa_pools"
+  ],
+  "policies": ["P0", "P1", "P2", "P3"],
+  "analytical_opt_containment": "For independent draws from a fixed distribution, P(at least one optimum in m shots) = 1-(1-p_opt)^m. Support size 64 alone does not imply that 1024 draws generally contain an optimum.",
+  "cost_disclaimer": "Matched sample counts are not equal wall-clock or monetary costs. Exact enumeration examines each of 64 unique states once."
+}

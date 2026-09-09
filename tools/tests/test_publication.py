@@ -95,9 +95,59 @@ class PublicationTests(unittest.TestCase):
             "docs/limitations-and-contributions.md",
             "requirements-repro.txt",
             "CITATION.cff",
+            "docs/claim-evidence-limitation.md",
+            "docs/related-work-handoff.md",
             "archive/development/PATH_MAP.json",
         ):
             self.assertTrue((REPO / rel).is_file(), rel)
+
+
+    def test_export_inventory_closed(self):
+        from publication.export import missing_inventory, source_inventory
+
+        rels = {str(p.relative_to(REPO)).replace("\\", "/") for p in source_inventory()}
+        self.assertIn("decision-study/tools/verify_isa.py", rels)
+        self.assertTrue(any("ibm-runtime-exports/run_01" in r for r in rels))
+        self.assertFalse(any(r.endswith(".zip") for r in rels))
+        self.assertFalse(any("/dist/" in r for r in rels))
+        self.assertEqual(missing_inventory(), [])
+
+    def test_default_output_does_not_write_publication(self):
+        from publication.paths import PUBLICATION, validate_output_root
+        from pathlib import Path
+
+        validate_output_root(REPO / "build" / "reproduction")
+        with self.assertRaises(ValueError):
+            validate_output_root(REPO / "decision-study" / "data" / "raw" / "out")
+
+    def test_p2_metadata_only_not_version_gate(self):
+        from src.fixtures import hardware_instances
+        from src.policies import apply_policy
+        from src.spec import spec_from_instance
+
+        inst = hardware_instances()[0]
+        spec = spec_from_instance(inst, request_id="t-p2-meta")
+        drifted = dict(spec)
+        drifted["current_version"] = "label-only"
+        greedy_bits = "011001"
+        linkage = {
+            "request_id": spec["request_id"],
+            "source_hash": spec["source_hash"],
+            "circuit_hash": "c",
+            "expected_circuit_hash": "c",
+            "expected_request_id": spec["request_id"],
+            "expected_source_hash": spec["source_hash"],
+        }
+        out = apply_policy("P2", drifted, [greedy_bits] * 8, None, 1.0, linkage, trusted_source=spec)
+        self.assertNotEqual(out.get("reason"), "VERSION_MISMATCH")
+
+    def test_ibm_tripwire(self):
+        from publication.ibm_guard import OfflineIbmBlocked, install_tripwires
+        import qiskit_ibm_runtime
+
+        install_tripwires()
+        with self.assertRaises(OfflineIbmBlocked):
+            qiskit_ibm_runtime.QiskitRuntimeService()
 
 
 if __name__ == "__main__":

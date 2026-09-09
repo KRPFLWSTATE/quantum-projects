@@ -1,0 +1,5 @@
+{
+  "historical_parameter_source_defect": "p=2 prefix rows were labelled frozen_p1.",
+  "n_simulation_fixtures": 24,
+  "note": "Index only. Full historical simulation replay remains in decision-study/data/derived/policy_replay.json."
+}

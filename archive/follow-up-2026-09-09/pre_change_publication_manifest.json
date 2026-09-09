@@ -1,0 +1,208 @@
+{
+  "created_utc": "2026-09-09T16:07:24.053670+00:00",
+  "note": "Snapshot of results/publication before follow-up post-collection analysis changes. Manifest excluded from hashing itself.",
+  "source_commit": "d5931db8bbe6593e0a201b57bd1c1f8abdc1368c",
+  "n_files": 40,
+  "files": [
+    {
+      "path": "results/publication/analysis_manifest.json",
+      "bytes": 2094,
+      "sha256": "5181d1a1efb0018e640ff551a4ed3a9a55b92b896c1bedad68027a56f908107c"
+    },
+    {
+      "path": "results/publication/dist/decision-qaoa-and-ghz-research-archive.sha256",
+      "bytes": 65,
+      "sha256": "3e3c8ee6c204a09d4a89904849e11435cd320e5d3ab6e9e1102c09b511358086"
+    },
+    {
+      "path": "results/publication/dist/decision-qaoa-and-ghz-research-archive.zip",
+      "bytes": 27680012,
+      "sha256": "0508f41c200e1ff6b492ead2cc79d900540f14974da688844d2f8fbb423d9716"
+    },
+    {
+      "path": "results/publication/dist/export_receipt.json",
+      "bytes": 358,
+      "sha256": "bdf814dc0e58ea0dbc8bfd47f32ec25ef2690c2f1c3d8178fe73a7a6f547077d"
+    },
+    {
+      "path": "results/publication/figures/architecture_and_provenance.png",
+      "bytes": 71287,
+      "sha256": "b290eb22a4ce82549680ba856b734ee90146b6a28b7b2657bcedf1e0ec6df4db"
+    },
+    {
+      "path": "results/publication/figures/architecture_and_provenance.svg",
+      "bytes": 48728,
+      "sha256": "22cb8f0bb4eb1effe7d14211a66651d3d9a321d1bd1f23325b75683b48157127"
+    },
+    {
+      "path": "results/publication/figures/feasibility_and_optimal_hit.png",
+      "bytes": 163356,
+      "sha256": "cf957d5fdad203221557dc8822a86306c1c61cef23595e245614fc103f0f1d05"
+    },
+    {
+      "path": "results/publication/figures/feasibility_and_optimal_hit.svg",
+      "bytes": 98182,
+      "sha256": "988d69b58da1cf0a957b71a41071b9c11ae597f555533d4ec56619c7f4f460c5"
+    },
+    {
+      "path": "results/publication/figures/legacy_ghz.png",
+      "bytes": 104931,
+      "sha256": "34bb0300aebc3d6ea9978c38517e89b7c2cc437817cc8f86975e2820e5ce7ac7"
+    },
+    {
+      "path": "results/publication/figures/legacy_ghz.svg",
+      "bytes": 67742,
+      "sha256": "6097215191ee57ba3aa702747fac725febcd352874889be1019618c065b6126e"
+    },
+    {
+      "path": "results/publication/figures/policy_selection.png",
+      "bytes": 46663,
+      "sha256": "295db3578b2e4f54d5574d9d27393507ae52c2fcc16878174c4c718913b09aa5"
+    },
+    {
+      "path": "results/publication/figures/policy_selection.svg",
+      "bytes": 36479,
+      "sha256": "f4dc68d9af41650a7f6b72b18f8b5201c329a20a36f655f3f3253d8ecf3f62fa"
+    },
+    {
+      "path": "results/publication/figures/timing_and_usage.png",
+      "bytes": 65022,
+      "sha256": "fba51ebf14cd3a14d02174bd467e6e36895d5414ced0ff68497fc42f1edef236"
+    },
+    {
+      "path": "results/publication/figures/timing_and_usage.svg",
+      "bytes": 56208,
+      "sha256": "e8b4d2c97af9dca0e6ab88d5714c5b70de3f3445471b6c3223e8c8feb6539348"
+    },
+    {
+      "path": "results/publication/figures/utility_vs_greedy_optimum.png",
+      "bytes": 51510,
+      "sha256": "a1bd71fd442c6bd21ff49fc3c79013bcc6f0aee911b5afd98015204f8d8e23e7"
+    },
+    {
+      "path": "results/publication/figures/utility_vs_greedy_optimum.svg",
+      "bytes": 49187,
+      "sha256": "b70edf8537818e3ceb44811d91e5cbd268d8b817be36f226cc08c36339ca690c"
+    },
+    {
+      "path": "results/publication/isa_compact_checks.json",
+      "bytes": 10269,
+      "sha256": "e8a9df2087d42b73b0a5755028b7ccfa795a3d7ad6d246f231bab1b948454af3"
+    },
+    {
+      "path": "results/publication/paper-support-notes.md",
+      "bytes": 833,
+      "sha256": "6a1e4ecca23d9510a8b30b7681b4a256474e546217296ce0f75b3ab94a86696b"
+    },
+    {
+      "path": "results/publication/reports/RESULTS.md",
+      "bytes": 2113,
+      "sha256": "389009f3634a0b1974389ee13bdfa1ed685a7443732a154281526e65d9077f4d"
+    },
+    {
+      "path": "results/publication/tables/campaign_status.json",
+      "bytes": 426,
+      "sha256": "a4299fbab0c30aa1db83023e9ab6a1df748f476ba7e796ed95964b6aeb14d897"
+    },
+    {
+      "path": "results/publication/tables/checkpoints.json",
+      "bytes": 772,
+      "sha256": "29fe7e0713943cffd400ae25df1767be2141df86d2eb98674a91a0cbcee23d15"
+    },
+    {
+      "path": "results/publication/tables/data_dictionary.json",
+      "bytes": 1641,
+      "sha256": "45da92be3227b5ea187995ef25814db72d88b1da16bc2cf97fd7a87f23dfc576"
+    },
+    {
+      "path": "results/publication/tables/decisions_index.json",
+      "bytes": 178,
+      "sha256": "3ab7be81c74ce8ada38638cac3c5c1bb832cc78f58721ac0835cf92cdb121846"
+    },
+    {
+      "path": "results/publication/tables/fixture_depth_summary.csv",
+      "bytes": 1785,
+      "sha256": "a39b95c36dac927b18d2412c1e476c4109b77dd92287d0188340438a9f1d8ead"
+    },
+    {
+      "path": "results/publication/tables/fixture_depth_summary.json",
+      "bytes": 5152,
+      "sha256": "77e4d1947e0d78b22c60c399afbbebafe7d0afe43165bc1841a6b00ec72031a0"
+    },
+    {
+      "path": "results/publication/tables/ghz_jobs.csv",
+      "bytes": 6025,
+      "sha256": "12b363d46eb8639dabf5dbfa3778003ef9d8f968f4a3162f663c0bddfee921ee"
+    },
+    {
+      "path": "results/publication/tables/ghz_jobs.json",
+      "bytes": 13934,
+      "sha256": "bcce7f2a1abe62231035e86d25934730c3c398ce7d98e61642acc4b1b79d660e"
+    },
+    {
+      "path": "results/publication/tables/job_level.csv",
+      "bytes": 2911,
+      "sha256": "8abdf5f300e965268d773045e3a3982f1d58aad8bafc9b5cb52605867cdab230"
+    },
+    {
+      "path": "results/publication/tables/job_level.json",
+      "bytes": 6234,
+      "sha256": "121e26092cb22b65ce31fd1caed5f51bd4d2e10f3748f5b9a9fcbad033878477"
+    },
+    {
+      "path": "results/publication/tables/p2_layer_identity.json",
+      "bytes": 1407,
+      "sha256": "2e346f70f0d03259e09b727d5dbd9ea1eef569cb8d8181063aad446734e48322"
+    },
+    {
+      "path": "results/publication/tables/policy_level.csv",
+      "bytes": 41349,
+      "sha256": "cebcec36fde15a487c1bf278de164c894abf56453144d5701c18b1027c7da319"
+    },
+    {
+      "path": "results/publication/tables/policy_level.json",
+      "bytes": 145694,
+      "sha256": "f356b044a3a11d31d45198b65cd0db59c000b919ea2a350e1dde9bea9033d68b"
+    },
+    {
+      "path": "results/publication/tables/policy_replay_index.json",
+      "bytes": 236,
+      "sha256": "58c198f81f20591b126eb7e550a4a1276c9bb5afed0e635c747b24bb0cd39910"
+    },
+    {
+      "path": "results/publication/tables/post_collection_replay.json",
+      "bytes": 17501,
+      "sha256": "2eab9da3457015489f6814b15b45faf1def29bd422d3c0b67c4592b09577e853"
+    },
+    {
+      "path": "results/publication/tables/post_collection_replay_deadlines.csv",
+      "bytes": 3059763,
+      "sha256": "427281f4d424ef87ff2188299fb51e90671ffbb5e15ef8b7673f916603686604"
+    },
+    {
+      "path": "results/publication/tables/post_collection_replay_scenarios.json",
+      "bytes": 813267,
+      "sha256": "b1c707a2a6b4173f7eae2934f996851488363c58d955d0fb65ec774c5dc588f4"
+    },
+    {
+      "path": "results/publication/tables/pub_level.csv",
+      "bytes": 18485,
+      "sha256": "cf63c8d6413d4c9a7c019a09241b20d45b5bb822d8bd8ddafb8bea30a2ec368f"
+    },
+    {
+      "path": "results/publication/tables/pub_level.json",
+      "bytes": 157380,
+      "sha256": "c21f8c347e65cb2394a908adb93602a8ebffb4cecc0e4e399854b8dce9d757df"
+    },
+    {
+      "path": "results/publication/tables/simulation_fixture_replay.json",
+      "bytes": 142203,
+      "sha256": "b9072af12e08870671e1b177297b5d8984392e0c56312684977463164af6ed65"
+    },
+    {
+      "path": "results/publication/tables/worked_example.json",
+      "bytes": 865,
+      "sha256": "868188eb26dcc5e6e5446b79e10241616e24cf84724f66cf90a6cfce1dd5cf0f"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
-  "analysis_version": "publication-analysis-v1",
+  "analysis_revision_distinct_from_frozen_hardware_protocol": true,
+  "analysis_version": "publication-analysis-v2",
   "campaign": {
     "campaign_remaining_seconds": 270.0,
     "campaign_status": "COMPLETE",
@@ -14,8 +15,9 @@
     "usage_reconciled_seconds": 30.0
   },
   "command": "python tools/reproduce.py --output /Users/kawinperera/Downloads/Quantum Projects/build/reproduction",
-  "created_utc": "2026-09-09T11:50:30.833020+00:00",
+  "created_utc": "2026-09-09T16:17:05.869441+00:00",
   "environment": {
+    "cwd": "/Users/kawinperera/Downloads/Quantum Projects",
     "executable": "/Users/kawinperera/Downloads/Quantum Projects/venv/bin/python",
     "packages": {
       "matplotlib": "3.11.1",
@@ -29,6 +31,24 @@
     "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]"
   },
   "errors": [],
+  "git": {
+    "dirty": true,
+    "git_present": true,
+    "head": "d5931db8bbe6593e0a201b57bd1c1f8abdc1368c",
+    "status_porcelain": "M AGENTS.md\n M README.md\n M docs/architecture-and-policies.md\n M docs/data-and-provenance.md\n M docs/reproduce.md\n M tools/publication/__init__.py\n M tools/publication/export.py\n M tools/publication/figures.py\n M tools/publication/metrics.py\n M tools/publication/paths.py\n M tools/reproduce.py\n M tools/tests/test_publication.py\n?? archive/follow-up-2026-09-09/\n?? decision-study/data/campaign_ledger.lock\n?? docs/claim-evidence-limitation.md\n?? docs/related-work-handoff.md\n?? tools/publication/classical_controls.py\n?? tools/publication/ibm_guard.py\n?? tools/publication/plans/\n?? tools/publication/provenance.py\n?? tools/publication/replay_adapter.py"
+  },
+  "hashes_after": {
+    "decision-study/config/protocol.json": "b6e0815466101c8636ae172068ae8718768f70d2605b655662a05d9fd87783dc",
+    "decision-study/data/campaign_ledger.json": "9e3290a33130d2e373212b1105d71bdf8b12605e8e3a64b2c831263011b209cb",
+    "decision-study/data/decisions.json": "35b91d4c00287706b893b39994b00503a9ef4bb1dc682fb24858c7f49bef38d3",
+    "decision-study/study.py": "181eb50eb0de9c4b3a336fe9796c2a094360b7984a96a11af5b1585aef7cf86a"
+  },
+  "hashes_before": {
+    "decision-study/config/protocol.json": "b6e0815466101c8636ae172068ae8718768f70d2605b655662a05d9fd87783dc",
+    "decision-study/data/campaign_ledger.json": "9e3290a33130d2e373212b1105d71bdf8b12605e8e3a64b2c831263011b209cb",
+    "decision-study/data/decisions.json": "35b91d4c00287706b893b39994b00503a9ef4bb1dc682fb24858c7f49bef38d3",
+    "decision-study/study.py": "181eb50eb0de9c4b3a336fe9796c2a094360b7984a96a11af5b1585aef7cf86a"
+  },
   "historical_account_balance_note": "524 seconds remaining was observed at 2026-09-09T11:17:44.252800+00:00 and is not live availability.",
   "legacy_hashes": {
     "n_expected": 65,
@@ -55,5 +75,6 @@
     "protocol_hash_ok": true,
     "protocol_hash_recomputed": "0e8c4283c971f672853d3dfdf9167911eb834a0b3dc0aad16e1ef377f0cd046a",
     "protocol_hash_recorded": "0e8c4283c971f672853d3dfdf9167911eb834a0b3dc0aad16e1ef377f0cd046a"
-  }
+  },
+  "refresh_publication": true
 }
