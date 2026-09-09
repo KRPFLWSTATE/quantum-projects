@@ -1,5 +1,5 @@
 {
-  "n_jobs": 1,
+  "n_jobs": 6,
   "rows": [
     {
       "charged_usage_seconds": 5.0,
@@ -9,6 +9,56 @@
       "job_id": "dagjoc8mhr3c73e58uk0",
       "n_pubs": 12,
       "result_received_utc": "2026-09-09T11:00:12.220462+00:00",
+      "shots_valid": true
+    },
+    {
+      "charged_usage_seconds": 5.0,
+      "created_utc": "2026-09-09T11:09:40.951134+00:00",
+      "evidence_type": "decision_hardware",
+      "intent": "f494f1ad-b145-4ae4-a4ad-3f8156bbd0d1",
+      "job_id": "dagjstomhr3c73e5936g",
+      "n_pubs": 12,
+      "result_received_utc": "2026-09-09T11:10:03.943169+00:00",
+      "shots_valid": true
+    },
+    {
+      "charged_usage_seconds": 5.0,
+      "created_utc": "2026-09-09T11:11:27.157252+00:00",
+      "evidence_type": "decision_hardware",
+      "intent": "01e6dd19-704f-4bb7-8d17-03345f515543",
+      "job_id": "dagjto8mhr3c73e5942g",
+      "n_pubs": 12,
+      "result_received_utc": "2026-09-09T11:11:42.144446+00:00",
+      "shots_valid": true
+    },
+    {
+      "charged_usage_seconds": 5.0,
+      "created_utc": "2026-09-09T11:13:24.348286+00:00",
+      "evidence_type": "decision_hardware",
+      "intent": "11b0afa8-648b-434f-8df2-8fe679e69918",
+      "job_id": "dagjulj9k43c73adg3j0",
+      "n_pubs": 12,
+      "result_received_utc": "2026-09-09T11:13:37.448402+00:00",
+      "shots_valid": true
+    },
+    {
+      "charged_usage_seconds": 5.0,
+      "created_utc": "2026-09-09T11:14:56.881416+00:00",
+      "evidence_type": "decision_hardware",
+      "intent": "baa68b98-cfda-47b8-932f-c5cc7732a9f8",
+      "job_id": "dagjvcphvn6c73cqnkt0",
+      "n_pubs": 12,
+      "result_received_utc": "2026-09-09T11:15:12.190631+00:00",
+      "shots_valid": true
+    },
+    {
+      "charged_usage_seconds": 5.0,
+      "created_utc": "2026-09-09T11:17:18.157444+00:00",
+      "evidence_type": "decision_hardware",
+      "intent": "93d8930a-4b66-41bf-bef8-6c03292e8c2d",
+      "job_id": "dagk0g0mhr3c73e5971g",
+      "n_pubs": 12,
+      "result_received_utc": "2026-09-09T11:17:35.789152+00:00",
       "shots_valid": true
     }
   ]

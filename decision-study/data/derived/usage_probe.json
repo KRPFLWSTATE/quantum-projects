@@ -15,18 +15,18 @@
     "usage_period",
     "usage_remaining_seconds"
   ],
-  "remaining_seconds": 549.0,
-  "timestamp_utc": "2026-09-09T11:00:19.385326+00:00",
+  "remaining_seconds": 524.0,
+  "timestamp_utc": "2026-09-09T11:17:44.252800+00:00",
   "usage": {
     "instance_id": "<redacted>",
     "plan_id": "<redacted>",
-    "usage_consumed_seconds": 51,
+    "usage_consumed_seconds": 76,
     "usage_limit_reached": false,
     "usage_limit_seconds": 600,
     "usage_period": {
-      "end_time": "2026-09-09T11:00:26.408Z",
-      "start_time": "2026-08-12T11:00:26.408Z"
+      "end_time": "2026-09-09T11:17:49.736Z",
+      "start_time": "2026-08-12T11:17:49.736Z"
     },
-    "usage_remaining_seconds": 549
+    "usage_remaining_seconds": 524
   }
 }

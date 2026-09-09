@@ -1,0 +1,98 @@
+{
+  "backend": "ibm_fez",
+  "deadline_seconds": 30.0,
+  "dispatched_utc": "2026-09-09T11:17:18.157444+00:00",
+  "intent": "93d8930a-4b66-41bf-bef8-6c03292e8c2d",
+  "physical": true,
+  "protocol_hash": "0e8c4283c971f672853d3dfdf9167911eb834a0b3dc0aad16e1ef377f0cd046a",
+  "pubs": [
+    {
+      "instance_id": "D1",
+      "isa_qpy": "data/derived/compile/qpy/D1_p2_isa.qpy",
+      "isa_qpy_sha256": "2307af2fe41c10492e361ed27a2e7228371633fa77f6cae10c64ea44f784307f",
+      "p": 2,
+      "pub_index": 0
+    },
+    {
+      "instance_id": "D4",
+      "isa_qpy": "data/derived/compile/qpy/D4_p1_isa.qpy",
+      "isa_qpy_sha256": "0e92af39d85f7b85dbcbf61e08d14f07920e9019a4f650ee11ce2e5776ccdd6a",
+      "p": 1,
+      "pub_index": 1
+    },
+    {
+      "instance_id": "D1",
+      "isa_qpy": "data/derived/compile/qpy/D1_p1_isa.qpy",
+      "isa_qpy_sha256": "103d4e893368bdb247d0ec08bc490d38e76a045931e32c0a58356ac28107567a",
+      "p": 1,
+      "pub_index": 2
+    },
+    {
+      "instance_id": "D3",
+      "isa_qpy": "data/derived/compile/qpy/D3_p1_isa.qpy",
+      "isa_qpy_sha256": "6f65e347d9c98917141a91c66f9d7ea02dbee0879e12fe5e33772d397122c3de",
+      "p": 1,
+      "pub_index": 3
+    },
+    {
+      "instance_id": "D5",
+      "isa_qpy": "data/derived/compile/qpy/D5_p1_isa.qpy",
+      "isa_qpy_sha256": "37be7f480e67f3201d200e06b6695b51a6bd044106dca6d6758fad5412dba875",
+      "p": 1,
+      "pub_index": 4
+    },
+    {
+      "instance_id": "D4",
+      "isa_qpy": "data/derived/compile/qpy/D4_p2_isa.qpy",
+      "isa_qpy_sha256": "064db2c31e5f942c07cb51ee3100ef70e835c1dcb72908a17ff62a6b072fc136",
+      "p": 2,
+      "pub_index": 5
+    },
+    {
+      "instance_id": "D5",
+      "isa_qpy": "data/derived/compile/qpy/D5_p2_isa.qpy",
+      "isa_qpy_sha256": "c6ba69bed63dd92f6d10b0f1f9da96c2ca4a0cd71dea2aaf3e336090128d25c2",
+      "p": 2,
+      "pub_index": 6
+    },
+    {
+      "instance_id": "D6",
+      "isa_qpy": "data/derived/compile/qpy/D6_p1_isa.qpy",
+      "isa_qpy_sha256": "1a0c0a5c26f8a54f943e32343e1228a1ab449800ab939e276db8cdaf39e567a6",
+      "p": 1,
+      "pub_index": 7
+    },
+    {
+      "instance_id": "D2",
+      "isa_qpy": "data/derived/compile/qpy/D2_p1_isa.qpy",
+      "isa_qpy_sha256": "6d858106402fa4a1c4f7a99a0ca8c8d6d50370f5eecdbe8f4fa12c8658ce614d",
+      "p": 1,
+      "pub_index": 8
+    },
+    {
+      "instance_id": "D3",
+      "isa_qpy": "data/derived/compile/qpy/D3_p2_isa.qpy",
+      "isa_qpy_sha256": "f3ef652268b92f04b13f32bd30b5db5ee9916df5ccf9be381f240178487215ba",
+      "p": 2,
+      "pub_index": 9
+    },
+    {
+      "instance_id": "D6",
+      "isa_qpy": "data/derived/compile/qpy/D6_p2_isa.qpy",
+      "isa_qpy_sha256": "e9e0cf2edfc94433432e65325bac3594b4b8a82dd400bce79b7a0554f4fa6c0a",
+      "p": 2,
+      "pub_index": 10
+    },
+    {
+      "instance_id": "D2",
+      "isa_qpy": "data/derived/compile/qpy/D2_p2_isa.qpy",
+      "isa_qpy_sha256": "c3401971302e82c9204e2b3c0005100da97ade048b54dfad0eb1bc777b47f244",
+      "p": 2,
+      "pub_index": 11
+    }
+  ],
+  "tags": [
+    "decision-93d8930a",
+    "decision-study"
+  ]
+}
