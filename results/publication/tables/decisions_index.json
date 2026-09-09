@@ -1,0 +1,11 @@
+{
+  "n_jobs": 6,
+  "n_pubs": 72,
+  "note": "Index only. Full records remain in decision-study/data/decisions.json.",
+  "policies": [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ]
+}

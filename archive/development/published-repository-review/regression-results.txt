@@ -1,0 +1,66 @@
+test_corrupted_protocol_blocks_readiness (__main__.ReleaseRegressions.test_corrupted_protocol_blocks_readiness) ... FAIL
+test_documented_float_usage_archives_and_reconciles (__main__.ReleaseRegressions.test_documented_float_usage_archives_and_reconciles) ... ERROR
+test_existing_raw_does_not_leave_campaign_stuck (__main__.ReleaseRegressions.test_existing_raw_does_not_leave_campaign_stuck) ... FAIL
+test_malformed_pub_count_is_not_success (__main__.ReleaseRegressions.test_malformed_pub_count_is_not_success) ... FAIL
+test_resume_accounts_for_charged_usage (__main__.ReleaseRegressions.test_resume_accounts_for_charged_usage) ... FAIL
+test_unknown_usage_keeps_reservation (__main__.ReleaseRegressions.test_unknown_usage_keeps_reservation) ... FAIL
+
+======================================================================
+ERROR: test_documented_float_usage_archives_and_reconciles (__main__.ReleaseRegressions.test_documented_float_usage_archives_and_reconciles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 53, in test_documented_float_usage_archives_and_reconciles
+    result = self.dispatch()
+             ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 38, in dispatch
+    return dispatch_block(physical=False, adapter=self.adapter, store=self.store,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/a13ccbdd6e02/repo-final-review/decision-study/src/runner.py", line 228, in dispatch_block
+    charged = float((usage or {}).get("quantum_seconds") or (usage or {}).get("qpu_usage") or 0.0)
+                    ^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'get'
+
+======================================================================
+FAIL: test_corrupted_protocol_blocks_readiness (__main__.ReleaseRegressions.test_corrupted_protocol_blocks_readiness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 102, in test_corrupted_protocol_blocks_readiness
+    self.assertFalse(result['ready_for_first_hardware'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_existing_raw_does_not_leave_campaign_stuck (__main__.ReleaseRegressions.test_existing_raw_does_not_leave_campaign_stuck)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 92, in test_existing_raw_does_not_leave_campaign_stuck
+    self.assertIsNone(self.store.load_ledger()['outstanding_job'])
+AssertionError: {'intent': 'review-intent', 'job_id': 'fake-runtime-f459d7b9-cb14-4d2a-a3a2-25b60bc17006', 'physical': False} is not None
+
+======================================================================
+FAIL: test_malformed_pub_count_is_not_success (__main__.ReleaseRegressions.test_malformed_pub_count_is_not_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 71, in test_malformed_pub_count_is_not_success
+    self.assertFalse(result.get('ok'), 'One PUB with one shot was reported successful')
+AssertionError: True is not false : One PUB with one shot was reported successful
+
+======================================================================
+FAIL: test_resume_accounts_for_charged_usage (__main__.ReleaseRegressions.test_resume_accounts_for_charged_usage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 79, in test_resume_accounts_for_charged_usage
+    self.assertEqual(ledger['usage_reconciled_seconds'], 2.0)
+AssertionError: 0.0 != 2.0
+
+======================================================================
+FAIL: test_unknown_usage_keeps_reservation (__main__.ReleaseRegressions.test_unknown_usage_keeps_reservation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a13ccbdd6e02/deliverables/published-repo-review/test_release_regressions.py", line 64, in test_unknown_usage_keeps_reservation
+    self.assertTrue(any(r.get('open') for r in ledger['reservations']),
+AssertionError: False is not true : Unknown usage was cleared instead of retaining its reservation
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.716s
+
+FAILED (failures=5, errors=1)

@@ -1,27 +1,17 @@
-# Decision study (separate from the 20-job GHZ archive)
+# Decision study
 
-Policy-controlled six-variable QAOA decision workflow. This namespace is **not** part of `dba-qpu-run/results/runs/`.
+Frozen six-variable QAOA decision campaign, **separate** from `dba-qpu-run/results/runs/`.
 
-## Commands
+**Campaign status (archive):** COMPLETE — six physical `ibm_fez` SamplerV2 jobs, 30.0 s reconciled charge. **Submission status:** blocked (`JOB_CAP_REACHED`). Do not reset the ledger or start a seventh job.
+
+Public interpretation: [`docs/results.md`](../docs/results.md). Offline rebuild: [`docs/reproduce.md`](../docs/reproduce.md).
+
+Active implementation: `study.py` and `src/` (frozen hashes in `config/protocol.json`). New publication analysis is under [`tools/`](../tools/), not inside frozen modules.
+
+Do not use `study.py prepare` / live `status` as the newcomer path. After dependency install:
 
 ```bash
-cd "/Users/kawinperera/Downloads/Quantum Projects"
-PYTHONUNBUFFERED=1 venv/bin/python -u decision-study/study.py audit-legacy
-PYTHONUNBUFFERED=1 venv/bin/python -u decision-study/study.py prepare
-PYTHONUNBUFFERED=1 venv/bin/python -u decision-study/study.py validate
-PYTHONUNBUFFERED=1 venv/bin/python -u decision-study/study.py status
-PYTHONUNBUFFERED=1 venv/bin/python -u decision-study/study.py report
-PYTHONUNBUFFERED=1 venv/bin/python -u decision-study/study.py export-return-packet
+python tools/reproduce.py --output build/reproduction
 ```
 
-Hardware:
-
-- Legacy GHZ: user says `do a legacy GHZ run`.
-- This study: `do a run` or `do a decision run` (exactly one 12-PUB block after live budget checks).
-- Resume an in-flight decision job: `resume the run` (never submits a replacement).
-
-`run-next --hardware` is wired but still refuses unless that later authorisation is used.
-
-## Evidence status
-
-Decision QPU jobs submitted: **0** (setup). Historical GHZ jobs remain the 20 archived probe executions.
+Hardware submission still requires the author’s exact phrases (`do a run` / `do a decision run`) and is not part of public reproduction. Development installers live under [`archive/development/`](../archive/development/).

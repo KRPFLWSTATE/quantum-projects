@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Hybrid Multi-Agent AI and Quantum Cloud Infrastructure: An Exploratory Organisational Framework for Complex Decision Processing"
+title: "Decision-QAOA hardware archive and GHZ probe records"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
@@ -7,7 +7,14 @@ authors:
     given-names: Kawin Rehan
 url: "https://github.com/KRPFLWSTATE/quantum-projects"
 repository-code: "https://github.com/KRPFLWSTATE/quantum-projects"
-version: 1.0.0
-date-released: 2026-08-25
 license: MIT
-abstract: "A bounded pilot implementation of a five-stage multi-agent-to-QPU architecture, documenting a 20-run comparative IBM Quantum hardware pilot with named-hardware telemetry and Hellinger-fidelity analysis."
+abstract: "Archived software and data for a six-block ibm_fez QAOA decision study on six synthetic six-variable fixtures, plus a separate 20-run 3-qubit GHZ hardware probe. Not a quantum-advantage claim. Cite the repository commit; no GitHub Release or DOI existed when this file was updated."
+preferred-citation:
+  type: software
+  title: "Decision-QAOA hardware archive and GHZ probe records"
+  authors:
+    - family-names: Perera
+      given-names: Kawin Rehan
+  url: "https://github.com/KRPFLWSTATE/quantum-projects"
+# No version/date-released: GitHub tags/releases were empty at update time.
+# Historical CFF copy claiming version 1.0.0 dated 2026-08-25 is in archive/historical-public-docs/CITATION.cff.

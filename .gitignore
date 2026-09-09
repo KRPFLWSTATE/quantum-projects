@@ -6,4 +6,5 @@ venv/
 save_credentials.py
 .cursor/
 *_backup.json
+build/
 

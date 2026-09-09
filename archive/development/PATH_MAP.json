@@ -1,0 +1,18 @@
+{
+  "analysis_type": "development_bundle_relocation",
+  "note": "Bundles are archival installers and review payloads, not the active implementation. Active code remains under decision-study/ and tools/.",
+  "moves": [
+    {
+      "old_path": "decision-study-completion-package/",
+      "new_path": "archive/development/decision-study-completion-package/"
+    },
+    {
+      "old_path": "published-repository-review/",
+      "new_path": "archive/development/published-repository-review/"
+    },
+    {
+      "old_path": "final-hardware-readiness-fix/",
+      "new_path": "archive/development/final-hardware-readiness-fix/"
+    }
+  ]
+}

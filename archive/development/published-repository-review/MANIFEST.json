@@ -1,0 +1,31 @@
+{
+  "reviewed_commit": "3f5b139cb523c83c354a71429b472d5a2e3e6103",
+  "physical_jobs_submitted": 0,
+  "manifest_self_hash_excluded": true,
+  "files": {
+    "circuit-checks.json": {
+      "sha256": "41fe80ba5a36f752d359cfa5ed28ff6d99993fe4443b1af394414a042ff4d7f2",
+      "bytes": 10266
+    },
+    "supplied-tests.log": {
+      "sha256": "7f1483a79a7e2eaa34c48bd39425848b01f36c89f8adf72b150cdc77b81ee273",
+      "bytes": 3316
+    },
+    "test_release_regressions.py": {
+      "sha256": "ecdacc9846e2739afffd97a1a810bfb9ac485b03023f0ad73325c553b3c500ca",
+      "bytes": 5107
+    },
+    "regression-results.txt": {
+      "sha256": "ca7ef31764560a2fc3decb17aaba51945886c9adc689d5012f5dc7303ff1b5fa",
+      "bytes": 5015
+    },
+    "reproduced-findings.json": {
+      "sha256": "63b772d8d253e6766648d16449250ed76a804bf9bca04369c11509673ab0bedf",
+      "bytes": 857
+    },
+    "REVIEW-AND-CURSOR-INSTRUCTIONS.md": {
+      "sha256": "403daea9c00126ae9f32f56fc16e888911713fdb87c037e5a688d0fe2e06c410",
+      "bytes": 13880
+    }
+  }
+}

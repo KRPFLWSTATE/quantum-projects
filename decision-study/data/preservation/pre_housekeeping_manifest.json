@@ -1,0 +1,889 @@
+{
+  "analysis_type": "pre_housekeeping_preservation",
+  "base_head": "a27d0dfd980b00c9967069ca99f916fc906f198e",
+  "created_utc": "2026-09-09T11:37:33.934475+00:00",
+  "files": [
+    {
+      "bytes": 687,
+      "path": "CITATION.cff",
+      "sha256": "25dce2e673efe127683fdd4b1b17082a9f5e85e054c7347d9ec74b0513e40540"
+    },
+    {
+      "bytes": 5875,
+      "path": "README.md",
+      "sha256": "9140559ab219375716c555e22d1081d75cb2a7f73feac472b6a2f742d7b3baeb"
+    },
+    {
+      "bytes": 569,
+      "path": "dba-qpu-run/qpu_run_telemetry.json",
+      "sha256": "8b1761a0e37cd1fa52d41689fe82a21114e41b446e5b4b5335af50a7a05ec6a1"
+    },
+    {
+      "bytes": 8247,
+      "path": "dba-qpu-run/results/comparative_summary.json",
+      "sha256": "b4ebb594429001575bfea8f2ad8a4981ef0439ea41a46807e9ca66501be3f3ef"
+    },
+    {
+      "bytes": 294,
+      "path": "dba-qpu-run/results/hardware_counts.json",
+      "sha256": "b76ced8c8aeb59eb1dd5583f25ca7a9c61c1c049088357a7649c9c03c12c3635"
+    },
+    {
+      "bytes": 2369,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_01_ibm_kingston_job_info.json",
+      "sha256": "e7463369bdcace3c4ee6ae532857d40f44ce1d6544267e7e90d766a528ca5010"
+    },
+    {
+      "bytes": 2525,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_01_ibm_kingston_job_result.json",
+      "sha256": "73c96f8d54c55a43e84684e5846e5aa4b88f1986246c0f63ae639d505ed02275"
+    },
+    {
+      "bytes": 2364,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_02_ibm_fez_job_info.json",
+      "sha256": "2de9e94b6febd3c606855c308399796121824e2a92c8fd51a6c8b81c0afe9252"
+    },
+    {
+      "bytes": 2373,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_02_ibm_fez_job_result.json",
+      "sha256": "d05d0323a332b74c3f934e9cd15c06090702bb28bd75b530eaaf9d30e38f583b"
+    },
+    {
+      "bytes": 646,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_03_ibm_fez_job_info.json",
+      "sha256": "ba14c994ab93260f75176fc45c42e18a5d3b451dbe17c67dc4264b8cdd744be7"
+    },
+    {
+      "bytes": 540,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_03_ibm_fez_job_result.json",
+      "sha256": "906c2b939abed8509e7347e7518b12a0703b5ba21df614cd25151e952e373d19"
+    },
+    {
+      "bytes": 652,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_04_ibm_marrakesh_job_info.json",
+      "sha256": "dd1b5d61b3def2832c684e3db77cc3a3f318f7fc0ddd44470c3b372cfed14ded"
+    },
+    {
+      "bytes": 538,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_04_ibm_marrakesh_job_result.json",
+      "sha256": "31b3451d674d2c82bf9ba6471d9883d72e41259447037fe0a8c9ee15af1e2024"
+    },
+    {
+      "bytes": 650,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_05_ibm_marrakesh_job_info.json",
+      "sha256": "fb8194845a47a243d3e219a6c2ad79fd92b6a6f88ee5d974da52ba7ae0bde254"
+    },
+    {
+      "bytes": 538,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_05_ibm_marrakesh_job_result.json",
+      "sha256": "1da08b65053a4774d8462e58d53cb67633ccf2732cbc35af65a3939e27b1dbb7"
+    },
+    {
+      "bytes": 651,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_06_ibm_kingston_job_info.json",
+      "sha256": "d57f5ae24856645001f3f08768da34657d1080bf30e1739bbba68a87720a7163"
+    },
+    {
+      "bytes": 543,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_06_ibm_kingston_job_result.json",
+      "sha256": "352b69d2ebbac146acafebb211dc02e67d0dc3644a33a92a967ed2a5982dcbfd"
+    },
+    {
+      "bytes": 646,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_07_ibm_fez_job_info.json",
+      "sha256": "674e65915d5c5026dd349f2e9d107c901f3bfd0eb04a1eca8475f09978e657de"
+    },
+    {
+      "bytes": 540,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_07_ibm_fez_job_result.json",
+      "sha256": "ffe4c062a00e5578fd9046243475270d685856108cb7d815e5c2db8ac75f497b"
+    },
+    {
+      "bytes": 649,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_08_ibm_kingston_job_info.json",
+      "sha256": "868b43bad60809124efffebaf416375ee640c5a391ec6d88905583ca7eb3ee84"
+    },
+    {
+      "bytes": 543,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_08_ibm_kingston_job_result.json",
+      "sha256": "fc3aa60211185db3c6d3aa1d6b624297319a947b0b367871e8bf4eeafa61ee1a"
+    },
+    {
+      "bytes": 652,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_09_ibm_marrakesh_job_info.json",
+      "sha256": "295f44fdc2e7dba390823ee9ef1b5bd91e31406579e8276330a3c4bf7bc84632"
+    },
+    {
+      "bytes": 524,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_09_ibm_marrakesh_job_result.json",
+      "sha256": "d14746be82506b0505cafeadbd26b87f4b5f2e7fa62e6c3adbb5485e34f9b23a"
+    },
+    {
+      "bytes": 645,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_10_ibm_fez_job_info.json",
+      "sha256": "5f85c33141a30a1b6abdfa72bda7ec82022bccb4831c14983a18b26ef517091f"
+    },
+    {
+      "bytes": 539,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_10_ibm_fez_job_result.json",
+      "sha256": "8feb47047708eef238939f3a6a260c25ae5aee5974251362e3df0329d4741d75"
+    },
+    {
+      "bytes": 646,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_11_ibm_fez_job_info.json",
+      "sha256": "7a9926f46d67cf995ef0a02f0a0d2e3475cf2df313674e23d14dfb79feb86586"
+    },
+    {
+      "bytes": 541,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_11_ibm_fez_job_result.json",
+      "sha256": "55e8213b0030a4b20f76abfbdbbc487863c0b026e05ff0d73085564242541333"
+    },
+    {
+      "bytes": 652,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_12_ibm_marrakesh_job_info.json",
+      "sha256": "4dd50f0cfe01ab8185c373183525df368d88da0c23fdf110480f5a69563faa17"
+    },
+    {
+      "bytes": 525,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_12_ibm_marrakesh_job_result.json",
+      "sha256": "08f9b613e462ed6ebca0465574e799476b38abaf63a623574dd2c78796165ffb"
+    },
+    {
+      "bytes": 650,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_13_ibm_marrakesh_job_info.json",
+      "sha256": "e7318b60849ff0b9d6ae21108cb67a10222feb65d4cdf4234c3d3beb7494da42"
+    },
+    {
+      "bytes": 525,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_13_ibm_marrakesh_job_result.json",
+      "sha256": "c75ca26dd58ac9669597fd653cefd63d1e698e56f68c7669e69ef8c1d0832068"
+    },
+    {
+      "bytes": 645,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_14_ibm_fez_job_info.json",
+      "sha256": "70b2c04d64b3e927a54ff7e4f1bda4ab716fdd43039d146137a83ddb102ff852"
+    },
+    {
+      "bytes": 540,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_14_ibm_fez_job_result.json",
+      "sha256": "c0dfb5a8f02b5b34e42fc0d405bfe4266e0bb83524426b61d2cf05b468b12a60"
+    },
+    {
+      "bytes": 646,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_15_ibm_fez_job_info.json",
+      "sha256": "d1930411b69c50bebc71545d37b4f8a41a4398cd50d7e89b0a002067717b22e6"
+    },
+    {
+      "bytes": 542,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_15_ibm_fez_job_result.json",
+      "sha256": "999750442d5f9c4e0735abca6bf332e7d9dd626f4b1d34494660b9caa93f3414"
+    },
+    {
+      "bytes": 650,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_16_ibm_marrakesh_job_info.json",
+      "sha256": "47b95f891bc52f504e3e53153d98098f6b2377bdaa911526e10382bb66697a83"
+    },
+    {
+      "bytes": 539,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_16_ibm_marrakesh_job_result.json",
+      "sha256": "6c082c5941196dbecc7daf47fcdae9e9709963e2c56092f5cd5f047f842ba43d"
+    },
+    {
+      "bytes": 646,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_17_ibm_fez_job_info.json",
+      "sha256": "0b3646f50897a3da4414503a15b6dd8aa9a7e6d3426c89c3600d334bf048cd96"
+    },
+    {
+      "bytes": 539,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_17_ibm_fez_job_result.json",
+      "sha256": "08d49e23581c097fc5bbd1525180bbe842a27a7e2a5559b40a421d9a159782a6"
+    },
+    {
+      "bytes": 652,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_18_ibm_marrakesh_job_info.json",
+      "sha256": "537ff74954cd3c427f6e24c1821157967ce6f70351666807902f40b1d784227a"
+    },
+    {
+      "bytes": 524,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_18_ibm_marrakesh_job_result.json",
+      "sha256": "d2e64cef29c150f82f5c8a6ddbc9b783c47942fe0791b9dd419f5391d932536a"
+    },
+    {
+      "bytes": 652,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_19_ibm_marrakesh_job_info.json",
+      "sha256": "66937de9a12960782f218394769d0416dbdd277e6c9f498fc0f0088a46b56547"
+    },
+    {
+      "bytes": 525,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_19_ibm_marrakesh_job_result.json",
+      "sha256": "443c9629ae9699f5e8cf95d24793ad96471638fd0035b126287f2bf459332c21"
+    },
+    {
+      "bytes": 645,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_20_ibm_fez_job_info.json",
+      "sha256": "5e24df1a6f63f86b91063c8818d3493cd9c985ddfe63c3b39398065774721d90"
+    },
+    {
+      "bytes": 539,
+      "path": "dba-qpu-run/results/ibm-runtime-exports/run_20_ibm_fez_job_result.json",
+      "sha256": "5f5a6665c98ecb4a31c342f5f6af3f75c9989c802b1f80ac828540e686ad0128"
+    },
+    {
+      "bytes": 549,
+      "path": "dba-qpu-run/results/qpu_run_telemetry.json",
+      "sha256": "65480c5eae52e384343144eea65f3a9dbb70c2c4e6a405fa0a9360f9bd6ad6c5"
+    },
+    {
+      "bytes": 845,
+      "path": "dba-qpu-run/results/runs/run_01_ibm_kingston.json",
+      "sha256": "0a23085a61cfd033b4c434835f77d81d5ee4ad7a6920373fe8c8d7cc6409888b"
+    },
+    {
+      "bytes": 840,
+      "path": "dba-qpu-run/results/runs/run_02_ibm_fez.json",
+      "sha256": "809fab63f0ed4b06201e38c168f3790e3be070e18193723dd329928275d1241a"
+    },
+    {
+      "bytes": 838,
+      "path": "dba-qpu-run/results/runs/run_03_ibm_fez.json",
+      "sha256": "398471d73a7a5bc37b1c690161c7b26004241e4dc824f9a953cf8bf88f21c857"
+    },
+    {
+      "bytes": 842,
+      "path": "dba-qpu-run/results/runs/run_04_ibm_marrakesh.json",
+      "sha256": "4cb0d85571565dbec1ae1ea91522eb84f5ed979e10290a8195c2895a6a403a9e"
+    },
+    {
+      "bytes": 842,
+      "path": "dba-qpu-run/results/runs/run_05_ibm_marrakesh.json",
+      "sha256": "a2e59240921ad2df7b936fc89cf3699a3e18668803387fbe1195346014e52ead"
+    },
+    {
+      "bytes": 847,
+      "path": "dba-qpu-run/results/runs/run_06_ibm_kingston.json",
+      "sha256": "4e11d14e332b0c22af6618f68303bf20801f2d1ee5b2a4f90fd1f5a7ca76dc10"
+    },
+    {
+      "bytes": 838,
+      "path": "dba-qpu-run/results/runs/run_07_ibm_fez.json",
+      "sha256": "d72094e470b615a3dfeeb955cc5fea21ed5e7487c4c507eaa068efd7f240cc55"
+    },
+    {
+      "bytes": 846,
+      "path": "dba-qpu-run/results/runs/run_08_ibm_kingston.json",
+      "sha256": "061eea69a6241f7387610e5f4ee8a9825e6274d91dbed2db83eae0f24b258f0d"
+    },
+    {
+      "bytes": 827,
+      "path": "dba-qpu-run/results/runs/run_09_ibm_marrakesh.json",
+      "sha256": "961b3e4cb82b481af25ebd80800b0fef0ab4ce2800e8e79c954d61e223a470cf"
+    },
+    {
+      "bytes": 838,
+      "path": "dba-qpu-run/results/runs/run_10_ibm_fez.json",
+      "sha256": "b896f6325fa836b214d6422236fda4270f214f09e5b8235c50aa3329652e8087"
+    },
+    {
+      "bytes": 841,
+      "path": "dba-qpu-run/results/runs/run_11_ibm_fez.json",
+      "sha256": "cef1cd40a1d98bb6ac2929c114f66dc79636ece9b8251cce977da124c8bce88a"
+    },
+    {
+      "bytes": 831,
+      "path": "dba-qpu-run/results/runs/run_12_ibm_marrakesh.json",
+      "sha256": "c2b9cc7fe6e4a5edd209f4915f7d6c5a28689fa1e42f50c6906f4db5e9db228c"
+    },
+    {
+      "bytes": 830,
+      "path": "dba-qpu-run/results/runs/run_13_ibm_marrakesh.json",
+      "sha256": "f2ab952fe1abc27e11c6cc149e56bfcdaaaa10a6feeb0ded71978520deeb611e"
+    },
+    {
+      "bytes": 839,
+      "path": "dba-qpu-run/results/runs/run_14_ibm_fez.json",
+      "sha256": "da066ab17dfa100a8a149997dae89749051567e5f1639bf8cbceebfdf554babf"
+    },
+    {
+      "bytes": 841,
+      "path": "dba-qpu-run/results/runs/run_15_ibm_fez.json",
+      "sha256": "848e48cb55d9ea0a46915b5058afc1b5bb00c5c618feaea1a0e4aa8a6d74b951"
+    },
+    {
+      "bytes": 845,
+      "path": "dba-qpu-run/results/runs/run_16_ibm_marrakesh.json",
+      "sha256": "a8014894f771a69f1e21452c8c83d2eeff55695bbf2c8c872223de635851428c"
+    },
+    {
+      "bytes": 838,
+      "path": "dba-qpu-run/results/runs/run_17_ibm_fez.json",
+      "sha256": "ae270d5fa0b8d382d206f0d1b6d011ea2e9e9135053d6f6bb8906f778f912458"
+    },
+    {
+      "bytes": 827,
+      "path": "dba-qpu-run/results/runs/run_18_ibm_marrakesh.json",
+      "sha256": "bdd1a4fb024014c926c3c0573dd583673292d9bd3fcc79eb205d0899ef8f5daa"
+    },
+    {
+      "bytes": 831,
+      "path": "dba-qpu-run/results/runs/run_19_ibm_marrakesh.json",
+      "sha256": "f56e92b0c06e885bb3fb8bcddbcee05d5c1dec1a2bf36171aa376a37df0093fd"
+    },
+    {
+      "bytes": 842,
+      "path": "dba-qpu-run/results/runs/run_20_ibm_fez.json",
+      "sha256": "3367e8453c9607dc65e3f0aad826abe4bc9ea95689833ffd1c3a2465512beabc"
+    },
+    {
+      "bytes": 146,
+      "path": "dba-qpu-run/results/simulation_counts.json",
+      "sha256": "4ffb0e45352bec6021e7630d3c99af393da203c487572983d0e2a907c7b9b8f2"
+    },
+    {
+      "bytes": 1150,
+      "path": "decision-study/README.md",
+      "sha256": "d28f54218a1c03abd0abf37bfaa4b068ad36359a17f701f29fcbdc5359b6c4a6"
+    },
+    {
+      "bytes": 83,
+      "path": "decision-study/config/hardware_fixtures.json",
+      "sha256": "0d12e938e68b15a2b7712505e91c94b29108145f22e4828847d9a7ea8232f671"
+    },
+    {
+      "bytes": 6419,
+      "path": "decision-study/config/protocol.json",
+      "sha256": "b6e0815466101c8636ae172068ae8718768f70d2605b655662a05d9fd87783dc"
+    },
+    {
+      "bytes": 17465,
+      "path": "decision-study/config/simulation_fixtures.json",
+      "sha256": "6eb5d18d4918d9740145544709ca8ef14232dc189fc8b7a4e929d6bd16031f22"
+    },
+    {
+      "bytes": 3063,
+      "path": "decision-study/data/attempts/01e6dd19-704f-4bb7-8d17-03345f515543.json",
+      "sha256": "7f0272826e5164948ea6ac27f8183d81ef419375844db541cf5ef2e4903ee5c4"
+    },
+    {
+      "bytes": 3063,
+      "path": "decision-study/data/attempts/11b0afa8-648b-434f-8df2-8fe679e69918.json",
+      "sha256": "304554c96932e6586e2e32eecbb5bc5030a0b25af2e312517cf3c679f99822dd"
+    },
+    {
+      "bytes": 3063,
+      "path": "decision-study/data/attempts/93d8930a-4b66-41bf-bef8-6c03292e8c2d.json",
+      "sha256": "7bcc7844de7962b1b908585c78f510212bd6748d99df63a3d8e6666be5507726"
+    },
+    {
+      "bytes": 3063,
+      "path": "decision-study/data/attempts/baa68b98-cfda-47b8-932f-c5cc7732a9f8.json",
+      "sha256": "7bfed04d804d999e39d7ae6d0a41afefd7775a54292b2336efdce1b78d1f7eda"
+    },
+    {
+      "bytes": 3063,
+      "path": "decision-study/data/attempts/d938fae1-f0e3-44d1-bb17-f2ba2f03f15e.json",
+      "sha256": "6a8484ca66c8a8b677efb60bb73339a95756fe4fbf1c555dc5d1aa05a2057c88"
+    },
+    {
+      "bytes": 3063,
+      "path": "decision-study/data/attempts/f494f1ad-b145-4ae4-a4ad-3f8156bbd0d1.json",
+      "sha256": "551f6a99a80a6499b3e29576a79d8277b7422fbab360e4ec76378ccba0ed5135"
+    },
+    {
+      "bytes": 2751,
+      "path": "decision-study/data/campaign_ledger.json",
+      "sha256": "9e3290a33130d2e373212b1105d71bdf8b12605e8e3a64b2c831263011b209cb"
+    },
+    {
+      "bytes": 5235660,
+      "path": "decision-study/data/decisions.json",
+      "sha256": "35b91d4c00287706b893b39994b00503a9ef4bb1dc682fb24858c7f49bef38d3"
+    },
+    {
+      "bytes": 263,
+      "path": "decision-study/data/derived/backend_pin.json",
+      "sha256": "4021a1726388601775e3e4d8bfc73a0e64b9fccbbd5460871784db6d61cdcc9d"
+    },
+    {
+      "bytes": 10269,
+      "path": "decision-study/data/derived/circuit_equivalence.json",
+      "sha256": "002c87ddc0b6e696e8062a463454c0ce9452062d1d996330c1b5a045bdcc0eba"
+    },
+    {
+      "bytes": 110924,
+      "path": "decision-study/data/derived/compile/isa_summary.json",
+      "sha256": "ab092e5110fda07401b5f4e06692616cc8ee89b1e3f3d3d73e8235bed8de5197"
+    },
+    {
+      "bytes": 14658,
+      "path": "decision-study/data/derived/compile/qpy/D1_p1_compact.qpy",
+      "sha256": "fec64e262f8577f5d3f270cfc5080164c88a0267561cdaf86007fb048c0da8fb"
+    },
+    {
+      "bytes": 20672,
+      "path": "decision-study/data/derived/compile/qpy/D1_p1_isa.qpy",
+      "sha256": "103d4e893368bdb247d0ec08bc490d38e76a045931e32c0a58356ac28107567a"
+    },
+    {
+      "bytes": 2604,
+      "path": "decision-study/data/derived/compile/qpy/D1_p1_logical.qpy",
+      "sha256": "068db28324fc5a79aa563591a377587b8298df0e2ecd056cac7f1d95e2cc0956"
+    },
+    {
+      "bytes": 29350,
+      "path": "decision-study/data/derived/compile/qpy/D1_p2_compact.qpy",
+      "sha256": "87fa35835b986eefb8519fc188962f048df320f8df30b4c9df43e37f2684cd79"
+    },
+    {
+      "bytes": 35364,
+      "path": "decision-study/data/derived/compile/qpy/D1_p2_isa.qpy",
+      "sha256": "2307af2fe41c10492e361ed27a2e7228371633fa77f6cae10c64ea44f784307f"
+    },
+    {
+      "bytes": 4341,
+      "path": "decision-study/data/derived/compile/qpy/D1_p2_logical.qpy",
+      "sha256": "565ccaeadefe84edd3a67eed4af0d11f0cea15d34d1dd9a26d022909697445b5"
+    },
+    {
+      "bytes": 14658,
+      "path": "decision-study/data/derived/compile/qpy/D2_p1_compact.qpy",
+      "sha256": "6f67df02356fcf9ddcf031b26f47c0afe5a6f54f7fe706bc2325fda515e4466b"
+    },
+    {
+      "bytes": 20672,
+      "path": "decision-study/data/derived/compile/qpy/D2_p1_isa.qpy",
+      "sha256": "6d858106402fa4a1c4f7a99a0ca8c8d6d50370f5eecdbe8f4fa12c8658ce614d"
+    },
+    {
+      "bytes": 2604,
+      "path": "decision-study/data/derived/compile/qpy/D2_p1_logical.qpy",
+      "sha256": "b594c0d6a77dfacc592b93830772a7f2ac740ed03fe1058993079b896731f137"
+    },
+    {
+      "bytes": 29350,
+      "path": "decision-study/data/derived/compile/qpy/D2_p2_compact.qpy",
+      "sha256": "d4872463e1f2c7416668e641fd684f865047125572bfe56757a21883cb5aca27"
+    },
+    {
+      "bytes": 35364,
+      "path": "decision-study/data/derived/compile/qpy/D2_p2_isa.qpy",
+      "sha256": "c3401971302e82c9204e2b3c0005100da97ade048b54dfad0eb1bc777b47f244"
+    },
+    {
+      "bytes": 4341,
+      "path": "decision-study/data/derived/compile/qpy/D2_p2_logical.qpy",
+      "sha256": "7719bc869600af35b0d7e706fd661311be6d1d5ca0b59f785eb29f65b687cebf"
+    },
+    {
+      "bytes": 14658,
+      "path": "decision-study/data/derived/compile/qpy/D3_p1_compact.qpy",
+      "sha256": "342d7a7a2f319e5c0af740a3f8561f42d0cf014411d5c1b8f9fff68e0363c697"
+    },
+    {
+      "bytes": 20672,
+      "path": "decision-study/data/derived/compile/qpy/D3_p1_isa.qpy",
+      "sha256": "6f65e347d9c98917141a91c66f9d7ea02dbee0879e12fe5e33772d397122c3de"
+    },
+    {
+      "bytes": 2604,
+      "path": "decision-study/data/derived/compile/qpy/D3_p1_logical.qpy",
+      "sha256": "f472734858995850f7bd8e96153771a8b5d7468090b7b7545f1c653499c58e1c"
+    },
+    {
+      "bytes": 19702,
+      "path": "decision-study/data/derived/compile/qpy/D3_p2_compact.qpy",
+      "sha256": "c081dfac6f325495014bbf12607f9291dc516e89fde5567b1da4b78f1c248617"
+    },
+    {
+      "bytes": 25716,
+      "path": "decision-study/data/derived/compile/qpy/D3_p2_isa.qpy",
+      "sha256": "f3ef652268b92f04b13f32bd30b5db5ee9916df5ccf9be381f240178487215ba"
+    },
+    {
+      "bytes": 4341,
+      "path": "decision-study/data/derived/compile/qpy/D3_p2_logical.qpy",
+      "sha256": "c7efc4aa7340d088b777b00999c5c44f976eb47cf1a316bd839438e810ca625e"
+    },
+    {
+      "bytes": 14658,
+      "path": "decision-study/data/derived/compile/qpy/D4_p1_compact.qpy",
+      "sha256": "022b3536752cc577dec2ad4ceca0a7eff861b8c842735f397122122408b6bd35"
+    },
+    {
+      "bytes": 20672,
+      "path": "decision-study/data/derived/compile/qpy/D4_p1_isa.qpy",
+      "sha256": "0e92af39d85f7b85dbcbf61e08d14f07920e9019a4f650ee11ce2e5776ccdd6a"
+    },
+    {
+      "bytes": 2604,
+      "path": "decision-study/data/derived/compile/qpy/D4_p1_logical.qpy",
+      "sha256": "1449bdd022de5115f7907e005ee5f95660e572fc3f582016417a3aaa7f898734"
+    },
+    {
+      "bytes": 29351,
+      "path": "decision-study/data/derived/compile/qpy/D4_p2_compact.qpy",
+      "sha256": "e012ba29ae71024c09b8e32945d3d1bb3322aa1798c40c75e932e08392cb3bd8"
+    },
+    {
+      "bytes": 35364,
+      "path": "decision-study/data/derived/compile/qpy/D4_p2_isa.qpy",
+      "sha256": "064db2c31e5f942c07cb51ee3100ef70e835c1dcb72908a17ff62a6b072fc136"
+    },
+    {
+      "bytes": 4341,
+      "path": "decision-study/data/derived/compile/qpy/D4_p2_logical.qpy",
+      "sha256": "f0e68a0bc88419654a903941f98c7de6820e138803c19a793a1445cabccf2fce"
+    },
+    {
+      "bytes": 14659,
+      "path": "decision-study/data/derived/compile/qpy/D5_p1_compact.qpy",
+      "sha256": "968a29d01efb337cae510d82d9cd57f2aa42270392b87f9c1f8ddf9067678a8a"
+    },
+    {
+      "bytes": 20673,
+      "path": "decision-study/data/derived/compile/qpy/D5_p1_isa.qpy",
+      "sha256": "37be7f480e67f3201d200e06b6695b51a6bd044106dca6d6758fad5412dba875"
+    },
+    {
+      "bytes": 2605,
+      "path": "decision-study/data/derived/compile/qpy/D5_p1_logical.qpy",
+      "sha256": "7977d209e9bb7d962693b8cfcbbbddc2c53f01ab377832ecfcb02b9ed12ff5ad"
+    },
+    {
+      "bytes": 29351,
+      "path": "decision-study/data/derived/compile/qpy/D5_p2_compact.qpy",
+      "sha256": "9e15601caba4a33488dcea6be2e7cb38878b53c84d32d8dea21fa950cca40136"
+    },
+    {
+      "bytes": 35365,
+      "path": "decision-study/data/derived/compile/qpy/D5_p2_isa.qpy",
+      "sha256": "c6ba69bed63dd92f6d10b0f1f9da96c2ca4a0cd71dea2aaf3e336090128d25c2"
+    },
+    {
+      "bytes": 4342,
+      "path": "decision-study/data/derived/compile/qpy/D5_p2_logical.qpy",
+      "sha256": "48881749c99187a533c05458ee94872d442cdd9d3c170df3ccc5ca5d01dc0424"
+    },
+    {
+      "bytes": 14659,
+      "path": "decision-study/data/derived/compile/qpy/D6_p1_compact.qpy",
+      "sha256": "b88e4365e37979043243fc4f08c777a80ab4ef3555b4eebb4ba57ce2cfd20996"
+    },
+    {
+      "bytes": 20673,
+      "path": "decision-study/data/derived/compile/qpy/D6_p1_isa.qpy",
+      "sha256": "1a0c0a5c26f8a54f943e32343e1228a1ab449800ab939e276db8cdaf39e567a6"
+    },
+    {
+      "bytes": 2605,
+      "path": "decision-study/data/derived/compile/qpy/D6_p1_logical.qpy",
+      "sha256": "db13f40dfaf5f552ad79f4bdada1fdb428198e07b9d0f6dd87c05dfca552d0e4"
+    },
+    {
+      "bytes": 19703,
+      "path": "decision-study/data/derived/compile/qpy/D6_p2_compact.qpy",
+      "sha256": "dbdbf10eb4cefb5d1876cf4ffcd61fc343dd42b1c5818d3b185446f1691f99af"
+    },
+    {
+      "bytes": 25717,
+      "path": "decision-study/data/derived/compile/qpy/D6_p2_isa.qpy",
+      "sha256": "e9e0cf2edfc94433432e65325bac3594b4b8a82dd400bce79b7a0554f4fa6c0a"
+    },
+    {
+      "bytes": 4342,
+      "path": "decision-study/data/derived/compile/qpy/D6_p2_logical.qpy",
+      "sha256": "9a4e55c3711549e0cef887b70e390fdd3a01b921387af4e2978e4d10585d1e92"
+    },
+    {
+      "bytes": 1749,
+      "path": "decision-study/data/derived/greedy_baselines.json",
+      "sha256": "e2c005b51bc1690a9f4dda6537f732bdbf264ff773af24422fae337908ed4e8c"
+    },
+    {
+      "bytes": 2176,
+      "path": "decision-study/data/derived/hardware_archive_analysis.json",
+      "sha256": "0229e7594ea8ad03b7e97ed5232e0e525145af90ac9a3351f92e16d87572c78e"
+    },
+    {
+      "bytes": 347,
+      "path": "decision-study/data/derived/last_dispatch.json",
+      "sha256": "ff88ef16805dedeb5113d39bc6ca94c35076dbe873dce8a1d069c86f2872d3b3"
+    },
+    {
+      "bytes": 955843,
+      "path": "decision-study/data/derived/policies_dagjoc8mhr3c73e58uk0.json",
+      "sha256": "5c45ff972b3ef4b25563c14e2c79ef560201d8bbe1739990bebd085621f6f84e"
+    },
+    {
+      "bytes": 955843,
+      "path": "decision-study/data/derived/policies_dagjstomhr3c73e5936g.json",
+      "sha256": "5fe7908de25e8ecc032502ed59adc42d631d36f329f29ede290bba1ae176b7de"
+    },
+    {
+      "bytes": 959359,
+      "path": "decision-study/data/derived/policies_dagjto8mhr3c73e5942g.json",
+      "sha256": "787cea338e8380a6b9218da23d78455cdd0f0cf37e857b784443beef4ed50467"
+    },
+    {
+      "bytes": 955744,
+      "path": "decision-study/data/derived/policies_dagjulj9k43c73adg3j0.json",
+      "sha256": "e3ce9c799bbd415ae93ec1696a592cba649fa03ea8dee1d63648e0aedc8a81a1"
+    },
+    {
+      "bytes": 953398,
+      "path": "decision-study/data/derived/policies_dagjvcphvn6c73cqnkt0.json",
+      "sha256": "ac4a524f92b18032586bd7c29c1f4bb95ce56240b25ea1bdd23efc02b3d60238"
+    },
+    {
+      "bytes": 960340,
+      "path": "decision-study/data/derived/policies_dagk0g0mhr3c73e5971g.json",
+      "sha256": "22ef26fd79c8237fdd5a7a7a2b2e4060ceb795940f65a57507c39a8ca0e37338"
+    },
+    {
+      "bytes": 6419,
+      "path": "decision-study/data/derived/protocol_freeze.json",
+      "sha256": "b6e0815466101c8636ae172068ae8718768f70d2605b655662a05d9fd87783dc"
+    },
+    {
+      "bytes": 109268,
+      "path": "decision-study/data/derived/qaoa_parameters.json",
+      "sha256": "9bdb51a97b890b3535407f3d35b34f390612862c49a33459d8c6b8defa0b8d26"
+    },
+    {
+      "bytes": 70,
+      "path": "decision-study/data/derived/validate_unittests.json",
+      "sha256": "cf9ee8d49e3abbde633cdeccac88638c27ac7980d97210977d608ce4f6a1c430"
+    },
+    {
+      "bytes": 8844,
+      "path": "decision-study/data/preservation/legacy_sha256.json",
+      "sha256": "9ebf8ffeb60b8d00e6b17dde1485659d21ee9c9cc50cc3b0e5f4922e3004d5b5"
+    },
+    {
+      "bytes": 1077,
+      "path": "decision-study/data/provider_jobs.json",
+      "sha256": "33ecccf8c2b97f1306de5cb69d27d3a71569abe0a34b5c1a353e4108c87b58d2"
+    },
+    {
+      "bytes": 242706,
+      "path": "decision-study/data/raw/dagjoc8mhr3c73e58uk0.json",
+      "sha256": "d941db27b6f8fce4283fc77f0a768ee21a3075473befc1f40ee2aaf96f422ad2"
+    },
+    {
+      "bytes": 242716,
+      "path": "decision-study/data/raw/dagjstomhr3c73e5936g.json",
+      "sha256": "a4c121cadf3dff17b80e1746fcb4adebc1939092d1f10f100c29da3537c92df1"
+    },
+    {
+      "bytes": 242723,
+      "path": "decision-study/data/raw/dagjto8mhr3c73e5942g.json",
+      "sha256": "3455e44d57607f2a2a91f565ff945e7608f9dc88a8c3239e6ff4061972bbb89c"
+    },
+    {
+      "bytes": 242661,
+      "path": "decision-study/data/raw/dagjulj9k43c73adg3j0.json",
+      "sha256": "a64a079b82a61ec8869eabf8f0c5ae8b1cbca4692448f69a71e1ce28a5da4435"
+    },
+    {
+      "bytes": 242616,
+      "path": "decision-study/data/raw/dagjvcphvn6c73cqnkt0.json",
+      "sha256": "62a5dfde6ba02675457457ad2d509185347cf3ca93d7846d0dbf9435d3f5dd60"
+    },
+    {
+      "bytes": 242741,
+      "path": "decision-study/data/raw/dagk0g0mhr3c73e5971g.json",
+      "sha256": "301c109cfad6eec21bec71f9fb79bdf2e640946aefe8bfec3e7292e95c49a58b"
+    },
+    {
+      "bytes": 14424,
+      "path": "decision-study/reports/CHATGPT_RETURN_REPORT.md",
+      "sha256": "c9fa2e9041f25491a253f12d7a75240fa94cf16b67efa27128a7793de93e7e3e"
+    },
+    {
+      "bytes": 65,
+      "path": "decision-study/reports/chatgpt_return_packet.sha256",
+      "sha256": "e6f8a86e0064decbfd42468f6f67fa8ee860351f363245194f099667a4825641"
+    },
+    {
+      "bytes": 763230,
+      "path": "decision-study/reports/chatgpt_return_packet.zip",
+      "sha256": "3c4f75308d1188550bc0069c70b32082844d5ad6f6220ac6576186f57c1619e7"
+    },
+    {
+      "bytes": 7876,
+      "path": "decision-study/reports/command_test_log.txt",
+      "sha256": "eaf34d0f573c5e4d422631cfccd77e77581cdff486a4bba99929856041607c29"
+    },
+    {
+      "bytes": 76,
+      "path": "decision-study/src/__init__.py",
+      "sha256": "d0352ce338cf5f91bb17e7723cf9511885f4cd6061640fba934b5bafe43ccbb8"
+    },
+    {
+      "bytes": 6585,
+      "path": "decision-study/src/agents.py",
+      "sha256": "902ca6ccba65e38a3e7e5e5d4215751aaae63045a7e6491293569963c2f5255e"
+    },
+    {
+      "bytes": 7772,
+      "path": "decision-study/src/analysis.py",
+      "sha256": "d90d7a975027f78b651fc8cf95a0b8d914939845bec48cb8423b19ad09defac5"
+    },
+    {
+      "bytes": 1042,
+      "path": "decision-study/src/archive.py",
+      "sha256": "45d66b1de17a8ae1beb825e74546fe5172bfb494a19c5f1d48196d65bf18ab16"
+    },
+    {
+      "bytes": 6607,
+      "path": "decision-study/src/budget.py",
+      "sha256": "c930fb270b42f7e64f6b37b0619acc66a8b2e8768d3b6b183d613cac084c9f4a"
+    },
+    {
+      "bytes": 4709,
+      "path": "decision-study/src/classical.py",
+      "sha256": "39b99810441b0d74839830e9a87e7b4992213cece9f5473eede4b5d7bc88cdef"
+    },
+    {
+      "bytes": 8689,
+      "path": "decision-study/src/compile.py",
+      "sha256": "99ab709e3d5f0e9be3ee1646ab2c7e4225dce706f8046084468b2385aac0fd3d"
+    },
+    {
+      "bytes": 2175,
+      "path": "decision-study/src/fake_provider.py",
+      "sha256": "b79a759ce02c979ab5f4b9a419ead705af69c48522a35138c559ff6ee85d03e2"
+    },
+    {
+      "bytes": 3383,
+      "path": "decision-study/src/figures.py",
+      "sha256": "e11f5fa27aed92d62de93aab199276f2dc9749aacecc01bf586779e66f6d4de4"
+    },
+    {
+      "bytes": 4052,
+      "path": "decision-study/src/fixtures.py",
+      "sha256": "6a8b043466326abcec9260767c97deec2ec21f294c2b7408eaaf0b2478ed02f4"
+    },
+    {
+      "bytes": 2773,
+      "path": "decision-study/src/freeze.py",
+      "sha256": "fc61b911ba0d634a07d0c46f8fd77adedfab206a978295edad2bcd691ef7bdde"
+    },
+    {
+      "bytes": 832,
+      "path": "decision-study/src/hardware.py",
+      "sha256": "b1f5850ba8a7708f2b1561fc128b54615f5aa90697750e6baf743e07bb5feda3"
+    },
+    {
+      "bytes": 922,
+      "path": "decision-study/src/hashing.py",
+      "sha256": "cb16e255e62068bbcdc6e79b3dcfe1635f1f47e9a63961da766729c954de127d"
+    },
+    {
+      "bytes": 2717,
+      "path": "decision-study/src/ledger.py",
+      "sha256": "883a89425b075cd0e433be0ef515065cd38fa627eeb2fc0ebf487a31ebe75746"
+    },
+    {
+      "bytes": 7656,
+      "path": "decision-study/src/legacy_audit.py",
+      "sha256": "9878e268ebbdb29cd2642a1ffab9e19cf3d341f68488902f16186a23986387e2"
+    },
+    {
+      "bytes": 6022,
+      "path": "decision-study/src/model.py",
+      "sha256": "c234ed17a45c5fbf3bf6e55f9f11cd799c72a8a823fb99281bfe3b0ff654164c"
+    },
+    {
+      "bytes": 8256,
+      "path": "decision-study/src/optimiser.py",
+      "sha256": "edd9fc09077a488446b1c6a0d6b63bb177ac82ee81fab4f0b1d815c27a622bad"
+    },
+    {
+      "bytes": 1846,
+      "path": "decision-study/src/oracle.py",
+      "sha256": "6cf0784c886cb74006fbb7454e3f023e5f8ea747b956756fa182fe89470019f9"
+    },
+    {
+      "bytes": 1877,
+      "path": "decision-study/src/packet.py",
+      "sha256": "8065007783882655d7bf70d6ee69647547bac552ed04c71a17b2d15af3c02a1a"
+    },
+    {
+      "bytes": 1452,
+      "path": "decision-study/src/paths.py",
+      "sha256": "112d6cd209d49e0fbc48948a19bf585394329e2a05a044fa16349b741fca56fd"
+    },
+    {
+      "bytes": 7581,
+      "path": "decision-study/src/policies.py",
+      "sha256": "4425162dfd03073fc6d9957cd634934016d3146134c8dd8e805640ed8a967bce"
+    },
+    {
+      "bytes": 3250,
+      "path": "decision-study/src/provenance.py",
+      "sha256": "6136fac7cec108c0a16f976498257e3f592394bcdd2eeb95ce1ed4b2aa167952"
+    },
+    {
+      "bytes": 3638,
+      "path": "decision-study/src/qaoa.py",
+      "sha256": "94a7b650a3bb71f438bc68bd14724766c87007e1420b15c3656f24e897d1c818"
+    },
+    {
+      "bytes": 7405,
+      "path": "decision-study/src/readiness.py",
+      "sha256": "b9c3382e3aa58a7b20e14d6036d93d2d76cea92896481e2ddc1d431d8775f69b"
+    },
+    {
+      "bytes": 10519,
+      "path": "decision-study/src/replay.py",
+      "sha256": "927b91cc2f2657961227a8b723cf7eeb9dd2d88ba778f7e1c7e582b3358214a7"
+    },
+    {
+      "bytes": 17376,
+      "path": "decision-study/src/report.py",
+      "sha256": "a0560c98bc27176a36b3e828a136e9be3bce35fe0b5ad6dc6b876c4d90907de1"
+    },
+    {
+      "bytes": 30468,
+      "path": "decision-study/src/runner.py",
+      "sha256": "5902eaea6babb6136d7af12cdb6543ce269888711b6985d6324214ffc445b306"
+    },
+    {
+      "bytes": 7326,
+      "path": "decision-study/src/runtime_adapter.py",
+      "sha256": "ff4c6ae8aa84f1577c21789c6a4746f779fdb0deb1b14735812758ac2ecdae1c"
+    },
+    {
+      "bytes": 3732,
+      "path": "decision-study/src/sampler_api.py",
+      "sha256": "030e6da403fd4a35f6dc5254e31a6df0700c451a47f5435503ea0edaff7ba020"
+    },
+    {
+      "bytes": 3094,
+      "path": "decision-study/src/spec.py",
+      "sha256": "4e2de910bea2a1784f1868f8a4aac126e7218b86c65fa393d11e1b1c31744ef8"
+    },
+    {
+      "bytes": 2376,
+      "path": "decision-study/src/store.py",
+      "sha256": "87292f4213f303221430ab24492e45a144953f089d81490b5f1bd8e7cb930b18"
+    },
+    {
+      "bytes": 5016,
+      "path": "decision-study/src/usage_estimate.py",
+      "sha256": "07f75fba37f229d00a83ae3f678320e34c8d4d6dba8b69c5c6b761628aae4ca8"
+    },
+    {
+      "bytes": 5731,
+      "path": "decision-study/src/verifier.py",
+      "sha256": "722de2bd4f20106064cbd8f6b8146de6ac78f14bed8c59b1ceea81c658156dea"
+    },
+    {
+      "bytes": 12702,
+      "path": "decision-study/study.py",
+      "sha256": "181eb50eb0de9c4b3a336fe9796c2a094360b7984a96a11af5b1585aef7cf86a"
+    }
+  ],
+  "n_files": 176,
+  "note": "This manifest file is excluded from hashing itself. Verify protected inputs against these SHA-256 digests."
+}

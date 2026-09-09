@@ -1,0 +1,13 @@
+# Reproduction environment (tested locally)
+
+# Tested: Python 3.14.6, macOS, repository venv.
+# Archived IBM jobs report qiskit_ibm_runtime-0.49.0, qiskit-2.5.2, qiskit_aer-0.17.2 in job metrics.
+# Those per-job strings are historical observations, not a lockfile for every transitive dependency.
+
+numpy==2.5.2
+qiskit==2.5.2
+qiskit-ibm-runtime==0.49.0
+qiskit-aer==0.17.2
+scipy==1.18.1
+matplotlib==3.11.1
+python-dotenv>=1.0

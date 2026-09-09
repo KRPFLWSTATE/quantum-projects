@@ -1,6 +1,8 @@
 # DBA QPU run package
 
-Bounded pilot implementation of a multi-agent-to-QPU telemetry-probe workflow for the DBA research artefact.
+20-run 3-qubit GHZ telemetry-probe archive. This namespace is **not** the decision-study QAOA campaign (`decision-study/`).
+
+Offline recompute of archived Hellinger fidelities: `python tools/reproduce.py` (repository root). That path does not submit IBM jobs.
 
 ## Authoritative vs convenience telemetry
 
@@ -9,14 +11,6 @@ Bounded pilot implementation of a multi-agent-to-QPU telemetry-probe workflow fo
 
 Supporting artefacts (IBM Runtime exports, figures, comparative index) live under [`results/`](results/).
 
-## Reproduce locally
+## Additional hardware (not the public quick start)
 
-IBM Quantum credentials must be configured locally (for example via `QiskitRuntimeService.save_account()`). Do not commit tokens or `.env` files.
-
-```bash
-cd dba-qpu-run
-PYTHONUNBUFFERED=1 python -u run_circuit.py
-PYTHONUNBUFFERED=1 python -u analyze_results.py
-```
-
-Future executions must **not** overwrite existing immutable records under `results/runs/`.
+IBM credentials are required only to append a **new** GHZ probe. Do not overwrite `results/runs/`. Backend selection is `least_busy(..., min_num_qubits=3)`, not a hardcoded machine. The authorising phrase is `do a legacy GHZ run`.
