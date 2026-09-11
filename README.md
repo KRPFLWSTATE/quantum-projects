@@ -58,4 +58,4 @@ archive/            Historical READMEs and development installers
 
 ## Citation, author, AI
 
-Cite the software via [`CITATION.cff`](CITATION.cff). There is no GitHub Release/DOI as of this writing. Author: Kawin Rehan Perera. AI assistance was used for implementation, debugging, and analysis, not merely grammar. The author is responsible for the archived jobs.
+Cite the software via [`CITATION.cff`](CITATION.cff). There is no GitHub Release/DOI as of this writing. Author: Kawin Rehan Perera ([ORCID](https://orcid.org/0009-0002-9014-1650)). AI assistance was used for implementation, debugging, and analysis, not merely grammar. The author is responsible for the archived jobs.

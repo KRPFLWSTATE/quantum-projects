@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: Perera
     given-names: Kawin Rehan
+    orcid: https://orcid.org/0009-0002-9014-1650
 url: "https://github.com/KRPFLWSTATE/quantum-projects"
 repository-code: "https://github.com/KRPFLWSTATE/quantum-projects"
 license: MIT
@@ -15,6 +16,7 @@ preferred-citation:
   authors:
     - family-names: Perera
       given-names: Kawin Rehan
+      orcid: https://orcid.org/0009-0002-9014-1650
   url: "https://github.com/KRPFLWSTATE/quantum-projects"
 references:
   - type: software
@@ -22,6 +24,7 @@ references:
     authors:
       - family-names: Perera
         given-names: Kawin Rehan
+        orcid: https://orcid.org/0009-0002-9014-1650
     url: "https://github.com/KRPFLWSTATE/quantum-projects"
     notes: "Later QAOA decision-study paper; archived under decision-study/ and results/publication/. Distinct from the GHZ/multi-agent preferred citation above."
 # No version/date-released: GitHub tags/releases were empty at update time.
