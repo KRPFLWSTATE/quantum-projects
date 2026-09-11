@@ -1,0 +1,1 @@
+Files under this directory are historical snapshots preserved for provenance. They are NOT the canonical source. The canonical, current results live under results/publication/ and decision-study/ at the repository root, per the root README.md. Do not cite figures or claims from files under archive/ as current.

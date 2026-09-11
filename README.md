@@ -53,7 +53,7 @@ dba-qpu-run/        20-run GHZ probe archive
 tools/              Post-collection analysis and offline reproduce.py
 results/publication/ Generated tables/figures (checked in)
 docs/               Reader documentation
-archive/            Historical READMEs and development installers
+archive/            Historical snapshots (not canonical; see archive/README.md)
 ```
 
 ## Citation, author, AI
