@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Decision-QAOA hardware archive and GHZ probe records"
+title: "Hybrid Multi-Agent AI and Quantum Cloud Infrastructure: An Exploratory Organisational Framework for Complex Decision Processing"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
@@ -8,13 +8,21 @@ authors:
 url: "https://github.com/KRPFLWSTATE/quantum-projects"
 repository-code: "https://github.com/KRPFLWSTATE/quantum-projects"
 license: MIT
-abstract: "Archived software and data for a six-block ibm_fez QAOA decision study on six synthetic six-variable fixtures, plus a separate 20-run 3-qubit GHZ hardware probe. Not a quantum-advantage claim. Cite the repository commit; no GitHub Release or DOI existed when this file was updated."
+abstract: "Software and archived data supporting two related outputs: a 20-run 3-qubit GHZ hardware probe (multi-agent-to-QPU organisational framing) and a later six-block ibm_fez QAOA decision study on six synthetic six-variable fixtures. Not a quantum-advantage claim. Cite the repository commit; no GitHub Release or DOI existed when this file was updated."
 preferred-citation:
   type: software
-  title: "Decision-QAOA hardware archive and GHZ probe records"
+  title: "Hybrid Multi-Agent AI and Quantum Cloud Infrastructure: An Exploratory Organisational Framework for Complex Decision Processing"
   authors:
     - family-names: Perera
       given-names: Kawin Rehan
   url: "https://github.com/KRPFLWSTATE/quantum-projects"
+references:
+  - type: software
+    title: "Revalidating quantum decision candidates under specification change"
+    authors:
+      - family-names: Perera
+        given-names: Kawin Rehan
+    url: "https://github.com/KRPFLWSTATE/quantum-projects"
+    notes: "Later QAOA decision-study paper; archived under decision-study/ and results/publication/. Distinct from the GHZ/multi-agent preferred citation above."
 # No version/date-released: GitHub tags/releases were empty at update time.
 # Historical CFF copy claiming version 1.0.0 dated 2026-08-25 is in archive/historical-public-docs/CITATION.cff.
