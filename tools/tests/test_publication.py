@@ -96,7 +96,8 @@ class PublicationTests(unittest.TestCase):
             "requirements-repro.txt",
             "CITATION.cff",
             "docs/claim-evidence-limitation.md",
-            "docs/related-work-handoff.md",
+            "docs/related-work.md",
+            "archive/historical-public-docs/related-work-handoff.md",
             "archive/development/PATH_MAP.json",
         ):
             self.assertTrue((REPO / rel).is_file(), rel)

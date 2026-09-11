@@ -25,7 +25,7 @@ Figures (regenerated; also under `build/reproduction/figures` after the offline 
 
 ## Navigation
 
-[Results](docs/results.md) · [Reproduce](docs/reproduce.md) · [Methods](docs/methods.md) · [Data](docs/data-and-provenance.md) · [Architecture](docs/architecture-and-policies.md) · [Limitations](docs/limitations-and-contributions.md) · [Claim–evidence](docs/claim-evidence-limitation.md) · [Related work](docs/related-work-handoff.md) · [Citation](CITATION.cff)
+[Results](docs/results.md) · [Reproduce](docs/reproduce.md) · [Methods](docs/methods.md) · [Data](docs/data-and-provenance.md) · [Architecture](docs/architecture-and-policies.md) · [Limitations](docs/limitations-and-contributions.md) · [Claim–evidence](docs/claim-evidence-limitation.md) · [Related work](docs/related-work.md) · [Citation](CITATION.cff)
 
 ## What the results mean (short)
 

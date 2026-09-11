@@ -1,0 +1,1 @@
+Novelty positioning versus prior work is intentionally out of scope for the current manuscript’s repository documentation; the unresolved bibliographic handoff is preserved at [`archive/historical-public-docs/related-work-handoff.md`](../archive/historical-public-docs/related-work-handoff.md) and is not a finalized Related Work section.
