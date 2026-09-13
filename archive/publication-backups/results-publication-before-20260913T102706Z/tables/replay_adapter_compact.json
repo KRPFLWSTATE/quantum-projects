@@ -1,0 +1,219 @@
+{
+  "analysis_type": "post_collection_policy_replay",
+  "compact_counts": {
+    "capacity_k2:P0": 12,
+    "capacity_k2:P1": 12,
+    "capacity_k2:P2": 12,
+    "capacity_k2:P3": 12,
+    "constraint_drift:P0": 12,
+    "constraint_drift:P1": 12,
+    "constraint_drift:P2": 12,
+    "constraint_drift:P3": 12,
+    "empty_candidates:P0": 72,
+    "empty_candidates:P1": 72,
+    "empty_candidates:P2": 72,
+    "empty_candidates:P3": 72,
+    "late_arrival:P0": 72,
+    "late_arrival:P1": 72,
+    "late_arrival:P2": 72,
+    "late_arrival:P3": 72,
+    "malformed_linkage:P0": 72,
+    "malformed_linkage:P1": 72,
+    "malformed_linkage:P2": 72,
+    "malformed_linkage:P3": 72,
+    "meaning_change:P0": 12,
+    "meaning_change:P1": 12,
+    "meaning_change:P2": 12,
+    "meaning_change:P3": 12,
+    "metadata_only_version:P0": 72,
+    "metadata_only_version:P1": 72,
+    "metadata_only_version:P2": 72,
+    "metadata_only_version:P3": 72,
+    "missing_linkage:P0": 72,
+    "missing_linkage:P1": 72,
+    "missing_linkage:P2": 72,
+    "missing_linkage:P3": 72,
+    "objective_drift:P0": 12,
+    "objective_drift:P1": 12,
+    "objective_drift:P2": 12,
+    "objective_drift:P3": 12,
+    "unchanged:P0": 72,
+    "unchanged:P1": 72,
+    "unchanged:P2": 72,
+    "unchanged:P3": 72
+  },
+  "historical_simulation_replay_keys": [
+    "deadlines",
+    "evidence_type",
+    "fixtures",
+    "n_prefix_deadline_evaluations",
+    "n_simulation_fixture_evaluations",
+    "prefix_deadline_executed",
+    "prefix_deadline_rows",
+    "prefixes"
+  ],
+  "n_drill_rows": 1920,
+  "n_reconcile": 288,
+  "n_reconcile_differences": 0,
+  "p2_contract": "Frozen verifier overwrites a metadata-only current_version mismatch with payload equality. P2 is not a strict version-label gate.",
+  "p2_metadata_only_accept_count": 72,
+  "reconcile_differences": [],
+  "scenario_matrix": [
+    "unchanged",
+    "objective_drift",
+    "constraint_drift",
+    "capacity_k2",
+    "meaning_change",
+    "metadata_only_version",
+    "malformed_linkage",
+    "missing_linkage",
+    "empty_candidates",
+    "late_arrival"
+  ],
+  "simulation_fixture_provenance": [
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S01",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S02",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S03",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S04",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S05",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S06",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S07",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S08",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S09",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S10",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S11",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S12",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S13",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S14",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S15",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S16",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S17",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S18",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S19",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S20",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S21",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S22",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S23",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    },
+    {
+      "historical_seed_rule": "4242 + len(instance_id) = 4245",
+      "instance_id": "S24",
+      "parameter_note": "arbitrary [0.3]/[0.4] angles are not simulator-optimised",
+      "shared_seed_coupling": "equally long S01\u2013S24 IDs share a seed"
+    }
+  ]
+}

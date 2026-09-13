@@ -46,10 +46,27 @@ def protected_files() -> set[Path]:
     }
 
 
+def _is_same_or_inside(path: Path, root: Path) -> bool:
+    resolved = path.resolve()
+    target = root.resolve()
+    if resolved == target:
+        return True
+    return target in resolved.parents
+
+
+def is_publication_output(path: Path) -> bool:
+    return _is_same_or_inside(path, PUBLICATION)
+
+
 def validate_output_root(output: Path) -> None:
     resolved = output.resolve()
     if resolved == REPO_ROOT.resolve():
         raise ValueError("refusing to use the repository root as an output directory")
+    if is_publication_output(resolved):
+        raise ValueError(
+            "refusing results/publication (and descendants, including symlink aliases) as a generation output; "
+            "run an isolated rebuild then --refresh-publication from that separate directory"
+        )
     if resolved in protected_files() or resolved in protected_roots():
         raise ValueError(f"refusing protected output root {resolved}")
     for root in protected_roots():

@@ -7,6 +7,7 @@ import json
 import shutil
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 TOOLS = Path(__file__).resolve().parent
@@ -32,13 +33,22 @@ from publication.ghz import collect_ghz_jobs  # noqa: E402
 from publication.hashes import verify_legacy_hashes, verify_pre_manifest, verify_protocol  # noqa: E402
 from publication.ibm_guard import install_tripwires  # noqa: E402
 from publication.metrics import checkpoints, flatten_policy_rows, grouped_rows, instance_catalog, job_rows, p2_layer_note, pub_rows, worked_example  # noqa: E402
-from publication.paths import PUBLICATION, REPO_ROOT, assert_safe_output, validate_output_root  # noqa: E402
+from publication.paths import PUBLICATION, REPO_ROOT, assert_safe_output, is_publication_output, validate_output_root  # noqa: E402
 from publication.provenance import analysis_provenance, hash_path_list  # noqa: E402
 from publication.replay_adapter import run_replay_adapter  # noqa: E402
 from publication.replay_analysis import replay_simulation_fixtures  # noqa: E402
 from publication.tables import write_json, write_csv  # noqa: E402
 
 
+HISTORICAL_PUBLICATION_BACKUP = REPO / "archive" / "follow-up-2026-09-09" / "results-publication-before-refresh"
+PUBLICATION_BACKUP_ROOT = REPO / "archive" / "publication-backups"
+REQUIRED_GENERATION = (
+    "tables",
+    "figures",
+    "reports",
+    "analysis_manifest.json",
+    "isa_compact_checks.json",
+)
 PROTECTED_HASH_TARGETS = [
     REPO / "decision-study" / "config" / "protocol.json",
     REPO / "decision-study" / "study.py",
@@ -86,13 +96,6 @@ def run(output: Path, *, refresh_publication: bool = False) -> int:
         _write_diagnostics(output, {"ok": False, "errors": errors, "hashes_before": hashes_before})
         print(json.dumps({"ok": False, "errors": errors}, indent=2))
         return 1
-
-    tables = output / "tables"
-    figures = output / "figures"
-    reports = output / "reports"
-    for path in (tables, figures, reports):
-        path.mkdir(parents=True, exist_ok=True)
-        assert_safe_output(path / ".keep")
 
     ghz = collect_ghz_jobs()
     if ghz["n_jobs"] != 20:
@@ -150,90 +153,151 @@ def run(output: Path, *, refresh_publication: bool = False) -> int:
     example = worked_example(catalog)
     layers = p2_layer_note()
 
-    write_json(tables / "job_level.json", jobs)
-    write_csv(tables / "job_level.csv", jobs)
-    write_json(tables / "pub_level.json", pubs)
-    write_csv(tables / "pub_level.csv", [{k: v for k, v in r.items() if k != "policies"} for r in pubs])
-    write_json(tables / "policy_level.json", policies)
-    write_csv(tables / "policy_level.csv", policies)
-    write_json(tables / "fixture_depth_summary.json", grouped)
-    write_csv(tables / "fixture_depth_summary.csv", grouped)
-    write_json(tables / "ghz_jobs.json", ghz)
-    write_csv(tables / "ghz_jobs.csv", ghz["rows"])
-    write_json(tables / "checkpoints.json", checks)
-    write_json(tables / "worked_example.json", example)
-    write_json(tables / "p2_layer_identity.json", layers)
-    write_json(tables / "campaign_status.json", campaign)
-    write_json(tables / "data_dictionary.json", DATA_DICTIONARY)
-    write_json(tables / "classical_fair_pools.json", classical)
-    write_csv(tables / "classical_fair_pools.csv", classical["fixture_prefix_rows"])
-    write_json(tables / "classical_policy_prefix.json", classical["policy_prefix_rows"])
-    write_json(tables / "replay_adapter_compact.json", {k: replay[k] for k in replay if k != "drill_rows"})
-    write_json(tables / "replay_adapter_drill.json", replay["drill_rows"])
-    write_json(tables / "simulation_fixture_replay.json", sim_replay)
+    stage = output / ".generation-stage"
+    if stage.exists():
+        shutil.rmtree(stage)
+    stage.mkdir(parents=True)
+    try:
+        isa_out = stage / "isa_compact_checks.json"
+        isa_script = REPO / "decision-study" / "tools" / "verify_isa.py"
+        isa = subprocess.run(
+            [sys.executable, str(isa_script), str(REPO / "decision-study"), "--output", str(isa_out)],
+            cwd=str(REPO),
+            capture_output=True,
+            text=True,
+        )
+        if isa.returncode != 0:
+            errors.append({"verify_isa": (isa.stderr or isa.stdout)[-2000:]})
+            _write_diagnostics(output, {"ok": False, "errors": errors})
+            print(json.dumps({"ok": False, "errors": errors}, indent=2))
+            return 1
 
-    feasibility_opt_hit(pubs, figures / "feasibility_and_optimal_hit")
-    utility_panel(pubs, figures / "utility_vs_greedy_optimum")
-    policy_panel(pubs, figures / "policy_selection")
-    timing_panel(jobs, figures / "timing_and_usage")
-    ghz_panel(ghz, figures / "legacy_ghz")
-    architecture_diagram(figures / "architecture_and_provenance")
-    fair_pool_panel(classical["fixture_prefix_rows"], figures / "fair_classical_pools")
+        hashes_after = hash_path_list(PROTECTED_HASH_TARGETS)
+        if hashes_after != hashes_before:
+            errors.append({"protected_hash_drift": {"before": hashes_before, "after": hashes_after}})
+            _write_diagnostics(output, {"ok": False, "errors": errors})
+            print(json.dumps({"ok": False, "errors": errors}, indent=2))
+            return 1
 
-    isa_out = output / "isa_compact_checks.json"
-    isa_script = REPO / "decision-study" / "tools" / "verify_isa.py"
-    isa = subprocess.run(
-        [sys.executable, str(isa_script), str(REPO / "decision-study"), "--output", str(isa_out)],
-        cwd=str(REPO),
-        capture_output=True,
-        text=True,
-    )
-    if isa.returncode != 0:
-        errors.append({"verify_isa": (isa.stderr or isa.stdout)[-2000:]})
-        _write_diagnostics(output, {"ok": False, "errors": errors})
-        print(json.dumps({"ok": False, "errors": errors}, indent=2))
-        return 1
+        tables = stage / "tables"
+        figures = stage / "figures"
+        reports = stage / "reports"
+        for path in (tables, figures, reports):
+            path.mkdir(parents=True, exist_ok=True)
+            assert_safe_output(path / ".keep")
 
-    hashes_after = hash_path_list(PROTECTED_HASH_TARGETS)
-    if hashes_after != hashes_before:
-        errors.append({"protected_hash_drift": {"before": hashes_before, "after": hashes_after}})
-        _write_diagnostics(output, {"ok": False, "errors": errors})
-        print(json.dumps({"ok": False, "errors": errors}, indent=2))
-        return 1
+        write_json(tables / "job_level.json", jobs)
+        write_csv(tables / "job_level.csv", jobs)
+        write_json(tables / "pub_level.json", pubs)
+        write_csv(tables / "pub_level.csv", [{k: v for k, v in r.items() if k != "policies"} for r in pubs])
+        write_json(tables / "policy_level.json", policies)
+        write_csv(tables / "policy_level.csv", policies)
+        write_json(tables / "fixture_depth_summary.json", grouped)
+        write_csv(tables / "fixture_depth_summary.csv", grouped)
+        write_json(tables / "ghz_jobs.json", ghz)
+        write_csv(tables / "ghz_jobs.csv", ghz["rows"])
+        write_json(tables / "checkpoints.json", checks)
+        write_json(tables / "worked_example.json", example)
+        write_json(tables / "p2_layer_identity.json", layers)
+        write_json(tables / "campaign_status.json", campaign)
+        write_json(tables / "data_dictionary.json", DATA_DICTIONARY)
+        write_json(tables / "classical_fair_pools.json", classical)
+        write_csv(tables / "classical_fair_pools.csv", classical["fixture_prefix_rows"])
+        write_json(tables / "classical_policy_prefix.json", classical["policy_prefix_rows"])
+        write_json(tables / "replay_adapter_compact.json", {k: replay[k] for k in replay if k != "drill_rows"})
+        write_json(tables / "replay_adapter_drill.json", replay["drill_rows"])
+        write_json(tables / "simulation_fixture_replay.json", sim_replay)
 
-    manifest = analysis_provenance(
-        command="python tools/reproduce.py --output " + str(output),
-        extra={
-            "protocol": checks_pack["protocol"],
-            "legacy_hashes": {"ok": checks_pack["legacy"]["ok"], "n_expected": checks_pack["legacy"]["n_expected"]},
-            "preservation": checks_pack["preserved"],
-            "campaign": campaign,
-            "errors": errors,
-            "ok": not errors,
-            "new_physical_qpu_jobs_submitted": 0,
-            "hashes_before": hashes_before,
-            "hashes_after": hashes_after,
-            "refresh_publication": refresh_publication,
-        },
-    )
-    write_json(output / "analysis_manifest.json", manifest)
+        feasibility_opt_hit(pubs, figures / "feasibility_and_optimal_hit")
+        utility_panel(pubs, figures / "utility_vs_greedy_optimum")
+        policy_panel(pubs, figures / "policy_selection")
+        timing_panel(jobs, figures / "timing_and_usage")
+        ghz_panel(ghz, figures / "legacy_ghz")
+        architecture_diagram(figures / "architecture_and_provenance")
+        fair_pool_panel(classical["fixture_prefix_rows"], figures / "fair_classical_pools")
 
-    report = _results_markdown(campaign, checks, ghz, layers, example, classical, replay)
-    (reports / "RESULTS.md").write_text(report, encoding="utf-8")
-    (reports / "CURRENT_REPORT.md").write_text(
-        "# CURRENT report (dated 2026-09-09)\n\n"
-        "This is the current generated report. `decision-study/reports/CHATGPT_RETURN_REPORT.md` is historical.\n\n"
-        + report,
-        encoding="utf-8",
-    )
-    (reports / "paper-support-notes.md").write_text(
-        "# Paper-support notes\n\nGenerated under the requested --output directory only.\n\n"
-        f"- Analysis version: {ANALYSIS_VERSION}\n"
-        f"- Campaign: {campaign['campaign_status']}; gate: {campaign['submission_gate']}\n"
-        f"- D4 p=2 mean optimal-hit: {checks['d4_p2_optimal_hit_mean']}\n"
-        f"- Replay reconcile differences: {replay['n_reconcile_differences']}\n",
-        encoding="utf-8",
-    )
+        generated_utc = datetime.now(timezone.utc).isoformat()
+        manifest = analysis_provenance(
+            command="python tools/reproduce.py --output " + str(output),
+            extra={
+                "protocol": checks_pack["protocol"],
+                "legacy_hashes": {"ok": checks_pack["legacy"]["ok"], "n_expected": checks_pack["legacy"]["n_expected"]},
+                "preservation": checks_pack["preserved"],
+                "campaign": campaign,
+                "errors": errors,
+                "ok": not errors,
+                "new_physical_qpu_jobs_submitted": 0,
+                "hashes_before": hashes_before,
+                "hashes_after": hashes_after,
+                "refresh_publication": refresh_publication,
+                "hardware_collection_date": "2026-09-09",
+                "analysis_generated_utc": generated_utc,
+                "paper_cited_commit": "0abf41f2e9b256c94cd056e55ec8f9fc8766faec",
+            },
+        )
+        write_json(stage / "analysis_manifest.json", manifest)
+
+        report = _results_markdown(campaign, checks, ghz, layers, example, classical, replay, generated_utc)
+        (reports / "RESULTS.md").write_text(report, encoding="utf-8")
+        (reports / "CURRENT_REPORT.md").write_text(
+            f"# CURRENT generated report\n\n"
+            f"Analysis generated: {generated_utc} (`{ANALYSIS_VERSION}`). "
+            "Hardware collection date remains 2026-09-09. "
+            "`decision-study/reports/CHATGPT_RETURN_REPORT.md` is historical.\n\n"
+            + report,
+            encoding="utf-8",
+        )
+        (reports / "SOURCE_TO_OUTPUT_INDEX.json").write_text(
+            json.dumps(
+                {
+                    "analysis_version": ANALYSIS_VERSION,
+                    "generator": "tools/reproduce.py",
+                    "hardware_collection_date": "2026-09-09",
+                    "analysis_generated_utc": generated_utc,
+                    "current_outputs": list(REQUIRED_GENERATION),
+                    "current_tables_from_generator": [
+                        "job_level",
+                        "pub_level",
+                        "policy_level",
+                        "fixture_depth_summary",
+                        "ghz_jobs",
+                        "checkpoints",
+                        "worked_example",
+                        "p2_layer_identity",
+                        "campaign_status",
+                        "data_dictionary",
+                        "classical_fair_pools",
+                        "classical_policy_prefix",
+                        "replay_adapter_compact",
+                        "replay_adapter_drill",
+                        "simulation_fixture_replay",
+                    ],
+                    "superseded_not_regenerated": "archive/superseded-analysis/2026-09-09-post-collection-replay/",
+                    "static_supporting_identified": [
+                        "archive/superseded-analysis/2026-09-09-post-collection-replay/",
+                        "archive/historical-exports/CHECKSUMS.md",
+                    ],
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        (reports / "paper-support-notes.md").write_text(
+            "# Paper-support notes\n\nGenerated under the requested --output directory only.\n\n"
+            f"- Analysis version: {ANALYSIS_VERSION}\n"
+            f"- Analysis generated UTC: {generated_utc}\n"
+            f"- Hardware collection date: 2026-09-09\n"
+            f"- Paper-cited evidence snapshot: 0abf41f2e9b256c94cd056e55ec8f9fc8766faec\n"
+            f"- Campaign: {campaign['campaign_status']}; gate: {campaign['submission_gate']}\n"
+            f"- D4 p=2 mean optimal-hit: {checks['d4_p2_optimal_hit_mean']}\n"
+            f"- Replay reconcile differences: {replay['n_reconcile_differences']}\n",
+            encoding="utf-8",
+        )
+        _promote_stage(stage, output)
+    finally:
+        if stage.exists():
+            shutil.rmtree(stage, ignore_errors=True)
 
     archive = write_research_archive(output / "dist", generated_root=output)
     write_json(output / "dist" / "export_receipt.json", archive)
@@ -245,27 +309,84 @@ def run(output: Path, *, refresh_publication: bool = False) -> int:
     return 0
 
 
-def _refresh_publication(src: Path) -> None:
-    backup = REPO / "archive" / "follow-up-2026-09-09" / "results-publication-before-refresh"
-    if PUBLICATION.exists() and not backup.exists():
-        backup.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copytree(PUBLICATION, backup)
-    if PUBLICATION.exists():
-        shutil.rmtree(PUBLICATION)
-    PUBLICATION.mkdir(parents=True)
-    for name in ("tables", "figures", "reports", "analysis_manifest.json", "isa_compact_checks.json"):
+def _promote_stage(stage: Path, output: Path) -> None:
+    for name in REQUIRED_GENERATION:
+        src = stage / name
+        dest = output / name
+        if not src.exists():
+            raise RuntimeError(f"incomplete staged generation missing {name}")
+        if dest.exists():
+            if dest.is_dir():
+                shutil.rmtree(dest)
+            else:
+                dest.unlink()
+        shutil.move(str(src), str(dest))
+
+
+def _copy_generation(src: Path, dest: Path) -> None:
+    dest.mkdir(parents=True)
+    for name in REQUIRED_GENERATION:
         item = src / name
-        dest = PUBLICATION / name
+        if not item.exists():
+            raise ValueError(f"incomplete generation missing {name}")
+        target = dest / name
         if item.is_dir():
-            shutil.copytree(item, dest)
-        elif item.is_file():
-            shutil.copy2(item, dest)
+            shutil.copytree(item, target)
+        else:
+            shutil.copy2(item, target)
 
 
-def _results_markdown(campaign, checks, ghz, layers, example, classical, replay) -> str:
+def _refresh_publication(src: Path) -> None:
+    src = src.resolve()
+    if is_publication_output(src):
+        raise ValueError("refresh source must be a separate isolated generation, not results/publication")
+    for name in REQUIRED_GENERATION:
+        if not (src / name).exists():
+            raise ValueError(f"refusing refresh; source missing {name}")
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    PUBLICATION_BACKUP_ROOT.mkdir(parents=True, exist_ok=True)
+    backup = PUBLICATION_BACKUP_ROOT / f"results-publication-before-{stamp}"
+    previous = None
+    if PUBLICATION.exists():
+        shutil.copytree(PUBLICATION, backup)
+        previous = backup
+        (backup / "BACKUP_PROVENANCE.json").write_text(
+            json.dumps(
+                {
+                    "created_utc": stamp,
+                    "source_generation": str(src),
+                    "historical_2026_09_09_backup_untouched": str(HISTORICAL_PUBLICATION_BACKUP),
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+    staged = PUBLICATION.parent / f"publication.next.{stamp}"
+    if staged.exists():
+        shutil.rmtree(staged)
+    try:
+        _copy_generation(src, staged)
+        old = PUBLICATION.parent / f"publication.old.{stamp}"
+        if PUBLICATION.exists():
+            PUBLICATION.rename(old)
+        staged.rename(PUBLICATION)
+        if old.exists():
+            shutil.rmtree(old)
+    except Exception:
+        if staged.exists():
+            shutil.rmtree(staged, ignore_errors=True)
+        if previous is not None and previous.exists() and not PUBLICATION.exists():
+            shutil.copytree(previous, PUBLICATION)
+        raise
+
+
+def _results_markdown(campaign, checks, ghz, layers, example, classical, replay, generated_utc: str) -> str:
     d4 = checks["d4_p2_optimal_hit_mean"]
     identity = [row["fixture"] for row in layers if row["second_layer_identity"]]
     return f"""# Generated results (archived-data reproduction)
+
+Analysis generated: {generated_utc} (`{ANALYSIS_VERSION}`). Hardware collection date: 2026-09-09. This generation timestamp is not the collection date.
 
 Campaign status: **{campaign['campaign_status']}**. Submission gate remains **{campaign['submission_gate']}**.
 

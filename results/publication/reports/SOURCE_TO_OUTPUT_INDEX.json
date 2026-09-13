@@ -1,0 +1,35 @@
+{
+  "analysis_version": "publication-analysis-v3",
+  "generator": "tools/reproduce.py",
+  "hardware_collection_date": "2026-09-09",
+  "analysis_generated_utc": "2026-09-13T10:27:05.788638+00:00",
+  "current_outputs": [
+    "tables",
+    "figures",
+    "reports",
+    "analysis_manifest.json",
+    "isa_compact_checks.json"
+  ],
+  "current_tables_from_generator": [
+    "job_level",
+    "pub_level",
+    "policy_level",
+    "fixture_depth_summary",
+    "ghz_jobs",
+    "checkpoints",
+    "worked_example",
+    "p2_layer_identity",
+    "campaign_status",
+    "data_dictionary",
+    "classical_fair_pools",
+    "classical_policy_prefix",
+    "replay_adapter_compact",
+    "replay_adapter_drill",
+    "simulation_fixture_replay"
+  ],
+  "superseded_not_regenerated": "archive/superseded-analysis/2026-09-09-post-collection-replay/",
+  "static_supporting_identified": [
+    "archive/superseded-analysis/2026-09-09-post-collection-replay/",
+    "archive/historical-exports/CHECKSUMS.md"
+  ]
+}

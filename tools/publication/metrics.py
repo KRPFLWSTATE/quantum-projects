@@ -8,6 +8,8 @@ from datetime import datetime
 from typing import Any
 
 from . import ANALYSIS_TYPE_HARDWARE
+from .identity import assert_archived_isa_matches_protocol
+from .job_validation import validate_six_physical_jobs
 from .campaign import JOB_ORDER, list_raw_jobs
 from .paths import ATTEMPTS, DERIVED, SRC_DIR, STUDY_ROOT
 
@@ -84,12 +86,20 @@ def evaluate_pub(job: dict[str, Any], pub: dict[str, Any], meta: dict[str, Any],
     cat = catalog[inst_id]
     inst = cat["instance"]
     shots = [str(s) for s in pub.get("shots") or []]
-    counts = {str(k): int(v) for k, v in (pub.get("counts") or {}).items()}
+    counts_raw = pub.get("counts") or {}
+    counts = {}
+    for key, value in counts_raw.items():
+        if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+            raise ValueError(f"invalid count {value!r} for {job.get('job_id')} pub {meta.get('pub_index')}")
+        counts[str(key)] = value
     hist = Counter(shots)
     if dict(hist) != counts:
         raise ValueError(f"counts/histogram mismatch {job['job_id']} pub {meta.get('pub_index')}")
     if len(shots) != 1024:
         raise ValueError("shot count != 1024")
+    for shot in shots:
+        if len(shot) != 6 or any(ch not in "01" for ch in shot):
+            raise ValueError(f"invalid shot bitstring {shot!r}")
     feas = 0
     opt = 0
     best_feas = None
@@ -104,12 +114,19 @@ def evaluate_pub(job: dict[str, Any], pub: dict[str, Any], meta: dict[str, Any],
     greedy = cat["greedy"]
     greedy_u = float(greedy["utility"]) if greedy.get("status") == "ok" else None
     spec = spec_from_instance(inst, request_id=f"{job['intent']}-{inst_id}-p{depth}")
-    circuit_hash = meta.get("isa_qpy_sha256") or "missing"
+    archived_hash = meta.get("isa_qpy_sha256")
+    expected_hash = assert_archived_isa_matches_protocol(
+        inst_id,
+        depth,
+        archived_hash,
+        job_id=job.get("job_id"),
+        pub_index=meta.get("pub_index"),
+    )
     linkage = {
         "request_id": spec["request_id"],
         "source_hash": spec["source_hash"],
-        "circuit_hash": circuit_hash,
-        "expected_circuit_hash": circuit_hash,
+        "circuit_hash": archived_hash,
+        "expected_circuit_hash": expected_hash,
         "expected_request_id": spec["request_id"],
         "expected_source_hash": spec["source_hash"],
     }
@@ -146,7 +163,8 @@ def evaluate_pub(job: dict[str, Any], pub: dict[str, Any], meta: dict[str, Any],
         "fixture": inst_id,
         "p": depth,
         "pub_index": int(meta["pub_index"]),
-        "isa_qpy_sha256": circuit_hash,
+        "isa_qpy_sha256": archived_hash,
+        "expected_isa_qpy_sha256": expected_hash,
         "n_shots": len(shots),
         "feasible_shot_fraction": feas / 1024.0,
         "optimal_hit_fraction": opt / 1024.0,
@@ -207,6 +225,7 @@ def job_rows() -> list[dict[str, Any]]:
 
 
 def pub_rows() -> list[dict[str, Any]]:
+    validate_six_physical_jobs()
     catalog = instance_catalog()
     attempts = {json.loads(p.read_text())["intent"]: json.loads(p.read_text()) for p in ATTEMPTS.glob("*.json")}
     # reload cleanly

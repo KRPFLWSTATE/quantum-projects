@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-09T21:47:05.302631</dc:date>
+    <dc:date>2026-09-13T15:57:05.407219</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ Q 18.6048 43.052412 18.6048 45.609503
 L 18.6048 135.107685 
 Q 18.6048 137.664776 21.456 137.664776 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 199.656 137.664776 
@@ -53,7 +53,7 @@ Q 196.8048 43.052412 196.8048 45.609503
 L 196.8048 135.107685 
 Q 196.8048 137.664776 199.656 137.664776 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 377.856 137.664776 
@@ -66,7 +66,7 @@ Q 375.0048 43.052412 375.0048 45.609503
 L 375.0048 135.107685 
 Q 375.0048 137.664776 377.856 137.664776 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 548.928 137.664776 
@@ -79,7 +79,7 @@ Q 546.0768 43.052412 546.0768 45.609503
 L 546.0768 135.107685 
 Q 546.0768 137.664776 548.928 137.664776 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 21.456 265.519321 
@@ -92,7 +92,7 @@ Q 18.6048 170.906957 18.6048 173.464048
 L 18.6048 262.96223 
 Q 18.6048 265.519321 21.456 265.519321 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 199.656 265.519321 
@@ -105,7 +105,7 @@ Q 196.8048 170.906957 196.8048 173.464048
 L 196.8048 262.96223 
 Q 196.8048 265.519321 199.656 265.519321 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 377.856 265.519321 
@@ -118,7 +118,7 @@ Q 375.0048 170.906957 375.0048 173.464048
 L 375.0048 262.96223 
 Q 375.0048 265.519321 377.856 265.519321 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
     <path d="M 548.928 265.519321 
@@ -131,7 +131,7 @@ Q 546.0768 170.906957 546.0768 173.464048
 L 546.0768 262.96223 
 Q 546.0768 265.519321 548.928 265.519321 
 z
-" clip-path="url(#p73fcd3ac4b)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
+" clip-path="url(#pf0ccda5dfc)" style="fill: #e8eef5; stroke: #1b365d; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- Frozen protocol -->
@@ -1648,7 +1648,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p73fcd3ac4b">
+  <clipPath id="pf0ccda5dfc">
    <rect x="7.2" y="20.038594" width="712.8" height="281.28"/>
   </clipPath>
  </defs>

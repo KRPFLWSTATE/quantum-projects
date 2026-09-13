@@ -1,8 +1,10 @@
-# CURRENT report (dated 2026-09-09)
+# CURRENT generated report
 
-This is the current generated report. `decision-study/reports/CHATGPT_RETURN_REPORT.md` is historical.
+Analysis generated: 2026-09-13T10:27:05.788638+00:00 (`publication-analysis-v3`). Hardware collection date remains 2026-09-09. `decision-study/reports/CHATGPT_RETURN_REPORT.md` is historical.
 
 # Generated results (archived-data reproduction)
+
+Analysis generated: 2026-09-13T10:27:05.788638+00:00 (`publication-analysis-v3`). Hardware collection date: 2026-09-09. This generation timestamp is not the collection date.
 
 Campaign status: **COMPLETE**. Submission gate remains **JOB_CAP_REACHED**.
 

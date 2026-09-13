@@ -20,16 +20,28 @@ def sha256_bytes(data: bytes) -> str:
 
 def git_state() -> dict[str, Any]:
     git_dir = REPO_ROOT / ".git"
+    marker = REPO_ROOT / "EXPORTED_SNAPSHOT_PROVENANCE.json"
     if not git_dir.exists():
-        return {"git_present": False, "exported_snapshot_identifier": None, "note": ".git absent; record an exported-snapshot identifier at packaging time."}
+        if marker.is_file():
+            payload = json.loads(marker.read_text(encoding="utf-8"))
+            payload.setdefault("git_present", False)
+            payload.setdefault("note", "Recovered exported-snapshot provenance; this tree is not a git checkout.")
+            return payload
+        return {
+            "git_present": False,
+            "exported_snapshot_identifier": "unavailable-no-git-no-export-marker",
+            "dirty": None,
+            "note": "No .git and no EXPORTED_SNAPSHOT_PROVENANCE.json; do not treat this as a clean checkout.",
+        }
     def _run(args: list[str]) -> str:
         proc = subprocess.run(args, cwd=str(REPO_ROOT), capture_output=True, text=True)
         return proc.stdout.strip() if proc.returncode == 0 else ""
+    dirty_text = _run(["git", "status", "--porcelain"])
     return {
         "git_present": True,
         "head": _run(["git", "rev-parse", "HEAD"]),
-        "dirty": bool(_run(["git", "status", "--porcelain"])),
-        "status_porcelain": _run(["git", "status", "--porcelain"]),
+        "dirty": bool(dirty_text),
+        "status_porcelain": dirty_text,
     }
 
 
