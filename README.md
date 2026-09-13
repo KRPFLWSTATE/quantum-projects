@@ -1,8 +1,8 @@
-# Decision-QAOA hardware archive and GHZ probe records
+# Revalidating quantum decision candidates under specification change (repository)
 
-Software artifact for a **bounded, synthetic six-variable QAOA decision study** on IBM Quantum (`ibm_fez`, six SamplerV2 blocks) together with a **separate 20-run 3-qubit GHZ telemetry probe**. This software title is not the manuscript’s working title.
+Software artifact for a **bounded, synthetic six-variable QAOA decision study** on IBM Quantum (`ibm_fez`, six SamplerV2 blocks) together with a **separate 20-run 3-qubit GHZ telemetry probe**. Canonical manuscript title: *Revalidating quantum decision candidates under specification change*. The paper cites evidence snapshot `0abf41f2e9b256c94cd056e55ec8f9fc8766faec`; later commits describe their relationship to that snapshot.
 
-This is **not** a quantum-advantage, organisational-effectiveness, or publication-readiness claim. Visual polish does not create novelty.
+This is **not** a quantum-advantage, organisational-effectiveness, or publication-readiness claim. Visual polish does not create novelty. No live IBM balance is claimed here.
 
 ## Evidence (generated)
 
@@ -13,9 +13,9 @@ This is **not** a quantum-advantage, organisational-effectiveness, or publicatio
 | GHZ probes | 20 hardware jobs | Kingston 3, Fez 9, Marrakesh 8. Hellinger vs each run’s sampled Aer baseline. |
 | Reproduction | Offline after `pip install` | [`python tools/reproduce.py --output build/reproduction`](docs/reproduce.md) |
 | License | MIT | [`LICENSE`](LICENSE) |
-| Tested env | Python 3.14.6 + [`requirements-repro.txt`](requirements-repro.txt) | Hosted CI is configured locally; a green badge is shown only after a real run. |
+| Tested env | Python 3.14.6 + [`requirements-repro.txt`](requirements-repro.txt) | Workflow *configured* in `.github/workflows/reproduce.yml`. “Locally passed” and “hosted CI passed at commit X” are distinct claims. |
 
-Figures (regenerated; also under `build/reproduction/figures` after the offline command):
+Figures (clone paths under `results/publication/figures` after a validated `--refresh-publication`; isolated default is `build/reproduction/figures`):
 
 ![Hardware sampling fractions](results/publication/figures/feasibility_and_optimal_hit.svg)
 
@@ -25,7 +25,7 @@ Figures (regenerated; also under `build/reproduction/figures` after the offline 
 
 ## Navigation
 
-[Results](docs/results.md) · [Reproduce](docs/reproduce.md) · [Methods](docs/methods.md) · [Data](docs/data-and-provenance.md) · [Architecture](docs/architecture-and-policies.md) · [Limitations](docs/limitations-and-contributions.md) · [Claim–evidence](docs/claim-evidence-limitation.md) · [Related work](docs/related-work-handoff.md) · [Citation](CITATION.cff)
+[Results](docs/results.md) · [Reproduce](docs/reproduce.md) · [Methods](docs/methods.md) · [Data](docs/data-and-provenance.md) · [Architecture](docs/architecture-and-policies.md) · [Limitations](docs/limitations-and-contributions.md) · [Claim–evidence](docs/claim-evidence-limitation.md) · [Related work](docs/related-work.md) · [Contribution](docs/contribution-note.md) · [ZIP nav](docs/archive-zip-navigation.md) · [Citation](CITATION.cff)
 
 ## What the results mean (short)
 
@@ -40,6 +40,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-repro.txt
 python -m unittest discover -s decision-study/tests -v
+python -m unittest discover -s tools/tests -v
 python tools/reproduce.py --output build/reproduction
 ```
 
@@ -53,9 +54,9 @@ dba-qpu-run/        20-run GHZ probe archive
 tools/              Post-collection analysis and offline reproduce.py
 results/publication/ Generated tables/figures (checked in)
 docs/               Reader documentation
-archive/            Historical READMEs and development installers
+archive/            Historical snapshots (not canonical; see archive/README.md)
 ```
 
 ## Citation, author, AI
 
-Cite the software via [`CITATION.cff`](CITATION.cff). There is no GitHub Release/DOI as of this writing. Author: Kawin Rehan Perera. AI assistance was used for implementation, debugging, and analysis, not merely grammar. The author is responsible for the archived jobs.
+Cite the software via [`CITATION.cff`](CITATION.cff). There is no GitHub Release/DOI as of this writing. Author: Kawin Rehan Perera ([ORCID](https://orcid.org/0009-0002-9014-1650)). AI assistance was used for implementation, debugging, and analysis, not merely grammar. The author is responsible for the archived jobs.

@@ -1,0 +1,4976 @@
+{
+  "fixtures": [
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "bitstring": "010101",
+        "evaluations": 33,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 23.0
+      },
+      "instance_id": "S01",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bitstring": "100011",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 22.0
+      },
+      "instance_id": "S02",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bitstring": "100011",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 13.0
+      },
+      "instance_id": "S03",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "NO_VALID_INCUMBENT",
+          "selected": null,
+          "status": "abstain"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_VALID_INCUMBENT",
+          "selected": null,
+          "status": "abstain"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "NO_VALID_INCUMBENT",
+          "selected": null,
+          "status": "abstain"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_VALID_INCUMBENT",
+          "selected": null,
+          "status": "abstain"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "bitstring": "101001",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 19.0
+      },
+      "instance_id": "S04",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "bitstring": "001101",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 26.0
+      },
+      "instance_id": "S05",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "bitstring": "001101",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 23.0
+      },
+      "instance_id": "S06",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "bitstring": "010101",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 29.0
+      },
+      "instance_id": "S07",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "bitstring": "001110",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 21.0
+      },
+      "instance_id": "S08",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "bitstring": "011001",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 21.0
+      },
+      "instance_id": "S09",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110000",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110000",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "bitstring": "011100",
+        "evaluations": 42,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 13.0
+      },
+      "instance_id": "S10",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "bitstring": "010110",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 18.0
+      },
+      "instance_id": "S11",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000110",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000110",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000110",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010110",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "bitstring": "001011",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 19.0
+      },
+      "instance_id": "S12",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000011",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000011",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000011",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000011",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001110",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001011",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "bitstring": "110001",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 25.0
+      },
+      "instance_id": "S13",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100001",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100001",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "111000",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bitstring": "100011",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 22.0
+      },
+      "instance_id": "S14",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110001",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100011",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "bitstring": "110100",
+        "evaluations": 33,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 24.0
+      },
+      "instance_id": "S15",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010100",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010100",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "bitstring": "101001",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 26.0
+      },
+      "instance_id": "S16",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "bitstring": "101010",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 23.0
+      },
+      "instance_id": "S17",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010101",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "bitstring": "110010",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 22.0
+      },
+      "instance_id": "S18",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010010",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010010",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "010011",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "bitstring": "011001",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 26.0
+      },
+      "instance_id": "S19",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011001",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "bitstring": "011100",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 23.0
+      },
+      "instance_id": "S20",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010100",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "010100",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011100",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "bitstring": "001101",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 24.0
+      },
+      "instance_id": "S21",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "000101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101100",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001101",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "bitstring": "101010",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 28.0
+      },
+      "instance_id": "S22",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101000",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "001010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101001",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "101010",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "bitstring": "100101",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 16.0
+      },
+      "instance_id": "S23",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110100",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "110010",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100101",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    },
+    {
+      "analysis_type": "post_collection_policy_replay",
+      "angle_note": "Arbitrary unit-test/replay angles, not simulator-optimised QAOA parameters.",
+      "angles": [
+        0.3,
+        0.4
+      ],
+      "evidence_type": "sampled_simulation",
+      "greedy": {
+        "bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "bitstring": "100110",
+        "evaluations": 24,
+        "feasible": true,
+        "reason": null,
+        "status": "ok",
+        "stopping_rule": "no_improving_feasible_swap",
+        "utility": 18.0
+      },
+      "instance_id": "S24",
+      "results": {
+        "bad_linkage:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "bad_linkage:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "capacity_k2:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "accept"
+        },
+        "capacity_k2:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "fallback_incumbent"
+        },
+        "capacity_k2:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "accept"
+        },
+        "capacity_k2:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100100",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "constraint_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "constraint_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "constraint_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "constraint_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "empty:P1": {
+          "policy": "P1",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "meaning_change:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "meaning_change:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:P3": {
+          "policy": "P3",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "meaning_change:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "objective_drift:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011010",
+          "status": "accept"
+        },
+        "objective_drift:P2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011010",
+          "status": "fallback_incumbent"
+        },
+        "objective_drift:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "011010",
+          "status": "accept"
+        },
+        "objective_drift:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "011010",
+          "status": "fallback_incumbent"
+        },
+        "unchanged:P0": {
+          "policy": "P0",
+          "reason": "UNGUARDED_MODAL",
+          "selected": "111111",
+          "status": "accept"
+        },
+        "unchanged:P1": {
+          "policy": "P1",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "unchanged:P2": {
+          "policy": "P2",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "unchanged:P3": {
+          "policy": "P3",
+          "reason": "ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "accept"
+        },
+        "unchanged:lateP2": {
+          "policy": "P2",
+          "reason": "NO_ELIGIBLE_CANDIDATE",
+          "selected": "100110",
+          "status": "fallback_incumbent"
+        }
+      },
+      "seed": 4245,
+      "seed_convention": "4242 + len(instance_id)",
+      "shared_seed_note": "S01\u2013S24 IDs have equal length, so they share seed 4245."
+    }
+  ],
+  "n_fixtures": 24,
+  "parameter_source_correction": "Historical replay.py labels p=2 prefix rows as parameter_source=frozen_p1 even when the sampled pool used p=2 amplitudes. Corrected labels appear only in this post-collection artifact.",
+  "summaries": [
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 23.0,
+      "instance_id": "S01",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 22.0,
+      "instance_id": "S02",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 13.0,
+      "instance_id": "S03",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 19.0,
+      "instance_id": "S04",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 26.0,
+      "instance_id": "S05",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 23.0,
+      "instance_id": "S06",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 29.0,
+      "instance_id": "S07",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 21.0,
+      "instance_id": "S08",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 21.0,
+      "instance_id": "S09",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 13.0,
+      "instance_id": "S10",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 18.0,
+      "instance_id": "S11",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 19.0,
+      "instance_id": "S12",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 25.0,
+      "instance_id": "S13",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 22.0,
+      "instance_id": "S14",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 24.0,
+      "instance_id": "S15",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 26.0,
+      "instance_id": "S16",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 23.0,
+      "instance_id": "S17",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 22.0,
+      "instance_id": "S18",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 26.0,
+      "instance_id": "S19",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 23.0,
+      "instance_id": "S20",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 24.0,
+      "instance_id": "S21",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 28.0,
+      "instance_id": "S22",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 16.0,
+      "instance_id": "S23",
+      "n_results": 28,
+      "seed": 4245
+    },
+    {
+      "greedy_status": "ok",
+      "greedy_utility": 18.0,
+      "instance_id": "S24",
+      "n_results": 28,
+      "seed": 4245
+    }
+  ]
+}

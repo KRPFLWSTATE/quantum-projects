@@ -18,7 +18,7 @@ Do not commit `.env` or IBM tokens. They are not required for archived-data repr
 python tools/reproduce.py --output build/reproduction
 ```
 
-Expected: exit code 0, `campaign_status: COMPLETE`, tables and figures **only** under the `--output` directory (default `build/reproduction`). Ordinary reproduction does **not** copy into `results/publication`. Use `--refresh-publication` only after a successful isolated rebuild if you intend to replace derived publication outputs (prior `results/publication` is copied to `archive/follow-up-2026-09-09/results-publication-before-refresh` on first refresh).
+Expected: exit code 0, `campaign_status: COMPLETE`, tables and figures **only** under the `--output` directory (default `build/reproduction`). Ordinary reproduction does **not** copy into `results/publication`. `results/publication` is rejected as `--output`. Use `--refresh-publication` only after a successful **separate** isolated rebuild: the new tree is staged and validated before replacing publication output; the immediately previous publication tree is copied to a new timestamped directory under `archive/publication-backups/`. The historical `archive/follow-up-2026-09-09/results-publication-before-refresh` backup is not overwritten. GitHub clone figure paths under `results/publication/` differ from ZIP paths under `reproduction_outputs/`; see [`archive-zip-navigation.md`](archive-zip-navigation.md).
 
 Also run:
 

@@ -1,0 +1,42 @@
+{
+  "benefits": [
+    9.0,
+    8.0,
+    7.0,
+    6.0,
+    5.0,
+    4.0
+  ],
+  "conflicts": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "convention": "The displayed six-character string is little-endian over task_0..task_5: left character is task_5, right character is task_0.",
+  "display_positions": {
+    "display_char_0": "0",
+    "display_char_1": "1",
+    "display_char_2": "1",
+    "display_char_3": "0",
+    "display_char_4": "0",
+    "display_char_5": "1"
+  },
+  "displayed_ibm_style_little_endian_string": "011001",
+  "feasible": true,
+  "fixture": "D1",
+  "note": "Feasibility is cardinality k=3 with no selected conflict pair, computed from business constraints, not from QUBO energy.",
+  "task_bits": {
+    "task_0": 1,
+    "task_1": 0,
+    "task_2": 0,
+    "task_3": 1,
+    "task_4": 1,
+    "task_5": 0
+  },
+  "utility": 23.0
+}

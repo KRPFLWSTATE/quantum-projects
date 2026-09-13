@@ -1,6 +1,7 @@
 {
+  "analysis_generated_utc": "2026-09-13T10:27:05.788638+00:00",
   "analysis_revision_distinct_from_frozen_hardware_protocol": true,
-  "analysis_version": "publication-analysis-v2",
+  "analysis_version": "publication-analysis-v3",
   "campaign": {
     "campaign_remaining_seconds": 270.0,
     "campaign_status": "COMPLETE",
@@ -15,7 +16,7 @@
     "usage_reconciled_seconds": 30.0
   },
   "command": "python tools/reproduce.py --output /Users/kawinperera/Downloads/Quantum Projects/build/reproduction",
-  "created_utc": "2026-09-09T16:17:05.869441+00:00",
+  "created_utc": "2026-09-13T10:27:05.788662+00:00",
   "environment": {
     "cwd": "/Users/kawinperera/Downloads/Quantum Projects",
     "executable": "/Users/kawinperera/Downloads/Quantum Projects/venv/bin/python",
@@ -34,9 +35,10 @@
   "git": {
     "dirty": true,
     "git_present": true,
-    "head": "d5931db8bbe6593e0a201b57bd1c1f8abdc1368c",
-    "status_porcelain": "M AGENTS.md\n M README.md\n M docs/architecture-and-policies.md\n M docs/data-and-provenance.md\n M docs/reproduce.md\n M tools/publication/__init__.py\n M tools/publication/export.py\n M tools/publication/figures.py\n M tools/publication/metrics.py\n M tools/publication/paths.py\n M tools/reproduce.py\n M tools/tests/test_publication.py\n?? archive/follow-up-2026-09-09/\n?? decision-study/data/campaign_ledger.lock\n?? docs/claim-evidence-limitation.md\n?? docs/related-work-handoff.md\n?? tools/publication/classical_controls.py\n?? tools/publication/ibm_guard.py\n?? tools/publication/plans/\n?? tools/publication/provenance.py\n?? tools/publication/replay_adapter.py"
+    "head": "ef67ea50feb58e4ab7df1e6c7425047e44e41d45",
+    "status_porcelain": "M CITATION.cff\n M README.md\n M docs/architecture-and-policies.md\n M docs/claim-evidence-limitation.md\n M docs/data-and-provenance.md\n M docs/methods.md\n M docs/related-work.md\n M docs/reproduce.md\n M docs/results.md\n M tools/publication/__init__.py\n M tools/publication/dictionary.py\n M tools/publication/export.py\n M tools/publication/figures.py\n M tools/publication/metrics.py\n M tools/publication/paths.py\n M tools/publication/provenance.py\n M tools/reproduce.py\n M tools/tests/test_publication.py\n?? archive/historical-exports/\n?? archive/superseded-analysis/\n?? decision-study/data/campaign_ledger.lock\n?? docs/CHANGELOG-2026-09-13.md\n?? docs/archive-zip-navigation.md\n?? docs/contribution-note.md\n?? tools/publication/identity.py\n?? tools/publication/job_validation.py"
   },
+  "hardware_collection_date": "2026-09-09",
   "hashes_after": {
     "decision-study/config/protocol.json": "b6e0815466101c8636ae172068ae8718768f70d2605b655662a05d9fd87783dc",
     "decision-study/data/campaign_ledger.json": "9e3290a33130d2e373212b1105d71bdf8b12605e8e3a64b2c831263011b209cb",
@@ -56,6 +58,7 @@
   },
   "new_physical_qpu_jobs_submitted": 0,
   "ok": true,
+  "paper_cited_commit": "0abf41f2e9b256c94cd056e55ec8f9fc8766faec",
   "preservation": {
     "changed": [],
     "manifest_excluded_from_self_hash": true,

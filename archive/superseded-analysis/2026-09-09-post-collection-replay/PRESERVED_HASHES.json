@@ -1,0 +1,32 @@
+[
+  {
+    "path": "decisions_index.json",
+    "bytes": 178,
+    "sha256": "3ab7be81c74ce8ada38638cac3c5c1bb832cc78f58721ac0835cf92cdb121846",
+    "status": "superseded-not-current-adapter"
+  },
+  {
+    "path": "policy_replay_index.json",
+    "bytes": 236,
+    "sha256": "58c198f81f20591b126eb7e550a4a1276c9bb5afed0e635c747b24bb0cd39910",
+    "status": "superseded-not-current-adapter"
+  },
+  {
+    "path": "post_collection_replay.json",
+    "bytes": 17501,
+    "sha256": "2eab9da3457015489f6814b15b45faf1def29bd422d3c0b67c4592b09577e853",
+    "status": "superseded-not-current-adapter"
+  },
+  {
+    "path": "post_collection_replay_scenarios.json",
+    "bytes": 813267,
+    "sha256": "b1c707a2a6b4173f7eae2934f996851488363c58d955d0fb65ec774c5dc588f4",
+    "status": "superseded-not-current-adapter"
+  },
+  {
+    "path": "post_collection_replay_deadlines.csv",
+    "bytes": 3059763,
+    "sha256": "427281f4d424ef87ff2188299fb51e90671ffbb5e15ef8b7673f916603686604",
+    "status": "superseded-not-current-adapter"
+  }
+]

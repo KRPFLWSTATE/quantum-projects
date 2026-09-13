@@ -8,7 +8,7 @@ Prior-art and contribution claims belong to the manuscript, which this task does
 
 ## Author and AI assistance
 
-Author: Kawin Rehan Perera. No employer, affiliation, ORCID, or peer-review status is claimed here.
+Author: Kawin Rehan Perera ([ORCID](https://orcid.org/0009-0002-9014-1650)). No employer, affiliation, or peer-review status is claimed here.
 
 AI assistance was used for coding, circuit-construction scripts, debugging, documentation, and post-collection analysis. That is not limited to grammar editing. The author remains responsible for the archived jobs, hashes, and claims.
 

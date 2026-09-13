@@ -1,0 +1,86 @@
+[
+  {
+    "betas": [
+      1.1383106937967755,
+      2.322456619996583
+    ],
+    "fixture": "D1",
+    "gammas": [
+      3.099382127958236,
+      1.6124536741631312
+    ],
+    "kind": "powell",
+    "p": 2,
+    "second_layer_identity": false
+  },
+  {
+    "betas": [
+      1.0039324958198246,
+      2.3397963110029534
+    ],
+    "fixture": "D2",
+    "gammas": [
+      3.1509861936328956,
+      2.362448124318263
+    ],
+    "kind": "powell",
+    "p": 2,
+    "second_layer_identity": false
+  },
+  {
+    "betas": [
+      2.945243112740431,
+      0.0
+    ],
+    "fixture": "D3",
+    "gammas": [
+      0.39269908169872414,
+      0.0
+    ],
+    "kind": "start",
+    "p": 2,
+    "second_layer_identity": true
+  },
+  {
+    "betas": [
+      1.5978989175184386,
+      2.298909730778879
+    ],
+    "fixture": "D4",
+    "gammas": [
+      2.2326103592441,
+      4.097141513478269
+    ],
+    "kind": "powell",
+    "p": 2,
+    "second_layer_identity": false
+  },
+  {
+    "betas": [
+      1.5674567203510692,
+      1.9794906090566664
+    ],
+    "fixture": "D5",
+    "gammas": [
+      1.5454362216756596,
+      1.4596474220750502
+    ],
+    "kind": "powell",
+    "p": 2,
+    "second_layer_identity": false
+  },
+  {
+    "betas": [
+      2.945243112740431,
+      0.0
+    ],
+    "fixture": "D6",
+    "gammas": [
+      0.39269908169872414,
+      0.0
+    ],
+    "kind": "start",
+    "p": 2,
+    "second_layer_identity": true
+  }
+]

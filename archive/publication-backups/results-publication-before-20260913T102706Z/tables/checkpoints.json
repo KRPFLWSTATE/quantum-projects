@@ -1,0 +1,72 @@
+{
+  "all_within_30s": true,
+  "client_elapsed_max": 22.992622207995737,
+  "client_elapsed_min": 13.100063708989182,
+  "d4_p2_optimal_hit_mean": 0.0087890625,
+  "exact_optima": {
+    "D1": 23.0,
+    "D2": 23.0,
+    "D3": 23.0,
+    "D4": 24.0,
+    "D5": 23.0,
+    "D6": 22.0
+  },
+  "greedy_incumbent_utilities": {
+    "D1": 23.0,
+    "D2": 23.0,
+    "D3": 21.0,
+    "D4": 24.0,
+    "D5": 22.0,
+    "D6": 22.0
+  },
+  "guarded": {
+    "P1": {
+      "feasible_optima": 72,
+      "improve_over_greedy": 24
+    },
+    "P2": {
+      "feasible_optima": 72,
+      "improve_over_greedy": 24
+    },
+    "P3": {
+      "feasible_optima": 72,
+      "improve_over_greedy": 24
+    }
+  },
+  "n_pools_with_optimum": 72,
+  "n_pubs": 72,
+  "p0_feasible_modal": 40,
+  "uniform_opt": 0.015625,
+  "uniform_opt_containment_1024": {
+    "D1": {
+      "n_optima": 1,
+      "p_at_least_one_optimum_in_1024_iid_uniform": 0.9999999008188177,
+      "p_opt_uniform": 0.015625
+    },
+    "D2": {
+      "n_optima": 2,
+      "p_at_least_one_optimum_in_1024_iid_uniform": 0.9999999999999925,
+      "p_opt_uniform": 0.03125
+    },
+    "D3": {
+      "n_optima": 1,
+      "p_at_least_one_optimum_in_1024_iid_uniform": 0.9999999008188177,
+      "p_opt_uniform": 0.015625
+    },
+    "D4": {
+      "n_optima": 1,
+      "p_at_least_one_optimum_in_1024_iid_uniform": 0.9999999008188177,
+      "p_opt_uniform": 0.015625
+    },
+    "D5": {
+      "n_optima": 1,
+      "p_at_least_one_optimum_in_1024_iid_uniform": 0.9999999008188177,
+      "p_opt_uniform": 0.015625
+    },
+    "D6": {
+      "n_optima": 2,
+      "p_at_least_one_optimum_in_1024_iid_uniform": 0.9999999999999925,
+      "p_opt_uniform": 0.03125
+    }
+  }
+}
