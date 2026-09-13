@@ -89,7 +89,7 @@ def policy_panel(pubs: list[dict], path: Path) -> None:
     ax.set_xticks(list(x), policies)
     ax.set_ylabel("PUB count (of 72)")
     ax.set_title("Unchanged-specification hardware policy selections")
-    ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=3)
+    ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=3)
     _style(ax)
     fig.tight_layout()
     fig.savefig(path.with_suffix(".svg"), bbox_inches="tight")
